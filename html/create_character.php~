@@ -1,0 +1,53 @@
+<?php # Script 18.5 - index.php
+// This is the main page for the site.
+
+// Include the configuration file:
+require ('includes/config.inc.php'); 
+
+// Set the page title and include the HTML header:
+$page_title = 'Welcome to this Site!';
+include ('includes/header.html');
+include ('includes/top.html');
+
+?>
+
+<h1>Forge A Character</h1>
+<form action="register.php" method="post">
+	<fieldset>
+	
+	<p><b>First Name:</b> <input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>" /></p>
+	
+	<p><b>Last Name:</b> <input type="text" name="last_name" size="20" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>" /></p>
+
+	<p><b>Email Address:</b> <input type="text" name="email" size="30" maxlength="60" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>" /> </p>
+		
+	<p><b>Password:</b> <input type="password" name="password1" size="20" maxlength="20" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>" /> <small>Use only letters, numbers, and the underscore. Must be between 4 and 20 characters long.</small></p>
+
+	<p><b>Confirm Password:</b> <input type="password" name="password2" size="20" maxlength="20" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>" /></p>
+	
+	<!-- A security question to use if user forgets password-->
+	
+	<p><b>Select a security question:</b> 
+	
+	<select name="security_question">
+	
+   	<option value="<?php if (isset($trimmed['security_question'])) echo $trimmed['security_question']; else echo ""; ?>"><?php if (isset($trimmed['security_question'])) echo $trimmed['security_question']; else echo "Select a security question";?></option>
+   	<option value="What was the name of your first pet?">What was the name of your first pet?</option>
+   	<option value="What's your favourite colour?">What's your favourite colour?</option>
+   	<option value="What's the name of the street you grew up in?">What's the name of the street you grew up in?</option>
+   	<option value="What's the name of your first grade teacher?">What's the name of your first grade teacher?</option>security
+  
+  </select>
+	
+	<!-- Answer to the security question-->
+	
+	<p><b>Security Answer:</b> <input type="security_answer" name="security_answer" size="20" maxlength="20" value="<?php if (isset($trimmed['security_answer'])) echo $trimmed['security_answer']; ?>" /></p>
+	
+	</fieldset>
+	<input type="submit" name="submit" value="Register" />
+	
+	
+</form>
+<br>
+
+<?php include ('includes/footer.html'); ?>

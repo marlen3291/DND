@@ -1,0 +1,281 @@
+/* Timothy Framework - www.timothyframework.com */
+/* This work is licensed under the MIT License - http://www.opensource.org/licenses/mit-license.php */
+
+
+/* Color Legend */
+
+
+/* Reset */
+
+html, body { margin: 0; padding: 0; border: 0;  
+				background: transparent; font-size:10px; }
+
+div, span, article, aside, footer, header, hgroup, nav, section,
+h1, h2, h3, h4, h5, h6, p, blockquote, a, ol, ul, li, 
+table, tr, th, td, tbody, tfoot, thead {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+img 	{ margin:0; padding:0; border:0; }
+
+table, tr, th, td, tbody, tfoot, thead {
+	margin: 0; padding: 0; border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	}
+	
+table { border-collapse: collapse; border-spacing: 0; }
+	
+input, select, textarea, form, fieldset {
+	margin: 0; padding: 0; border: 0;
+	}
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section { 
+	display:block; }
+
+h1, h2, h3, h4, h5, h6, p, li, blockquote, td, th, a, caption, em, strong, strike { 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:100%;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 100%; 
+	text-indent: 0;
+	text-decoration: none;
+	text-align: left;
+	color: #000;
+	}
+
+ol, ul { list-style: none; }
+
+
+/* Global */
+
+html 	{	}
+body	{ background-color: #FF0000;	}
+
+
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; color: #000; }
+
+h1 { font-size:24px; }
+h2 { font-size:20px; }
+h3 { font-size:16px; }
+h4 { font-size:14px; }
+h5 { font-size:14px; }
+h6 { font-size:14px; }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
+
+
+
+/* Text Elements */
+
+p           	{ color:#000; font-size:12px; line-height:150%;  }
+p .left			{ margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p .right 		{ margin: 1.5em 0 1.5em 1.5em; padding: 0; }
+
+a           	{   }
+a:link			{ color: #00f;  }
+a:visited		{ color: #0f0;  }
+a:active		{ color: #000000;  }
+a:focus			{ color: #666;  }
+a:hover     	{ color: #f00;  }
+
+blockquote  	{ color:#000; font-size:12px; }
+
+strong      	{ font-weight: bold; }
+em		      	{ font-style: italic; }
+
+/* Images */
+
+
+
+/* Lists */
+
+ul          	{  }
+ol          	{ list-style-type:decimal; }
+
+ul li		    { color:#000; font-size:12px; }
+ol li	     	{ color:#000; font-size:12px; }
+
+dl          	{  	}
+dt       		{  	}
+dd          	{ 	}
+
+
+
+/* Tables */
+
+table       	{ width:100%; }
+
+tr				{	}
+.odd			{ background-color:#eee; }
+.even			{ background-color:#fff; }
+
+th          	{ font-weight: bold; }
+thead, th    	{ background: #ccc; }
+
+tbody			{   }
+
+th,td,caption 	{ 	}
+caption 		{ 	}
+
+tfoot       	{	}
+.tfooter		{ background-color:#ccc; text-align:center; font-style:italic; }
+
+caption     	{ background: #efefef; }
+
+
+/* Containers */
+
+#wrapper 			{ width: 900px; margin: 0px auto; background-color: #ffffff; }
+
+#top	 			{ background-color: #A52A2A; width: 100%; height:80px;padding:0px 0px 20px 0px; overflow:hidden; }
+
+#logo 			{ margin: 0 0 0 10px;float:left;height:100%;width:80%; }
+#logo img		{padding:0px;height:120px;width:500px;}
+
+#social-media	{ float:right; margin: 0px 10px 0px 0px; }
+#social-media p {color:#ffffff; font-size: 11px; margin: 4px 10px 4px 0px;   }
+#social-media img { width: 24px; height:24px; }
+#social-media ul li {display:inline;}
+
+#topnav 			{ background-color: #333333; clear: both;  }
+#topnav ul		{width:100%; float:left; margin:0px; background-color:#333333; border-bottom: 3px #cccccc solid;}
+#topnav ul li  { display:inline;}
+#topnav ul li a { float:left; padding:10px 20px; font-size:20px;}
+
+#topnav a:link {color:#ffffff;}
+#topnav a:visited {color:#ffffff;}
+#topnav a:active {color:#000000;}
+#topnav a:hover {color:#ffffff;background-color:#770000}
+#topnav a:focus {color:#ffffff;}
+
+#banner 			{   }
+#banner img		{width:100%}
+
+#subbanner 			{ 	
+							width:100%; 
+							background-color:#555555; 
+							padding: 5px 0px; 
+							overflow:hidden;  
+							
+						}
+						
+#subbanner h2		{ 
+
+							color:white;
+							font-size:12px;
+							font-weight:bold;
+							text-align: center;
+							line-height: 100%;
+							
+						}
+						
+#content 			{ float:left;width:650px;padding: 20px;   }
+#content h1			{ margin: 0 0 20px 0; font-size:32px; border-bottom:1px #777777 solid; padding:20px 0;  }
+
+#content p			{ margin:16px 0; line-height:160%  }
+#content h2			{ margin:20px 0 0 0;  }
+#content img 			{ padding:8px;border:1px #8888888 solid;margin:0px;  }
+
+#rightside 			{ padding:20px; margin-left:675px;   }
+#rightside h2			{ 20px 0 10px 0;  }
+#rightside p			{ margin:8px 0; line-height:160%;  }
+
+#footer 			{  clear:both; background-color:#000000;padding: 10px 0;width:100%; }
+#footer p		{	text-align:center; color:#ffffff;}
+
+
+#box1 {   }
+
+#box2 {   }
+
+#box3 {   }
+
+#box4 {   }
+
+#box5 {   }
+
+#box6 {   }
+
+
+/* Layout Extra */
+
+
+
+
+/* Navigation Extra */
+
+
+
+/* Forms */
+
+form ol { list-style-type:none; }
+
+form 	{ text-align:left; margin:20px;	}
+
+label 	{ 
+		float: left; width: 150px; margin-top:5px;
+		text-align:right; display:block; background:none; font-weight:bold;
+		}
+	
+submit	{ background:none; 	}
+
+input 	{ 
+		width: 280px; margin:0 0 16px 10px;
+		border:1px #bbb solid; padding:5px; background:none; 
+		}
+		
+input:focus, textarea:focus	{ background-color:#BFEBFF; }
+
+textarea {
+		width: 280px; height: 150px; margin:0 0 16px 10px;
+		border:1px #bbb solid; padding:5px; background:none; 
+		}
+
+select { margin-bottom:20px;	}
+	
+.month { margin-left:155px;	}
+
+.submit {
+		width:90px; height:25px;
+		margin-left:160px;
+		font-size:12px;
+		}
+
+br		{ clear: left; 	}
+
+.clear	{ clear:both; }
+
+
+
+
+
+/* Success, info, notice and error/alert boxes - from Blueprint CSS Framework */
+
+.error, .alert, .notice, .success, .info {
+	padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error, .alert 	{ background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
+	
+.notice			{ background: #fff6bf; color: #514721; border-color: #ffd324; }
+	
+.success   		{ background: #e6efc2; color: #264409; border-color: #c6d880; }
+	
+.info 			{ background: #d5edf8; color: #205791; border-color: #92cae4; }
+	
+.error a 	{ color: #8a1f11; }
+.alert a 	{ color: #8a1f11; }
+	
+.notice a   { color: #514721; }
+.success a  { color: #264409; }
+.info a		{ color: #205791; }
+
+

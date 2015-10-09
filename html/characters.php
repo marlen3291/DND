@@ -1,0 +1,21 @@
+<?php # Script 18.5 - index.php
+// This is the main page for the site.
+
+// Include the configuration file:
+require ('includes/config.inc.php'); 
+
+// Set the page title and include the HTML header:
+$page_title = 'Welcome to this Site!';
+include ('includes/header.html');
+include ('includes/top.html');
+
+?>
+
+<a href="view_character.php" >View Characters </a>
+<a href="create_character.php" >Forge A Character</a>
+<a href="edit_character.php" >Edit A Character</a>
+
+
+<?php include ('includes/footer.html'); ?>
+
+
