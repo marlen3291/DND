@@ -205,6 +205,9 @@ caption     	{ background: #efefef; }
 
 #box6 {   }
 
+/Character List
+#character {}
+#character a {font:bold;font-size: 22;color:#000000;}
 
 /* Layout Extra */
 

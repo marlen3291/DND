@@ -1,0 +1,10 @@
+<?php # Script 18.5 - index.php
+
+
+phpinfo();
+file_uploads = on;
+?>
+
+
+
+

@@ -32,7 +32,7 @@ echo "<h1>View Characters</h1>";
 		
 	$sessionid = $_SESSION['user_id'];
 	
-	//Select everything from characters
+	//Select everything from users
 	$q = "SELECT character_id,first_name, last_name, class, level, background FROM characters WHERE user_id=$sessionid";
 	
 	

@@ -1,0 +1,22 @@
+<?php
+
+// Need the database connection:
+	require (MYSQL);
+if(isset($_GET['id']))
+{
+    $image = $_GET['id'];
+    $query = mysqli_query($con,"SELECT appearance FROM characters WHERE appearance=$image");
+    while($row = mysqli_fetch_assoc($query))
+    {
+        $appearance = $row['appearance'];
+        $appearance = base64_decode($appearance);
+    }
+    header("content-type:image/jpeg");
+    echo $appearance;
+}
+else
+{
+    echo "Error!";
+}
+
+?>

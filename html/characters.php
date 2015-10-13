@@ -11,11 +11,13 @@ include ('includes/top.html');
 
 ?>
 
-<a href="view_character.php" >View Characters </a>
-<a href="create_character.php" >Forge A Character</a>
-<a href="edit_character.php" >Edit A Character</a>
-
-
+<div id="character">
+<ul> 
+<li><a href="view_character.php" >View Characters </a></li>
+<li><a href="create_character.php" >Forge A Character</a></li>
+<li><a href="edit_character.php" >Edit A Character</a></li>
+</ul>
+</div>
 <?php include ('includes/footer.html'); ?>
 
 
