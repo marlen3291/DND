@@ -5,6 +5,12 @@ $page_title = 'Activate Your Account';
 include ('includes/header.html');
 include ('includes/top.html');
 
+?>
+
+<div id="content">
+
+<?php
+
 // If $x and $y don't exist or aren't of the proper format, redirect the user:
 if (isset($_GET['x'], $_GET['y']) 
 	&& filter_var($_GET['x'], FILTER_VALIDATE_EMAIL)
@@ -33,6 +39,7 @@ if (isset($_GET['x'], $_GET['y'])
 	exit(); // Quit the script.
 
 } // End of main IF-ELSE.
-
-include ('includes/footer.html');
 ?>
+
+</div> <!--End of Content-->
+<?php include ('includes/footer.html');?>

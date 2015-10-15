@@ -13,6 +13,8 @@ include (
 
 ?>
 
+<div id="content">
+
 <?php
 
 if (isset($_SESSION['user_id'])){
@@ -184,7 +186,11 @@ else
 	<p><b>Level:</b> <input type="text" name="level" size="20" maxlength="40" value="<?php if (isset($trimmed['level'])) echo $trimmed['level']; ?>" /></p>
 	
 	<p><b>Background:</b> <input type="text" name="background" size="20" maxlength="20" value="<?php if (isset($trimmed['background'])) echo $trimmed['background']; ?>" /></p>
-	
+
+
+<!--	<p><b>Background:</b></p><textarea rows="10" cols="100" name="background" value="<?php if (isset($trimmed['background'])) echo $trimmed['background']; ?>" />
+	</textarea>	
+-->
 	<p><b>Player Name</b> <input type="text" name="player_name" size="20" maxlength="40" value="<?php if (isset($trimmed['player_name'])) echo $trimmed['player_name']; ?>" /></p>
 	
 	<p><b>Race</b> <input type="text" name="race" size="20" maxlength="20" value="<?php if (isset($trimmed['race'])) echo $trimmed['race']; ?>" /></p>
@@ -229,22 +235,42 @@ else
 
 	<p><b>Saving Throws:</b> <input type="text" name="saving_throws" size="20" maxlength="40" value="<?php if (isset($trimmed['saving_throws'])) echo $trimmed['saving_throws']; ?>" /></p>
 
-	<p><b>Skills</b> <input type="text" name="skills" size="20" maxlength="40" value="<?php if (isset($trimmed['skills'])) echo $trimmed['skills']; ?>" /></p>
+<!--	<p><b>Skills</b> <input type="text" name="skills" size="20" maxlength="40" value="<?php if (isset($trimmed['skills'])) echo $trimmed['skills']; ?>" /></p>
+-->
 
+	<p><b>Skills:</b></p><textarea rows="10" cols="100" name="skills" value="<?php if (isset($trimmed['background'])) echo $trimmed['background']; ?>" />
+	</textarea>	
+	
 	<p><b>Passive Wisdom:</b> <input type="text" name="passive_wisdom" size="20" maxlength="40" value="<?php if (isset($trimmed['passive_wisdom'])) echo $trimmed['passive_wisdom']; ?>" /></p>
 
-	<p><b>Languages:</b> <input type="text" name="languages" size="20" maxlength="40" value="<?php if (isset($trimmed['languages'])) echo $trimmed['languages']; ?>" /></p>
+<!--	<p><b>Languages:</b> <input type="text" name="languages" size="20" maxlength="40" value="<?php if (isset($trimmed['languages'])) echo $trimmed['languages']; ?>" /></p>
+-->
+	<p><b>Languages:</b></p><textarea rows="10" cols="100" name="languages" value="<?php if (isset($trimmed['languages'])) echo $trimmed['languages']; ?>" />
+	</textarea>
+		
+<!--	<p><b>Proficiencies:</b> <input type="text" name="proficiencies" size="20" maxlength="40" value="<?php if (isset($trimmed['proficiencies'])) echo $trimmed['proficiencies']; ?>" /></p>
+-->
 
-	<p><b>Proficiencies:</b> <input type="text" name="proficiencies" size="20" maxlength="40" value="<?php if (isset($trimmed['proficiencies'])) echo $trimmed['proficiencies']; ?>" /></p>
-
-	<p><b>Personality Traits:</b> <input type="text" name="personality_traits" size="20" maxlength="40" value="<?php if (isset($trimmed['personality_traits'])) echo $trimmed['personality_traits']; ?>" /></p>
-
-	<p><b>Ideals:</b> <input type="text" name="ideals" size="20" maxlength="40" value="<?php if (isset($trimmed['ideals'])) echo $trimmed['ideals']; ?>" /></p>
+	<p><b>Proficiencies:</b></p><textarea rows="10" cols="100" name="proficiencies" value="<?php if (isset($trimmed['proficiencies'])) echo $trimmed['proficiencies']; ?>" />
+	</textarea>	
 	
-	<p><b>Bonds:</b> <input type="text" name="bonds" size="20" maxlength="40" value="<?php if (isset($trimmed['bonds'])) echo $trimmed['bonds']; ?>" /></p>
-	
-	<p><b>Flaws:</b> <input type="text" name="flaws" size="20" maxlength="40" value="<?php if (isset($trimmed['flaws'])) echo $trimmed['flaws']; ?>" /></p>
-	
+<!--	<p><b>Personality Traits:</b> <input type="text" name="personality_traits" size="20" maxlength="40" value="<?php if (isset($trimmed['personality_traits'])) echo $trimmed['personality_traits']; ?>" /></p>
+-->
+	<p><b>Personality Traits:</b></p><textarea rows="10" cols="100" name="personality_traits" value="<?php if (isset($trimmed['personality_traits'])) echo $trimmed['personality_traits']; ?>" />
+	</textarea>	
+<!--	<p><b>Ideals:</b> <input type="text" name="ideals" size="20" maxlength="40" value="<?php if (isset($trimmed['ideals'])) echo $trimmed['ideals']; ?>" /></p>
+-->
+		<p><b>Ideals:</b></p><textarea rows="10" cols="100" name="ideals" value="<?php if (isset($trimmed['ideals'])) echo $trimmed['ideals']; ?>" />
+	</textarea>	
+<!--	<p><b>Bonds:</b> <input type="text" name="bonds" size="20" maxlength="40" value="<?php if (isset($trimmed['bonds'])) echo $trimmed['bonds']; ?>" /></p>
+-->
+		<p><b>Bonds:</b></p><textarea rows="10" cols="100" name="bonds" value="<?php if (isset($trimmed['bonds'])) echo $trimmed['bonds']; ?>" />
+	</textarea>	
+<!--	<p><b>Flaws:</b> <input type="text" name="flaws" size="20" maxlength="40" value="<?php if (isset($trimmed['flaws'])) echo $trimmed['flaws']; ?>" /></p>
+-->	
+	<p><b>Flaws:</b></p><textarea rows="10" cols="100" name="flaws" value="<?php if (isset($trimmed['flaws'])) echo $trimmed['flaws']; ?>" />
+	</textarea>
+		
 	<p><b>CP:</b> <input type="text" name="cp" size="20" maxlength="40" value="<?php if (isset($trimmed['cp'])) echo $trimmed['cp']; ?>" /></p>
 	
 	<p><b>SP:</b> <input type="text" name="sp" size="20" maxlength="40" value="<?php if (isset($trimmed['sp'])) echo $trimmed['sp']; ?>" /></p>
@@ -255,7 +281,10 @@ else
 	
 	<p><b>PP:</b> <input type="text" name="pp" size="20" maxlength="40" value="<?php if (isset($trimmed['pp'])) echo $trimmed['pp']; ?>" /></p>
 	
-	<p><b>Features:</b> <input type="text" name="features" size="20" maxlength="40" value="<?php if (isset($trimmed['features'])) echo $trimmed['features']; ?>" /></p>
+<!--	<p><b>Features:</b> <input type="text" name="features" size="20" maxlength="40" value="<?php if (isset($trimmed['features'])) echo $trimmed['features']; ?>" /></p>
+-->	
+	<p><b>Features:</b></p><textarea rows="10" cols="100" name="features" value="<?php if (isset($trimmed['features'])) echo $trimmed['features']; ?>" />
+	</textarea>
 	
    <p><b>Appearance:</b><input type="file" name="appearance" id="appearance"></p>
 	
@@ -275,8 +304,10 @@ else
 	
 	<p><b>Hair:</b> <input type="text" name="hair" size="20" maxlength="40" value="<?php if (isset($trimmed['hair'])) echo $trimmed['hair']; ?>" /></p>
 	
-	<p><b>Backstory:</b> <input type="text" name="backstory" size="20" maxlength="40" value="<?php if (isset($trimmed['backstory'])) echo $trimmed['backstory']; ?>" /></p>
-	
+<!--	<p><b>Backstory:</b> <input type="text" name="backstory" size="20" maxlength="40" value="<?php if (isset($trimmed['backstory'])) echo $trimmed['backstory']; ?>" /></p>
+-->	
+	<p><b>Backstory:</b></p><textarea rows="10" cols="100" name="backstory" value="<?php if (isset($trimmed['backstory'])) echo $trimmed['backstory']; ?>" />
+	</textarea>
 	<p><b>Spell Slots:</b> <input type="text" name="spell_slots" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_slots'])) echo $trimmed['spell_slots']; ?>" /></p>
 	
 	<p><b>Spellcasting Ability:</b> <input type="text" name="spell_casting_ability" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_casting_ability'])) echo $trimmed['spell_casting_ability']; ?>" /></p>
@@ -290,4 +321,5 @@ else
 </form>
 <br>
 
+</div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

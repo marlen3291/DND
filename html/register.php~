@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 <h1>Register</h1>
 <form action="register.php" method="post">
-	
+	<fieldset>
 	
 	<p><b>First Name:</b> <input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>" /></p>
 	
@@ -151,8 +151,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 	<p><b>Security Answer:</b> <input type="security_answer" name="security_answer" size="20" maxlength="20" value="<?php if (isset($trimmed['security_answer'])) echo $trimmed['security_answer']; ?>" /></p>
 	
+	</fieldset>
 	<input type="submit" name="submit" value="Register" />
-
+	
+	
 </form>
 <br>
 <?php include ('includes/footer.html'); ?>

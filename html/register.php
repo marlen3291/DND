@@ -4,7 +4,11 @@ require ('includes/config.inc.php');
 $page_title = 'Register';
 include ('includes/header.html');
 include ('includes/top.html');
+?>
 
+<div id="content">
+
+<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 
 	// Need the database connection:
@@ -156,5 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 	
 </form>
+
+</div> <!--End of Content-->
 <br>
 <?php include ('includes/footer.html'); ?>

@@ -10,14 +10,17 @@ include ('includes/header.html');
 include ('includes/top.html');
 
 ?>
+<div id="content">
 
-<div id="character">
-<ul> 
-<li><a href="view_character.php" >View Characters </a></li>
-<li><a href="create_character.php" >Forge A Character</a></li>
-<li><a href="edit_character.php" >Edit A Character</a></li>
-</ul>
-</div>
+	<div id="character">
+		<ul> 
+			<li><a href="view_character.php" >View Characters </a></li>
+			<li><a href="create_character.php" >Forge A Character</a></li>
+			<li><a href="edit_character.php" >Edit A Character</a></li>
+		</ul>
+	</div>
+
+</div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>
 
 

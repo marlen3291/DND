@@ -16,30 +16,15 @@ if (isset($_SESSION['first_name'])) {
 }
 echo '!</h1>';
 ?>
-<p>Spam spam spam spam spam spam
-spam spam spam spam spam spam 
-spam spam spam spam spam spam 
-spam spam spam spam spam spam.</p>
-<p>Spam spam spam spam spam spam
-spam spam spam spam spam spam 
-spam spam spam spam spam spam 
-spam spam spam spam spam spam.</p>
-<p>Spam spam spam spam spam spam
-spam spam spam spam spam spam 
-spam spam spam spam spam spam 
-spam spam spam spam spam spam.</p>
-<p>Spam spam spam spam spam spam
-spam spam spam spam spam spam 
-spam spam spam spam spam spam 
-spam spam spam spam spam spam.</p>
-<p>Spam spam spam spam spam spam
-spam spam spam spam spam spam 
-spam spam spam spam spam spam 
-spam spam spam spam spam spam.</p>
-<p>Spam spam spam spam spam spam
-spam spam spam spam spam spam 
-spam spam spam spam spam spam 
-spam spam spam spam spam spam.</p>
 
+<div id="content">
 
+<p>This is my Dungeons and Dragons fan website.
+This website is for non-profit and is a hobby side project.
+Users can register, log in, and create their personal D&D character 
+profiles to keep online. Users can also create journal log entries of 
+their character.
+</p>
+
+</div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

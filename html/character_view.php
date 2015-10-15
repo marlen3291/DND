@@ -10,6 +10,8 @@ include ('includes/header.html');
 include ('includes/top.html');
 ?>
 
+<div id="content">
+
 <?php
 
 if (isset($_SESSION['user_id'])){
@@ -180,5 +182,12 @@ else
 	}
 
 ?>
+<form action="edit_character.php" method="get">
 
+			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
+		
+			<input type="submit" name="submit" value="Edit Character" />
+		
+</form>
+</div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

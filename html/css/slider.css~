@@ -16,9 +16,12 @@
                 background: url(../images/icons/a03.png) no-repeat;
                 overflow: hidden;
             }
-.jssora03l { background-position: -3px -33px; }
-.jssora03r { background-position: -63px -33px; }
+.jssora03l { background-position: -3px -33px; float:left;position:relative;top:50%;}
+.jssora03r { background-position: -63px -33px; float:right;position:relative;top:50%; }
 .jssora03l:hover { background-position: -123px -33px; }
 .jssora03r:hover { background-position: -183px -33px; }
 .jssora03l.jssora03ldn { background-position: -243px -33px; }
 .jssora03r.jssora03rdn { background-position: -303px -33px; }
+
+#slider1_container {width:100%;}
+#slider1_container img {width:100%;}

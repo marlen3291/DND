@@ -11,6 +11,8 @@ include ('includes/top.html');
 
 ?>
 
+<div id="content">
+
 <?php
 
 
@@ -32,7 +34,7 @@ echo "<h1>View Characters</h1>";
 		
 	$sessionid = $_SESSION['user_id'];
 	
-	//Select everything from users
+	//Select everything from characters
 	$q = "SELECT character_id,first_name, last_name, class, level, background FROM characters WHERE user_id=$sessionid";
 	
 	
@@ -46,8 +48,8 @@ echo "<h1>View Characters</h1>";
 	echo "<th>First Name</th>";
 	echo "<th>Last Name</th>";
 	echo "<th>Class</th>";
-	echo "<th>Level</th>";
-	echo "<th>Background</th>";
+	echo "<th></th>";
+	echo "<th></th>";
 	
 	echo "</tr>";
 	
@@ -58,8 +60,7 @@ echo "<h1>View Characters</h1>";
 	$first_name = $row["first_name"];
 	$last_name = $row["last_name"];
 	$class = $row["class"];
-	$level = $row["level"];
-	$background = $row["background"];
+
 	
 		
 	echo "<tr>";
@@ -67,8 +68,7 @@ echo "<h1>View Characters</h1>";
 		echo "<td>" .	$first_name	.	"</td>"	;
 		echo "<td>" .	$last_name	.	"</td>"	;
 		echo "<td>" .	$class.	"</td>"	;
-		echo "<td>" .	$level	.	"</td>"	;
-		echo "<td>" .	$background	.	"</td>"	;
+		
 		echo 
 		
 		"<td>
@@ -80,6 +80,30 @@ echo "<h1>View Characters</h1>";
 		
 			</form>
 		</td>";
+		
+		echo 
+		
+		"<td>
+				<form action=\"chronicle_view.php\" method=\"post\">
+					<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
+		
+					<input type=\"submit\" name=\"submit\" value=\"View Chronicles\" />
+		
+				</form>
+		</td>";
+		
+		"<td>
+				<form action=\"chronicle_view.php\" method=\"post\">
+					<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
+		
+					<input type=\"submit\" name=\"submit\" value=\"View Chronicles\" />
+		
+				</form>
+		</td>";
+		
+		
+		
+			
 		
 	echo "</tr>";
 	
@@ -108,6 +132,7 @@ mysqli_close($dbc);
  // End of the main Submit conditional.
 
 ?>
-
-
+<br>
+<button type="button"><a href="create_character.php" >Forge A Character </a></button>
+</div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

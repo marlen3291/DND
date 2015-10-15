@@ -10,6 +10,8 @@ include ('includes/header.html');
 include ('includes/top.html');
 ?>
 
+<div id="content">
+
 <?php
 
 if (isset($_SESSION['user_id'])){
@@ -148,10 +150,21 @@ if (isset($_SESSION['user_id'])){
 	
 	echo "<p>Features: $features</p><br>";
 	echo "<p>Appearance:</p>";
+	echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/><br>';
+	echo "<p>Organization: $organization</p><br>";
+	echo "<p>Rank: $rank</p><br>";
+	echo "<p>Age: $age</p><br>";
+	echo "<p>Height: $height</p><br>";
+	echo "<p>Weight: $weight</p><br>";
+	echo "<p>Eyes: $eyes</p><br>";
+	echo "<p>Skin: $skin</p><br>";
+	echo "<p>Hair: $hair</p><br>";
 	
-  echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/><br>';
-	
-	
+	echo "<p>Backstory: $backstory</p><br>";
+	echo "<p>Spell Slots: $spell_slots</p><br>";
+	echo "<p>Spellcasting Ability: $spell_casting_ability</p><br>";
+	echo "<p>Spell Save DC: $spell_save_dc</p><br>";
+	echo "<p>Spell Attack Bonus: $spell_attack_bonus</p><br>";
 	mysqli_close($dbc);
 	
 	
@@ -169,5 +182,12 @@ else
 	}
 
 ?>
+<form action="create_chronicle.php" method="get">
 
+			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
+		
+			<input type="submit" name="submit" value="Create A Chronicle" />
+		
+</form>
+</div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

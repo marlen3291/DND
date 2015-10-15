@@ -5,6 +5,11 @@ $page_title = 'Login';
 include ('includes/header.html');
 include ('includes/top.html');
 
+?>
+
+<div id="content">
+
+<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require (MYSQL);
 	
@@ -35,6 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// Register the values:
 			$_SESSION = mysqli_fetch_array ($r, MYSQLI_ASSOC); 
 			mysqli_free_result($r);
+			
+			//My Revision Code: Update last login
+			$a = "UPDATE users SET last_logged_in = NOW() WHERE (email='$e' AND pass=SHA1('$p'))";
+			$b = mysqli_query ($dbc, $a) or trigger_error("Query: $b\n<br />MySQL Error: " . mysqli_error($dbc));
+			//
+			
 			mysqli_close($dbc);
 							
 			// Redirect the user:
@@ -65,5 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<div align="center"><input type="submit" name="submit" value="Login" /></div>
 	</fieldset>
 </form>
+
+</div> <!--End of Content-->
 
 <?php include ('includes/footer.html'); ?>
