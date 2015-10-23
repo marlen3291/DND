@@ -22,10 +22,38 @@ if (!isset($page_title)) {
     <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
     <script type="text/javascript" src="js/jssor.js"></script>
     <script type="text/javascript" src="js/jssor.slider.js"></script>
+    
+    
+    
+    <!--
     <link href="css/slider.css" rel="stylesheet" type="text/css" media="screen">
+    -->
     <script>
-         jQuery(document).ready(function ($) {
+    
+    
+    <!--
+        jQuery(document).ready(function ($) {
+            var options = {
+            	$FillMode: 2,                                      //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actuall size, 5 contain for large image and actual size for small image, default value is 0
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 0,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                }
 
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            
+           
+        });
+        
+     -->
+     
+     
+     jssor_slider1_starter = function (containerId) {
             var _CaptionTransitions = [];
             _CaptionTransitions["L"] = { $Duration: 900, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
             _CaptionTransitions["R"] = { $Duration: 900, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
@@ -41,13 +69,13 @@ if (!isset($page_title)) {
 
             var options = {
                 $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
-                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
                 $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
                 $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
                 $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
                 $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
-                $SlideDuration: 800,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
                 $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
                 //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
                 //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
@@ -76,15 +104,15 @@ if (!isset($page_title)) {
                     $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
                 },
 
-                $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
-                    $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
+                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
                     $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
                     $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
                     $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
                 }
             };
 
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            var jssor_slider1 = new $JssorSlider$(containerId, options);
 
             //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizes
@@ -93,16 +121,44 @@ if (!isset($page_title)) {
                 if (bodyWidth)
                     jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
                 else
-                    window.setTimeout(ScaleSlider, 30);
+                    $Jssor$.$Delay(ScaleSlider, 30);
             }
-            ScaleSlider();
 
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
             //responsive code end
-        });
+        };
+     
+        
     </script>
+    
+    <!--Tabs-->
+    
+    <!--
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+ 	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ 	 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+ 	 <link rel="stylesheet" href="/resources/demos/style.css">
+ 	 -->
+ 	 
+ 	 <!--
+ 	<link href="css/swanky-purse/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="js/jquery-1.8.3.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.js"></script>
+	-->
+	
+	<link href="css/jquery-ui.css" rel="stylesheet">
+ 	 
+ 	 
+ 	 <script>
+  	 	$(function() {
+    	$( "#tabs" ).tabs();
+  		});
+  	 </script>
+    
 	<title><?php echo $page_title; ?></title>
 	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 </head>

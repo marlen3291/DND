@@ -105,66 +105,126 @@ if (isset($_SESSION['user_id'])){
 		
 	}
 	
-	echo "<p>First Name: $first_name</p><br>";
-	echo "<p>Last Name: $last_name</p><br>";
-	echo "<p>Class: $class</p><br>";
-	echo "<p>Level: $level</p><br>";
-	echo "<p>Background: $background</p><br>";
-	echo "<p>Player Name: $player_name</p><br>";
-	echo "<p>Race: $race</p><br>";
-	echo "<p>Alignment: $alignment</p><br>";
-	echo "<p>Experience: $exp</p><br>";
-	echo "<p>Armor Class: $armor_class</p><br>";
+	echo '
 	
-	echo "<p>Initiative: $initiative</p><br>";
-	echo "<p>Speed: $speed</p><br>";
-	echo "<p>Max HP: $max_hp</p><br>";
-	echo "<p>Current HP: $current_hp</p><br>";
-	echo "<p>Hit Dice: $hit_dice</p><br>";
-	echo "<p>Successes: $successes</p><br>";
-	echo "<p>Failures: $failures</p><br>";
-	echo "<p>Strength: $strength</p><br>";
-	echo "<p>Dexterity: $dexterity</p><br>";
+<div id="tabs">
+  	<ul>
+    	<li><a href="#tabs-1">Character Main Stats </a></li>
+    	<li><a href="#tabs-2">Background and Features</a></li>
+    	<li><a href="#tabs-3">Spellcasting</a></li>
+  	</ul>
+  	
+  	';
+  	
+  	//Page 1 Start
+  	echo '
+  	<div id="tabs-1">
+    ';	
+  	
+  	//Page 1
 	
-	echo "<p>Constitution: $constitution</p><br>";
-	echo "<p>Intelligence: $intelligence</p><br>";
-	echo "<p>Wisdom: $wisdom</p><br>";
-	echo "<p>Charisma: $charisma</p><br>";
-	echo "<p>Inspiration: $inspiration</p><br>";
-	echo "<p>Proficiency Bonus: $proficiency_bonus</p><br>";
-	echo "<p>Saving Throws: $saving_throws</p><br>";
-	echo "<p>Skills: $skills</p><br>";
-	echo "<p>Passive Wisdom: $passive_wisdom</p><br>";
-	echo "<p>Languages: $languages</p><br>";
+	//Intro
+	echo '<div id="playerinfo">';
+		echo "<p>First Name: $first_name</p>";
+		echo "<p>Last Name: $last_name</p>";
+		echo "<p>Class: $class</p>";
+		echo "<p>Level: $level</p>";
+		echo "<p>Background: $background</p>";
+		echo "<p>Player Name: $player_name</p>";
+		echo "<p>Race: $race</p>";
+		echo "<p>Alignment: $alignment</p>";
+		echo "<p>Experience: $exp</p>";
+	echo '</div>';
 	
-	echo "<p>Proficiencies: $proficiencies</p><br>";
-	echo "<p>Personality Traits: $personality_traits</p><br>";
-	echo "<p>Ideals: $ideals</p><br>";
-	echo "<p>Bonds: $bonds</p><br>";
-	echo "<p>Flaws: $flaws</p><br>";
-	echo "<p>CP: $cp</p><br>";
-	echo "<p>SP: $sp</p><br>";
-	echo "<p>EP: $ep</p><br>";
-	echo "<p>GP: $gp</p><br>";
-	echo "<p>PP: $pp</p><br>";
+	//Stats 1
+	echo '<div id="stats1">';
+		echo "<p>Armor Class: $armor_class</p>";
+		echo "<p>Initiative: $initiative</p>";
+		echo "<p>Speed: $speed</p>";
+		echo "<p>Max HP: $max_hp</p>";
+		echo "<p>Current HP: $current_hp</p>";
+		echo "<p>Hit Dice: $hit_dice</p>";
+		echo "<p>Successes: $successes</p>";
+		echo "<p>Failures: $failures</p>";
+	echo '</div>';
 	
-	echo "<p>Features: $features</p><br>";
+	//Stats 2
+	echo "<p>Strength: $strength</p>";
+	echo "<p>Dexterity: $dexterity</p>";
+	echo "<p>Constitution: $constitution</p>";
+	echo "<p>Intelligence: $intelligence</p>";
+	echo "<p>Wisdom: $wisdom</p>";
+	echo "<p>Charisma: $charisma</p>";
+	
+	echo "<p>Inspiration: $inspiration</p>";
+	echo "<p>Proficiency Bonus: $proficiency_bonus</p>";
+	echo "<p>Saving Throws: $saving_throws</p>";
+	echo "<p>Skills: $skills</p>";
+	
+	echo "<p>Passive Wisdom: $passive_wisdom</p>";
+	echo "<p>Languages: $languages</p>";
+	
+	echo "<p>Proficiencies: $proficiencies</p>";
+	echo "<p>Personality Traits: $personality_traits</p>";
+	echo "<p>Ideals: $ideals</p>";
+	echo "<p>Bonds: $bonds</p>";
+	echo "<p>Flaws: $flaws</p>";
+	echo "<p>CP: $cp</p>";
+	echo "<p>SP: $sp</p>";
+	echo "<p>EP: $ep</p>";
+	echo "<p>GP: $gp</p>";
+	echo "<p>PP: $pp</p>";
+	
+	//Page 1 End
+  	echo'
+  	</div>
+  	';
+  	
+  	//Page 2 Start
+  	echo '
+  	<div id="tabs-2">
+   ';
+   
+   //Page 2
+	echo "<p>Features: $features</p>";
 	echo "<p>Appearance:</p>";
-	echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/><br>';
-	echo "<p>Organization: $organization</p><br>";
-	echo "<p>Rank: $rank</p><br>";
-	echo "<p>Age: $age</p><br>";
-	echo "<p>Height: $height</p><br>";
-	echo "<p>Weight: $weight</p><br>";
-	echo "<p>Eyes: $eyes</p><br>";
-	echo "<p>Skin: $skin</p><br>";
-	echo "<p>Hair: $hair</p><br>";
+	echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
+	echo "<p>Organization: $organization</p>";
+	echo "<p>Rank: $rank</p>";
+	echo "<p>Age: $age</p>";
+	echo "<p>Height: $height</p>";
+	echo "<p>Weight: $weight</p>";
+	echo "<p>Eyes: $eyes</p>";
+	echo "<p>Skin: $skin</p>";
+	echo "<p>Hair: $hair</p>";
+	echo "<p>Backstory: $backstory</p>";
+   
+   //Page 2 End
+   echo '
+  	</div>
+  	';
+  	
+  	//Page 3 Start
+  	echo '
+  	<div id="tabs-3">
+	';
 	
-	echo "<p>Backstory: $backstory</p><br>";
-	echo "<p>Spell Slots: $spell_slots</p><br>";
-	echo "<p>Spellcasting Ability: $spell_casting_ability</p><br>";
-	echo "<p>Spell Save DC: $spell_save_dc</p><br>";
-	echo "<p>Spell Attack Bonus: $spell_attack_bonus</p><br>";
+	//Page 3
+	echo "<p>Spell Slots: $spell_slots</p>";
+	echo "<p>Spellcasting Ability: $spell_casting_ability</p>";
+	echo "<p>Spell Save DC: $spell_save_dc</p>";
+	echo "<p>Spell Attack Bonus: $spell_attack_bonus</p>";
+	
+	//Page 3 End	
+	echo '
+  	</div>
+  	';
+  	
+//Tab End  	
+echo '
+</div>
+';
+
 	mysqli_close($dbc);
 	
 	
@@ -182,11 +242,11 @@ else
 	}
 
 ?>
-<form action="create_chronicle.php" method="get">
+<form action="edit_character.php" method="get">
 
 			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 		
-			<input type="submit" name="submit" value="Create A Chronicle" />
+			<input type="submit" name="submit" value="Edit Character" />
 		
 </form>
 </div> <!--End of Content-->

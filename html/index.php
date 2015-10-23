@@ -5,10 +5,15 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Welcome to this Site!';
+$page_title = 'Dungeons and Dragons Fan Site';
 include ('includes/header.html');
 include ('includes/top.html');
+?>
 
+
+<div id="content">
+
+<?php
 // Welcome the user (by name if they are logged in):
 echo '<h1>Welcome';
 if (isset($_SESSION['first_name'])) {
@@ -16,8 +21,6 @@ if (isset($_SESSION['first_name'])) {
 }
 echo '!</h1>';
 ?>
-
-<div id="content">
 
 <p>This is my Dungeons and Dragons fan website.
 This website is for non-profit and is a hobby side project.
