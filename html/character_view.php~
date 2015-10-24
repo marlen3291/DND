@@ -124,12 +124,14 @@ if (isset($_SESSION['user_id'])){
   	//Page 1
 	
 	//Intro
+	
+	
+	//Some Background Info
 	echo '<div id="playerinfo">';
-		echo "<p>First Name: $first_name</p>";
-		echo "<p>Last Name: $last_name</p>";
+		echo "<p>Name: $first_name $last_name</p>";
 		echo "<p>Class: $class</p>";
 		echo "<p>Level: $level</p>";
-		echo "<p>Background: $background</p>";
+		echo "<p>Background: $background</p><br>";
 		echo "<p>Player Name: $player_name</p>";
 		echo "<p>Race: $race</p>";
 		echo "<p>Alignment: $alignment</p>";
@@ -138,6 +140,29 @@ if (isset($_SESSION['user_id'])){
 	
 	//Stats 1
 	echo '<div id="stats1">';
+		echo "<p>Strength: $strength</p>";
+		echo "<p>Dexterity: $dexterity</p>";
+		echo "<p>Constitution: $constitution</p>";
+		echo "<p>Intelligence: $intelligence</p>";
+		echo "<p>Wisdom: $wisdom</p>";
+		echo "<p>Charisma: $charisma</p>";
+	echo '</div>';
+	
+	
+	//Stats 2
+
+	echo '<div id="stats2">';
+		echo "<p>Inspiration: $inspiration</p>";
+		echo "<p>Proficiency Bonus: $proficiency_bonus</p>";
+		echo "<p>Saving Throws: $saving_throws</p>";
+		echo "<p>Skills: $skills</p>";
+		echo "<p>Passive Wisdom: $passive_wisdom</p>";
+		echo "<p>Languages: $languages</p>";
+		echo "<p>Proficiencies: $proficiencies</p>";
+	echo '</div>';
+	
+	//Stats 3
+	echo '<div id="stats3">';
 		echo "<p>Armor Class: $armor_class</p>";
 		echo "<p>Initiative: $initiative</p>";
 		echo "<p>Speed: $speed</p>";
@@ -146,35 +171,23 @@ if (isset($_SESSION['user_id'])){
 		echo "<p>Hit Dice: $hit_dice</p>";
 		echo "<p>Successes: $successes</p>";
 		echo "<p>Failures: $failures</p>";
+	echo '</div><br>';
+	
+	//Stats 4	
+	echo '<div id="stats4">';
+		echo "<p>Personality Traits: $personality_traits</p>";
+		echo "<p>Ideals: $ideals</p>";
+		echo "<p>Bonds: $bonds</p>";
+		echo "<p>Flaws: $flaws</p>";
 	echo '</div>';
 	
-	//Stats 2
-	echo "<p>Strength: $strength</p>";
-	echo "<p>Dexterity: $dexterity</p>";
-	echo "<p>Constitution: $constitution</p>";
-	echo "<p>Intelligence: $intelligence</p>";
-	echo "<p>Wisdom: $wisdom</p>";
-	echo "<p>Charisma: $charisma</p>";
-	
-	echo "<p>Inspiration: $inspiration</p>";
-	echo "<p>Proficiency Bonus: $proficiency_bonus</p>";
-	echo "<p>Saving Throws: $saving_throws</p>";
-	echo "<p>Skills: $skills</p>";
-	
-	echo "<p>Passive Wisdom: $passive_wisdom</p>";
-	echo "<p>Languages: $languages</p>";
-	
-	echo "<p>Proficiencies: $proficiencies</p>";
-	echo "<p>Personality Traits: $personality_traits</p>";
-	echo "<p>Ideals: $ideals</p>";
-	echo "<p>Bonds: $bonds</p>";
-	echo "<p>Flaws: $flaws</p>";
-	echo "<p>CP: $cp</p>";
-	echo "<p>SP: $sp</p>";
-	echo "<p>EP: $ep</p>";
-	echo "<p>GP: $gp</p>";
-	echo "<p>PP: $pp</p>";
-	
+	echo '<div id="stats5">';
+		echo "<p>CP: $cp</p>";
+		echo "<p>SP: $sp</p>";
+		echo "<p>EP: $ep</p>";
+		echo "<p>GP: $gp</p>";
+		echo "<p>PP: $pp</p>";
+	echo '</div><br><br>';
 	//Page 1 End
   	echo'
   	</div>
@@ -186,19 +199,26 @@ if (isset($_SESSION['user_id'])){
    ';
    
    //Page 2
-	echo "<p>Features: $features</p>";
-	echo "<p>Appearance:</p>";
-	echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
-	echo "<p>Organization: $organization</p>";
-	echo "<p>Rank: $rank</p>";
-	echo "<p>Age: $age</p>";
-	echo "<p>Height: $height</p>";
-	echo "<p>Weight: $weight</p>";
-	echo "<p>Eyes: $eyes</p>";
-	echo "<p>Skin: $skin</p>";
-	echo "<p>Hair: $hair</p>";
-	echo "<p>Backstory: $backstory</p>";
-   
+	echo '<div id="background1">';
+		echo "<p>Appearance:</p>";
+		echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
+	echo '</div>';
+	
+	echo '<div id="background2">';
+		echo "<p>Age: $age</p>";
+		echo "<p>Height: $height</p>";
+		echo "<p>Weight: $weight</p><br>";
+		echo "<p>Eyes: $eyes</p>";
+		echo "<p>Skin: $skin</p>";
+		echo "<p>Hair: $hair</p>";
+	
+		echo "<p>Organization: $organization</p>";
+		echo "<p>Rank: $rank</p><br>";
+	
+		echo "<p>Backstory: $backstory</p>";
+	
+		echo "<p>Features: $features</p>";
+   echo '</div><br>';
    //Page 2 End
    echo '
   	</div>

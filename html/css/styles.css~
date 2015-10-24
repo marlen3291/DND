@@ -134,12 +134,12 @@ caption     	{ background: #efefef; }
 
 /* Containers */
 
-#wrapper 			{ width: 90%; margin: 0px auto; background-color: #ffffff;overflow:hidden;}
+#wrapper 			{ width: 80%; margin: 0px auto; background-color: #ffffff;overflow:hidden;}
 
 #top	 			{ background-color: #A52A2A; width: 100%; height:80px;padding:0px 0px 20px 0px; overflow:hidden; }
 
 #logo 			{ margin: 0 0 0 10px;float:left;height:100%;width:80%; }
-#logo img		{padding:0px;height:120px;width:500px;}
+#logo img		{padding:0px;height:100px;width:500px;}
 
 #social-media	{ float:right; margin: 0px 10px 0px 0px; }
 #social-media p {color:#ffffff; font-size: 11px; margin: 4px 10px 4px 0px;   }
@@ -210,7 +210,20 @@ caption     	{ background: #efefef; }
 #character a {font:bold;font-size: 22px;color:#000000;}
 
 /Character Page View
-#playerinfo	{border-style: solid;border-color: #ff0000 #0000ff;width:10px;}
+#playerinfo{padding:20px 20px 10px 20px;border-style: solid;border-width: 1px;}
+#playerinfo p{display:inline-block;padding:0px 50px 0px 0px;}
+
+#stats1{float:left;margin:0px 0px 0px 0px;width:150px;}
+#stats2{float:left;margin:0px 0px 0px 10vw;width:200px;}
+#stats3{float:left;margin:0px 0px 0px 10vw;width:200px;}
+#stats4{float:left;margin:0px 0px 0px 0px;width:500px;}
+#stats5{float:right;margin:0px 0px 0px 0px;width:200px;}
+
+#background1{float:left;width:400px;}
+#background2{display:inline-block;width:500px;}
+#background2 p{display:inline-block;padding:0px 0px 0px 20px;}
+
+
 
 /* Layout Extra */
 

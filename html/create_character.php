@@ -29,18 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	$trimmed = array_map('trim', $_POST);
 
 // Assume invalid values:
-	$c0 = FALSE;
-	$c1 = $c2 = $c3 = $c4 = $c5 = FALSE;
-	$c6 = $c7 = $c8 = $c9 = $c10 = FALSE;
-	$c11 = $c12 = $c13 = $c14 = $c15 = FALSE;
-	$c16 = $c17 = $c18 = $c19 = $c20 = FALSE;
-	$c21 = $c22 = $c23 = $c24 = $c25 = FALSE;
-	$c26 = $c27 = $c28 = $c29 = $c30 = FALSE;
-	$c31 = $c32 = $c33 = $c34 = $c35 = FALSE;
-	$c36 = $c37 = $c38 = $c39 = $c40 = FALSE;
-	$c41 = $c42 = $c43 = $c44 = $c45 = FALSE;
-	$c46 = $c47 = $c48 = $c49 = $c50 = FALSE;
-	$c51 = $c52 = $c53 = $c54 = $c55 = FALSE;
+	$user_id = FALSE;
+	$first_name = $last_name = $class = $level = $background = FALSE;
+	$player_name = $race = $alignment = $exp = $armor_class = FALSE;
+	$initiative = $speed = $max_hp = $current_hp = $hit_dice = FALSE;
+	$successes = $failures = $death_saves = $strength = $dexterity = FALSE;
+	$constitution = $intelligence = $wisdom = $charisma = $inspiration = FALSE;
+	$proficiency_bonus = $saving_throws = $skills = $passive_wisdom = $languages = FALSE;
+	$proficiencies = $personality_traits = $ideals = $bonds = $flaws = FALSE;
+	$cp = $sp = $ep = $gp = $pp = FALSE;
+	$features = $appearance = $organization = $rank = $age = FALSE;
+	$height = $weight = $eyes = $skin = $hair = FALSE;
+	$backstory = $spell_slots = $spell_casting_ability = $spell_save_dc = $spell_attack_bonus = FALSE;
 	
 //Setting up image uploads:
 
@@ -53,70 +53,70 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	
 //Setting up variables
 
-	$c0 = $_SESSION['user_id'];	
-	$c1 = mysqli_real_escape_string ($dbc, $trimmed['first_name']);
-	$c2 = mysqli_real_escape_string ($dbc, $trimmed['last_name']);
-	$c3 = mysqli_real_escape_string ($dbc, $trimmed['class']);
-	$c4 = mysqli_real_escape_string ($dbc, $trimmed['level']);
-	$c5 = mysqli_real_escape_string ($dbc, $trimmed['background']);
-	$c6 = mysqli_real_escape_string ($dbc, $trimmed['player_name']);
-	$c7 = mysqli_real_escape_string ($dbc, $trimmed['race']);
-	$c8 = mysqli_real_escape_string ($dbc, $trimmed['alignment']);
-	$c9 = mysqli_real_escape_string ($dbc, $trimmed['exp']);
-	$c10 = mysqli_real_escape_string ($dbc, $trimmed['armor_class']);
+	$user_id = $_SESSION['user_id'];	
+	$first_name = mysqli_real_escape_string ($dbc, $trimmed['first_name']);
+	$last_name = mysqli_real_escape_string ($dbc, $trimmed['last_name']);
+	$class = mysqli_real_escape_string ($dbc, $trimmed['class']);
+	$level = mysqli_real_escape_string ($dbc, $trimmed['level']);
+	$background = mysqli_real_escape_string ($dbc, $trimmed['background']);
+	$player_name = mysqli_real_escape_string ($dbc, $trimmed['player_name']);
+	$race = mysqli_real_escape_string ($dbc, $trimmed['race']);
+	$alignment = mysqli_real_escape_string ($dbc, $trimmed['alignment']);
+	$exp = mysqli_real_escape_string ($dbc, $trimmed['exp']);
+	$armor_class = mysqli_real_escape_string ($dbc, $trimmed['armor_class']);
 	
-	$c11 = mysqli_real_escape_string ($dbc, $trimmed['initiative']);
-	$c12 = mysqli_real_escape_string ($dbc, $trimmed['speed']);
-	$c13 = mysqli_real_escape_string ($dbc, $trimmed['max_hp']);
-	$c14 = mysqli_real_escape_string ($dbc, $trimmed['current_hp']);
-	$c15 = mysqli_real_escape_string ($dbc, $trimmed['hit_dice']);
-	$c16 = mysqli_real_escape_string ($dbc, $trimmed['successes']);
-	$c17 = mysqli_real_escape_string ($dbc, $trimmed['failures']);
-	$c18 = mysqli_real_escape_string ($dbc, $trimmed['death_saves']);
-	$c19 = mysqli_real_escape_string ($dbc, $trimmed['strength']);
-	$c20 = mysqli_real_escape_string ($dbc, $trimmed['dexterity']);
+	$initiative = mysqli_real_escape_string ($dbc, $trimmed['initiative']);
+	$speed = mysqli_real_escape_string ($dbc, $trimmed['speed']);
+	$max_hp = mysqli_real_escape_string ($dbc, $trimmed['max_hp']);
+	$current_hp = mysqli_real_escape_string ($dbc, $trimmed['current_hp']);
+	$hit_dice = mysqli_real_escape_string ($dbc, $trimmed['hit_dice']);
+	$successes = mysqli_real_escape_string ($dbc, $trimmed['successes']);
+	$failures = mysqli_real_escape_string ($dbc, $trimmed['failures']);
+	$death_saves = mysqli_real_escape_string ($dbc, $trimmed['death_saves']);
+	$strength = mysqli_real_escape_string ($dbc, $trimmed['strength']);
+	$dexterity = mysqli_real_escape_string ($dbc, $trimmed['dexterity']);
 	
-	$c21 = mysqli_real_escape_string ($dbc, $trimmed['constitution']);
-	$c22 = mysqli_real_escape_string ($dbc, $trimmed['intelligence']);
-	$c23 = mysqli_real_escape_string ($dbc, $trimmed['wisdom']);
-	$c24 = mysqli_real_escape_string ($dbc, $trimmed['charisma']);
-	$c25 = mysqli_real_escape_string ($dbc, $trimmed['inspiration']);
-	$c26 = mysqli_real_escape_string ($dbc, $trimmed['proficiency_bonus']);
-	$c27 = mysqli_real_escape_string ($dbc, $trimmed['saving_throws']);
-	$c28 = mysqli_real_escape_string ($dbc, $trimmed['skills']);
-	$c29 = mysqli_real_escape_string ($dbc, $trimmed['passive_wisdom']);
-	$c30 = mysqli_real_escape_string ($dbc, $trimmed['languages']);
+	$constitution = mysqli_real_escape_string ($dbc, $trimmed['constitution']);
+	$intelligence = mysqli_real_escape_string ($dbc, $trimmed['intelligence']);
+	$wisdom = mysqli_real_escape_string ($dbc, $trimmed['wisdom']);
+	$charisma = mysqli_real_escape_string ($dbc, $trimmed['charisma']);
+	$inspiration = mysqli_real_escape_string ($dbc, $trimmed['inspiration']);
+	$proficiency_bonus = mysqli_real_escape_string ($dbc, $trimmed['proficiency_bonus']);
+	$saving_throws = mysqli_real_escape_string ($dbc, $trimmed['saving_throws']);
+	$skills = mysqli_real_escape_string ($dbc, $trimmed['skills']);
+	$passive_wisdom = mysqli_real_escape_string ($dbc, $trimmed['passive_wisdom']);
+	$languages = mysqli_real_escape_string ($dbc, $trimmed['languages']);
 	
-	$c31 = mysqli_real_escape_string ($dbc, $trimmed['proficiencies']);
-	$c32 = mysqli_real_escape_string ($dbc, $trimmed['personality_traits']);
-	$c33 = mysqli_real_escape_string ($dbc, $trimmed['ideals']);
-	$c34 = mysqli_real_escape_string ($dbc, $trimmed['bonds']);
-	$c35 = mysqli_real_escape_string ($dbc, $trimmed['flaws']);
-	$c36 = mysqli_real_escape_string ($dbc, $trimmed['cp']);
-	$c37 = mysqli_real_escape_string ($dbc, $trimmed['sp']);
-	$c38 = mysqli_real_escape_string ($dbc, $trimmed['ep']);
-	$c39 = mysqli_real_escape_string ($dbc, $trimmed['gp']);
-	$c40 = mysqli_real_escape_string ($dbc, $trimmed['pp']);
+	$proficiencies = mysqli_real_escape_string ($dbc, $trimmed['proficiencies']);
+	$personality_traits = mysqli_real_escape_string ($dbc, $trimmed['personality_traits']);
+	$ideals = mysqli_real_escape_string ($dbc, $trimmed['ideals']);
+	$bonds = mysqli_real_escape_string ($dbc, $trimmed['bonds']);
+	$flaws = mysqli_real_escape_string ($dbc, $trimmed['flaws']);
+	$cp = mysqli_real_escape_string ($dbc, $trimmed['cp']);
+	$sp = mysqli_real_escape_string ($dbc, $trimmed['sp']);
+	$ep = mysqli_real_escape_string ($dbc, $trimmed['ep']);
+	$gp = mysqli_real_escape_string ($dbc, $trimmed['gp']);
+	$pp = mysqli_real_escape_string ($dbc, $trimmed['pp']);
 	
-	$c41 = mysqli_real_escape_string ($dbc, $trimmed['features']);
-	$c42 = $appearance;
-	
-	
-	$c43 = mysqli_real_escape_string ($dbc, $trimmed['organization']);
-	$c44 = mysqli_real_escape_string ($dbc, $trimmed['rank']);
-	$c45 = mysqli_real_escape_string ($dbc, $trimmed['age']);
-	$c46 = mysqli_real_escape_string ($dbc, $trimmed['height']);
-	$c47 = mysqli_real_escape_string ($dbc, $trimmed['weight']);
-	$c48 = mysqli_real_escape_string ($dbc, $trimmed['eyes']);
-	$c49 = mysqli_real_escape_string ($dbc, $trimmed['skin']);
-	$c50 = mysqli_real_escape_string ($dbc, $trimmed['hair']);
+	$features = mysqli_real_escape_string ($dbc, $trimmed['features']);
+	$appearance = $appearance;
 	
 	
-	$c51 = mysqli_real_escape_string ($dbc, $trimmed['backstory']);
-	$c52 = mysqli_real_escape_string ($dbc, $trimmed['spell_slots']);
-	$c53 = mysqli_real_escape_string ($dbc, $trimmed['spell_casting_ability']);
-	$c54 = mysqli_real_escape_string ($dbc, $trimmed['spell_save_dc']);
-	$c55 = mysqli_real_escape_string ($dbc, $trimmed['spell_attack_bonus']);
+	$organization = mysqli_real_escape_string ($dbc, $trimmed['organization']);
+	$rank = mysqli_real_escape_string ($dbc, $trimmed['rank']);
+	$age = mysqli_real_escape_string ($dbc, $trimmed['age']);
+	$height = mysqli_real_escape_string ($dbc, $trimmed['height']);
+	$weight = mysqli_real_escape_string ($dbc, $trimmed['weight']);
+	$eyes = mysqli_real_escape_string ($dbc, $trimmed['eyes']);
+	$skin = mysqli_real_escape_string ($dbc, $trimmed['skin']);
+	$hair = mysqli_real_escape_string ($dbc, $trimmed['hair']);
+	
+	
+	$backstory = mysqli_real_escape_string ($dbc, $trimmed['backstory']);
+	$spell_slots = mysqli_real_escape_string ($dbc, $trimmed['spell_slots']);
+	$spell_casting_ability = mysqli_real_escape_string ($dbc, $trimmed['spell_casting_ability']);
+	$spell_save_dc = mysqli_real_escape_string ($dbc, $trimmed['spell_save_dc']);
+	$spell_attack_bonus = mysqli_real_escape_string ($dbc, $trimmed['spell_attack_bonus']);
 	
 	 
 	 // Add a new character to the database
@@ -133,12 +133,12 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	) 
 	
 	VALUES (
-	'$c0','$c1', '$c2', '$c3', '$c4', '$c5','$c6', '$c7', '$c8', '$c9', '$c10',
-	'$c11', '$c12', '$c13', '$c14', '$c15','$c16', '$c17', '$c18', '$c19', '$c20',
-	'$c21', '$c22', '$c23', '$c24', '$c25','$c26', '$c27', '$c28', '$c29', '$c30',
-	'$c31', '$c32', '$c33', '$c34', '$c35','$c36', '$c37', '$c38', '$c39', '$c40',
-	'$c41', '$c42','$c43', '$c44', '$c45','$c46', '$c47', '$c48', '$c49', '$c50',
-	'$c51', '$c52', '$c53', '$c54', '$c55'
+	'$user_id','$first_name', '$last_name', '$class', '$level', '$background','$player_name', '$race', '$alignment', '$exp', '$armor_class',
+	'$initiative', '$speed', '$max_hp', '$current_hp', '$hit_dice','$successes', '$failures', '$death_saves', '$strength', '$dexterity',
+	'$constitution', '$intelligence', '$wisdom', '$charisma', '$inspiration','$proficiency_bonus', '$saving_throws', '$skills', '$passive_wisdom', '$languages',
+	'$proficiencies', '$personality_traits', '$ideals', '$bonds', '$flaws','$cp', '$sp', '$ep', '$gp', '$pp',
+	'$features', '$appearance','$organization', '$rank', '$age','$height', '$weight', '$eyes', '$skin', '$hair',
+	'$backstory', '$spell_slots', '$spell_casting_ability', '$spell_save_dc', '$spell_attack_bonus'
 	)";
 	 
 	$t = mysqli_query ($dbc, $s) or trigger_error("Query: $s\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -149,6 +149,11 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 				
 				// Finish the page:
 				echo '<h3>It worked!</h3>';
+				$url = BASE_URL . 'view_character.php';
+	
+				ob_end_clean();
+				header("Location: $url");
+				exit();
 			
 				
 			} else { // If it did not run OK.
@@ -157,6 +162,7 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	}
 	
 mysqli_close($dbc);
+
 
 } // End of the main Submit conditional.
 
@@ -174,10 +180,17 @@ else
 
 <h1>Forge A Character</h1>
 <form action="create_character.php" method="post" enctype="multipart/form-data">
+<fieldset>
+	<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Character Main Stats</a></li>
+    <li><a href="#tabs-2">Features and Backstory</a></li>
+    <li><a href="#tabs-3">Spellcasting</a></li>
+  </ul>
+  <div id="tabs-1">
 
-	<fieldset>
-	
-	<p><b>Character First Name:</b> <input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>" /></p>
+
+		<p><b>Character First Name:</b> <input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>" /></p>
 	
 	<p><b>Character Last Name:</b> <input type="text" name="last_name" size="20" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>" /></p>
 
@@ -281,7 +294,10 @@ else
 	
 	<p><b>PP:</b> <input type="text" name="pp" size="20" maxlength="40" value="<?php if (isset($trimmed['pp'])) echo $trimmed['pp']; ?>" /></p>
 	
-<!--	<p><b>Features:</b> <input type="text" name="features" size="20" maxlength="40" value="<?php if (isset($trimmed['features'])) echo $trimmed['features']; ?>" /></p>
+  </div>
+  <div id="tabs-2">
+	
+	<!--	<p><b>Features:</b> <input type="text" name="features" size="20" maxlength="40" value="<?php if (isset($trimmed['features'])) echo $trimmed['features']; ?>" /></p>
 -->	
 	<p><b>Features:</b></p><textarea rows="10" cols="100" name="features" value="<?php if (isset($trimmed['features'])) echo $trimmed['features']; ?>" />
 	</textarea>
@@ -308,6 +324,11 @@ else
 -->	
 	<p><b>Backstory:</b></p><textarea rows="10" cols="100" name="backstory" value="<?php if (isset($trimmed['backstory'])) echo $trimmed['backstory']; ?>" />
 	</textarea>
+	
+  </div>
+  
+  <div id="tabs-3">
+
 	<p><b>Spell Slots:</b> <input type="text" name="spell_slots" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_slots'])) echo $trimmed['spell_slots']; ?>" /></p>
 	
 	<p><b>Spellcasting Ability:</b> <input type="text" name="spell_casting_ability" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_casting_ability'])) echo $trimmed['spell_casting_ability']; ?>" /></p>
@@ -315,6 +336,10 @@ else
 	<p><b>Spell Save DC:</b> <input type="text" name="spell_save_dc" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_save_dc'])) echo $trimmed['spell_save_dc']; ?>" /></p>
 	
 	<p><b>Spell Attack Bonus:</b> <input type="text" name="spell_attack_bonus" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_attack_bonus'])) echo $trimmed['spell_attack_bonus']; ?>" /></p>
+	
+
+  </div>
+</div>
 	
 	</fieldset>
 	<input type="submit" name="submit" value="Forge Character" />
