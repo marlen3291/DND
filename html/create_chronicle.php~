@@ -52,6 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 				// Finish the page:
 				echo '<h3>It worked!</h3>';
 			
+				$url = BASE_URL . 'character_view.php?character_id='	. $character_id;
+	
+				ob_end_clean();
+				header("Location: $url");
+				exit();
 				
 			} else { // If it did not run OK.
 				echo '<p class="error">A chronicle could not be made</p>';
@@ -79,9 +84,11 @@ else
 	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
-<textarea rows="10" cols="100" name="description" form="chronicleform">
+<textarea rows="30" cols="100" name="description" form="chronicleform">
 Enter log entry here...
 </textarea>
+
+<br>
 
 <input type="submit" name="submit" value="Create a chronicle" />
 </form>

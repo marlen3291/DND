@@ -36,7 +36,7 @@ include ('includes/top.html');
 	while($row = mysqli_fetch_array($r))
 	{
 		
-	$pell_name = $row["spell_name"];
+	$spell_name = $row["spell_name"];
 	$spell_description = $row["spell_description"];
 	$spell_level = $row["spell_level"];
 	$casting_time = $row["casting_time"];
@@ -54,6 +54,16 @@ include ('includes/top.html');
 	echo '<p>Range: '	.	$spell_range	.	'</p>';
 	echo '<p>Components: '	.	$components	.	'</p>';
 	echo '<p>Duration: '	.	$duration	.'</p>';
+	
+	echo '<br>';
+	
+	echo '<form action="edit_spell.php" method="get">
+
+			<input type="hidden" name="spell_id" value="<?php echo $spell_id ?>">
+		
+			<input type="submit" name="submit" value="Edit Spell" />
+		
+			</form>'	;
 	}
 	
 	else

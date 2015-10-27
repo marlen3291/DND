@@ -49,7 +49,6 @@ echo "<h1>View Characters</h1>";
 	echo "<th>Last Name</th>";
 	echo "<th>Class</th>";
 	echo "<th></th>";
-	echo "<th></th>";
 	
 	echo "</tr>";
 	
@@ -73,26 +72,9 @@ echo "<h1>View Characters</h1>";
 		
 		"<td>
 		
-			<form action=\"character_view.php\" method=\"post\">
-			<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
-		
-			<input type=\"submit\" name=\"submit\" value=\"View Character\" />
-		
-			</form>
+			<button><a href='character_view.php?character_id=$character_id'>View Character</a> </button>
 		</td>";
-		
-		echo 
-		
-		"<td>
-				<form action=\"chronicle_view.php\" method=\"post\">
-					<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
-		
-					<input type=\"submit\" name=\"submit\" value=\"View Chronicles\" />
-		
-				</form>
-		</td>";
-		
-			
+				
 		
 	echo "</tr>";
 	

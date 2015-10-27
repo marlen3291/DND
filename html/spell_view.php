@@ -54,6 +54,16 @@ include ('includes/top.html');
 	echo '<p>Range: '	.	$spell_range	.	'</p>';
 	echo '<p>Components: '	.	$components	.	'</p>';
 	echo '<p>Duration: '	.	$duration	.'</p>';
+	
+	echo '<br>';
+	
+	echo '<form action="edit_spell.php" method="get">
+
+			<input type="hidden" name="spell_id" value='	.	$spell_id	. '>
+		
+			<input type="submit" name="submit" value="Edit Spell" />
+		
+			</form>'	;
 	}
 	
 	else

@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Edit Character';
 include ('includes/header.html');
 include ('includes/top.html');
 
@@ -296,7 +296,11 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 		
 				// Finish the page:
 				echo '<h3>It worked!</h3>';
-			
+				$url = BASE_URL . 'character_view.php?character_id='. $character_id;
+	
+				ob_end_clean();
+				header("Location: $url");
+				exit();
 				
 		}
 		 
@@ -310,7 +314,7 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	
 	mysqli_close($dbc);
 	
-	$url = BASE_URL . 'view_character.php';
+	$url = BASE_URL . 'character_view.php?character_id='. $character_id;
 	
 	ob_end_clean();
 	header("Location: $url");

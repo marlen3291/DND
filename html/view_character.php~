@@ -73,23 +73,13 @@ echo "<h1>View Characters</h1>";
 		
 		"<td>
 		
-			<form action=\"character_view.php\" method=\"post\">
-			<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
-		
-			<button type=\"button\"><input type=\"submit\" name=\"submit\" value=\"View Character\" /></button>
-		
-			</form>
+			<button><a href='character_view.php?character_id=$character_id'>View Character</a> </button>
 		</td>";
 		
 		echo 
 		
 		"<td>
-				<form action=\"chronicle_view.php\" method=\"post\">
-					<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
-		
-					<button type=\"button\"><input type=\"submit\" name=\"submit\" value=\"View Chronicles\" /></button>
-		
-				</form>
+				<button><a href='chronicle_view.php?character_id=$character_id'>View Chronicle</a> </button>
 		</td>";
 		
 			

@@ -97,11 +97,11 @@ else
 Enter log entry here...
 </textarea>
 
-<p><b>Spell Level:</b> <input type="text" name="spell_level" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_level'])) echo $trimmed['spell_level']; ?>" /></p>
-<p><b>Casting Time:</b> <input type="text" name="casting_time" size="20" maxlength="40" value="<?php if (isset($trimmed['casting_time'])) echo $trimmed['casting_time']; ?>" /></p>
-<p><b>Spell_Range:</b> <input type="text" name="spell_range" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_range'])) echo $trimmed['spell_range']; ?>" /></p>
-<p><b>Components:</b> <input type="text" name="components" size="20" maxlength="40" value="<?php if (isset($trimmed['components'])) echo $trimmed['components']; ?>" /></p>
-<p><b>Duration:</b> <input type="text" name="duration" size="20" maxlength="40" value="<?php if (isset($trimmed['duration'])) echo $trimmed['duration']; ?>" /></p>
+<p><b>Spell Level:</b> <input type="text" name="spell_level" value="<?php if (isset($trimmed['spell_level'])) echo $trimmed['spell_level']; ?>" /></p>
+<p><b>Casting Time:</b> <input type="text" name="casting_time"  value="<?php if (isset($trimmed['casting_time'])) echo $trimmed['casting_time']; ?>" /></p>
+<p><b>Spell_Range:</b> <input type="text" name="spell_range" value="<?php if (isset($trimmed['spell_range'])) echo $trimmed['spell_range']; ?>" /></p>
+<p><b>Components:</b> <input type="text" name="components" value="<?php if (isset($trimmed['components'])) echo $trimmed['components']; ?>" /></p>
+<p><b>Duration:</b> <input type="text" name="duration" value="<?php if (isset($trimmed['duration'])) echo $trimmed['duration']; ?>" /></p>
 
 <input type="submit" name="submit" value="Acquire Spell" />
 </form>

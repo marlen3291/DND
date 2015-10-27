@@ -49,7 +49,7 @@ if (isset($_SESSION['user_id'])){
 	
 	while($row = mysqli_fetch_array($r))
 	{
-		
+	$chronicle_id = $row["chronicle_id"];
 	$chronicle_name = $row["chronicle_name"];
 	$date = $row["date"];
 	$description = $row["description"];

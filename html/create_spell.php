@@ -59,7 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 				
 				// Finish the page:
 				echo '<h3>It worked!</h3>';
-			
+				$url = BASE_URL . 'character_view.php?character_id='	. $character_id;
+	
+				ob_end_clean();
+				header("Location: $url");
+				exit();
 				
 			} else { // If it did not run OK.
 			

@@ -16,16 +16,16 @@ include ('includes/top.html');
 
 if (isset($_SESSION['user_id'])){
 	
-	if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
+	if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 
 	// Need the database connection:
 	require (MYSQL);
 	
 	// Trim all the incoming data:
-	$trimmed = array_map('trim', $_POST);
+	$trimmed = array_map('trim', $_GET);
 	
 	
-	$character_id = $_POST['character_id'];
+	$character_id = $_GET['character_id'];
 	
 	//Select everything from characters
 	$q = "SELECT * FROM characters WHERE character_id=$character_id";
@@ -110,8 +110,10 @@ if (isset($_SESSION['user_id'])){
 <div id="tabs">
   	<ul>
     	<li><a href="#tabs-1">Character Main Stats </a></li>
-    	<li><a href="#tabs-2">Background and Features</a></li>
-    	<li><a href="#tabs-3">Spellcasting</a></li>
+    	<li><a href="#tabs-2">Inventory </a></li>
+    	<li><a href="#tabs-3">Background and Features</a></li>
+    	<li><a href="#tabs-4">Spellcasting</a></li>
+    	<li><a href="#tabs-5">Chronicles</a></li>
   	</ul>
   	
   	';
@@ -181,13 +183,8 @@ if (isset($_SESSION['user_id'])){
 		echo "<p><u>Flaws</u>: $flaws</p>";
 	echo '</div>';
 	
-	echo '<div id="stats5">';
-		echo "<p><u>CP</u>: $cp</p>";
-		echo "<p><u>SP</u>: $sp</p>";
-		echo "<p><u>EP</u>: $ep</p>";
-		echo "<p><u>GP</u>: $gp</p>";
-		echo "<p><u>PP</u>: $pp</p>";
-	echo '</div><br><br>';
+	echo '<br>';
+	
 	//Page 1 End
   	echo'
   	</div>
@@ -199,6 +196,24 @@ if (isset($_SESSION['user_id'])){
    ';
    
    //Page 2
+	echo '<div id="money_info">';
+		echo "<p><u>CP</u>: $cp</p>";
+		echo "<p><u>SP</u>: $sp</p>";
+		echo "<p><u>EP</u>: $ep</p>";
+		echo "<p><u>GP</u>: $gp</p>";
+		echo "<p><u>PP</u>: $pp</p>";
+	echo '</div><br><br>';
+   //Page 2 End
+   echo '
+  	</div>
+  	';
+  	
+  	//Page 3 Start
+  	echo '
+  	<div id="tabs-3">
+   ';
+   
+   //Page 3
 	echo '<div id="background1">';
 		echo "<p><u>Appearance</u>:</p>";
 		echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
@@ -219,17 +234,17 @@ if (isset($_SESSION['user_id'])){
 	
 		echo "<p><u>Features</u>: $features</p><br>";
    echo '</div><br>';
-   //Page 2 End
+   //Page 3 End
    echo '
   	</div>
   	';
   	
-  	//Page 3 Start
+  	//Page 4 Start
   	echo '
-  	<div id="tabs-3">
+  	<div id="tabs-4">
 	';
 	
-	//Page 3
+	//Page 4
 	echo '<div id="spell_info">';
 		echo "<p><u>Spell Slots</u>: $spell_slots</p>";
 		echo "<p><u>Spellcasting Ability</u>: $spell_casting_ability</p>";
@@ -590,11 +605,77 @@ if (isset($_SESSION['user_id'])){
 		
 			</form><br>';
 	
-	//Page 3 End	
+	//Page 4 End	
 	echo '
   	</div>
   	';
   	
+  	//Page 5 Start
+  	echo '
+  	<div id="tabs-5">
+   ';
+   
+   //Page 5
+	//Select everything from characters
+	$c = "SELECT * FROM chronicles WHERE character_id=$character_id";
+	
+	
+	$d = mysqli_query ($dbc, $c) or trigger_error("Query: $c\n<br />MySQL Error: " . mysqli_error($dbc));
+	
+	echo "<table>";
+	echo "<tbody>";
+	echo "<tr>";
+	
+	
+	echo "<th>Chronicle Name</th>";
+	echo "<th>Date</th>";
+	echo "<th>Description</th>";
+	echo "<th></th>";
+	
+	echo "</tr>";
+	
+	while($row = mysqli_fetch_array($d))
+	{
+	$chronicle_id = $row["chronicle_id"];
+	$chronicle_name = $row["chronicle_name"];
+	$date = $row["date"];
+	$description = $row["description"];
+	
+		
+	echo "<tr>";
+
+		echo "<td>" .	$chronicle_name	.	"</td>"	;
+		echo "<td>" .	$date	.	"</td>"	;
+		echo "<td>" .	$description.	"</td>"	;
+		
+		echo
+		"<td>
+				<form action=\"edit_chronicle.php\" method=\"get\">
+					<input type=\"hidden\" name=\"chronicle_id\" value=\"$chronicle_id\">
+		
+					<input type=\"submit\" name=\"submit\" value=\"Edit Chronicle\" />
+		
+				</form>
+		</td>";
+		
+	}
+	echo "</tbody>";
+	echo "</table>";
+	
+	echo ' 
+	
+		<form action="create_chronicle.php" method="get">
+
+				<input type="hidden" name="character_id" value='	.	$character_id . '>
+		
+				<input type="submit" name="submit" value="Create A Chronicle" />
+		
+		</form>
+	';
+   //Page 5 End
+   echo '
+  	</div>
+  	';
 //Tab End  	
 echo '
 </div>
