@@ -23,7 +23,7 @@
 		
 		<div id="topnav">
 		
-			<ul>
+			<ul id="menu">
 					
 					<li><a href="index.php" >Welcome </a></li>			
 					<li><a href="lore.php" >Lore </a></li>
@@ -46,10 +46,13 @@
 					else { 
 					//  Not logged in.
 					echo '	
-							
-							<li><a href="login.php" >Log In</a></li>
-							<li><a href="register.php" >Register</a></li>
-							<li><a href="forgot_password.php">Retrieve Password</a></li>
+							<li><a>Account</a>
+								<ul>
+									<li><a href="login.php" class="droplink">Log In</a></li>
+									<li><a href="register.php" class="droplink">Register</a></li>
+									<li><a href="forgot_password.php" class="droplink">Retrieve Password</a></li>
+								</ul>
+							</li>
 			
 					';
 					}
@@ -157,7 +160,7 @@
         <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;">
         </span>
         <!-- Arrow Right -->
-        <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;">
+        <span u="arrowright" class="jssora21r" style="top: 123px; right: 400px;">
         </span>
         <!--#endregion Arrow Navigator Skin End -->
         <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>

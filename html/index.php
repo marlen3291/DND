@@ -29,5 +29,7 @@ profiles to keep online. Users can also create journal log entries of
 their character.
 </p>
 
+
+
 </div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

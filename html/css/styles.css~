@@ -112,7 +112,7 @@ dd          	{ 	}
 
 /* Tables */
 
-table       	{ width:100%;border-spacing: 4px;border: 1px solid black; }
+table       	{ width:100%;border-spacing: 4px;border: 1px solid black;}
 
 tr				{	border: 1px solid black;}
 .odd			{ background-color:#eee; }
@@ -147,10 +147,12 @@ caption     	{ background: #efefef; }
 #social-media ul li {display:inline;}
 
 #topnav 			{ background-color: #333333; clear: both;  }
-#topnav ul		{width:100%; float:left; margin:0px; background-color:#333333; border-bottom: 3px #cccccc solid;}
+#topnav ul		{width:100%; float:left; margin:0px; background-color:#333333; }
 #topnav ul li  { display:inline;}
 #topnav ul li a { float:left; padding:10px 20px; font-size:20px;}
+#topnav ul li a.droplink{width:100px; }
 
+#topnav a{color:#ffffff;background-color: #333333;}
 #topnav a:link {color:#ffffff;}
 #topnav a:visited {color:#ffffff;}
 #topnav a:active {color:#000000;}
@@ -205,12 +207,12 @@ caption     	{ background: #efefef; }
 
 #box6 {   }
 
-/Character List
+/*Character List*/
 #character {}
 #character a {font:bold;font-size: 22px;color:#000000;}
 
-/Character Page View
-#playerinfo{padding:20px 20px 10px 20px;border-style: solid;border-width: 1px;}
+/*Character Page View*/
+#playerinfo{padding:20px 20px 10px 20px;}
 #playerinfo p{display:inline-block;padding:0px 50px 0px 0px;}
 
 #stats1{float:left;margin:0px 0px 0px 0px;width:150px;}
@@ -219,7 +221,15 @@ caption     	{ background: #efefef; }
 #stats4{float:left;margin:0px 0px 0px 0px;width:500px;}
 #stats5{float:right;margin:0px 0px 0px 0px;width:200px;}
 
-#background1{float:left;width:400px;}
+/*SpellPage*/
+#spell_info{}
+#spell_info p{display:inline-block;padding:0px 50px 0px 0px;}
+table.spell_table{width:100px;display:inline-block;border: 0px solid black;}
+tbody.spell_table{width:100px;}
+th.spell_table{width:100px;}
+tr.spell_table{width:100px;}
+
+#background1{float:left;width:350px;}
 #background2{display:inline-block;width:500px;}
 #background2 p{display:inline-block;padding:0px 0px 0px 20px;}
 
@@ -249,13 +259,15 @@ submit	{ background:none; 	}
 
 input 	{ 
 		width: 140px; margin:0 0 16px 10px;
-		border:1px #bbb solid; padding:5px; background:none; 
+		border:1px #bbb solid; padding:5px;  
 		}
+		
+input[type=submit] {cursor:pointer;}
 		
 input:focus, textarea:focus	{ background-color:#BFEBFF; }
 
 textarea {
-		width: 280px; height: 150px; margin:0 0 16px 10px;
+	   margin:0 0 16px 10px;
 		border:1px #bbb solid; padding:5px; background:none; 
 		}
 

@@ -135,6 +135,15 @@ if (!isset($page_title)) {
         
     </script>
     
+    <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+   <style>
+  .ui-menu { width: 150px; }
+  </style>
+    
     <!--Tabs-->
     
     <!--
@@ -151,13 +160,24 @@ if (!isset($page_title)) {
 	-->
 	
 	<link href="css/jquery-ui.css" rel="stylesheet">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
  	 
+
+  
+  <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+ 
  	 
  	 <script>
   	 	$(function() {
     	$( "#tabs" ).tabs();
   		});
   	 </script>
+  	 
     
 	<title><?php echo $page_title; ?></title>
 	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">

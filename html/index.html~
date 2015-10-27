@@ -18,39 +18,13 @@
 <!-- End of Content -->
 
 </div>
-<ul id="menu">
-  <li class="ui-state-disabled">Aberdeen</li>
-  <li>Ada</li>
-  <li>Adamsville</li>
-  <li>Addyston</li>
-  <li>Delphi
-    <ul>
-      <li class="ui-state-disabled">Ada</li>
-      <li>Saarland</li>
-      <li>Salzburg an der schönen Donau</li>
-    </ul>
-  </li>
-  <li>Saarland</li>
-  <li>Salzburg
-    <ul>
-      <li>Delphi
-        <ul>
-          <li>Ada</li>
-          <li>Saarland</li>
-          <li>Salzburg</li>
-        </ul>
-      </li>
-      <li>Delphi
-        <ul>
-          <li>Ada</li>
-          <li>Saarland</li>
-          <li>Salzburg</li>
-        </ul>
-      </li>
-      <li>Perch</li>
-    </ul>
-  </li>
-  <li class="ui-state-disabled">Amesville</li>
-</ul>
+<div id="Menu">
+	<a href="index.php" title="Home Page">Home</a><br />
+	<a href="register.php" title="Register for the Site">Register</a><br />
+	<a href="login.php" title="Login/Logout">Login/Logout</a><br />
+	<a href="change_password.php" title="Password Links">Password Links</a><br />
+	<a href="" title="">Some Page</a><br />
+	<a href="" title="">Another Page</a><br />
+</div>
 </body>
 </html>

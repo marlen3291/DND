@@ -79,9 +79,11 @@ else
 	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
-<textarea rows="10" cols="100" name="description" form="chronicleform">
+<textarea rows="30" cols="100" name="description" form="chronicleform">
 Enter log entry here...
 </textarea>
+
+<br>
 
 <input type="submit" name="submit" value="Create a chronicle" />
 </form>

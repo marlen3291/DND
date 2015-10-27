@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	
 	
 	$chronicle_id = $_GET['chronicle_id'];
+	echo $chronicle_id;
 	
 	//Select everything from characters
 	$q = "SELECT * FROM chronicles WHERE chronicle_id='$chronicle_id'";
@@ -100,10 +101,10 @@ else
 	<input type="hidden" name="chronicle_id" value="<?php echo $chronicle_id; ?>">
 <br>
 
-<textarea rows="10" cols="100" name="description" form="chronicleform">
+<textarea rows="30" cols="100" name="description" form="chronicleform">
 <?php echo $description; ?>
 </textarea>
-
+<br>
 <input type="submit" name="submit" value="Edit Chronicle" />
 </form>
 

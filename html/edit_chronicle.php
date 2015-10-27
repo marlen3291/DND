@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Welcome to this Site!';
+$page_title = 'Dungeons and Dragons Fan Site';
 include ('includes/header.html');
 include ('includes/top.html');
 
@@ -101,10 +101,10 @@ else
 	<input type="hidden" name="chronicle_id" value="<?php echo $chronicle_id; ?>">
 <br>
 
-<textarea rows="10" cols="100" name="description" form="chronicleform">
+<textarea rows="30" cols="100" name="description" form="chronicleform">
 <?php echo $description; ?>
 </textarea>
-
+<br>
 <input type="submit" name="submit" value="Edit Chronicle" />
 </form>
 

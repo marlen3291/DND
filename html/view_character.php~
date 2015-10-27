@@ -76,7 +76,7 @@ echo "<h1>View Characters</h1>";
 			<form action=\"character_view.php\" method=\"post\">
 			<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
 		
-			<input type=\"submit\" name=\"submit\" value=\"View Character\" />
+			<button type=\"button\"><input type=\"submit\" name=\"submit\" value=\"View Character\" /></button>
 		
 			</form>
 		</td>";
@@ -87,21 +87,10 @@ echo "<h1>View Characters</h1>";
 				<form action=\"chronicle_view.php\" method=\"post\">
 					<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
 		
-					<input type=\"submit\" name=\"submit\" value=\"View Chronicles\" />
+					<button type=\"button\"><input type=\"submit\" name=\"submit\" value=\"View Chronicles\" /></button>
 		
 				</form>
 		</td>";
-		
-		"<td>
-				<form action=\"chronicle_view.php\" method=\"post\">
-					<input type=\"hidden\" name=\"character_id\" value=\"$character_id\">
-		
-					<input type=\"submit\" name=\"submit\" value=\"View Chronicles\" />
-		
-				</form>
-		</td>";
-		
-		
 		
 			
 		

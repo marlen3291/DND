@@ -353,13 +353,14 @@ else
 	
 	<p><b>Level:</b> <input type="text" name="level" size="20" maxlength="40" value="<?php echo $level; ?>" /></p>
 	
-<!--	<p><b>Background:</b> <input type="text" name="background" size="20" maxlength="20" value="<?php if (isset($trimmed['background'])) echo $trimmed['background']; ?>" /></p>
--->
+	<p><b>Background:</b> <input type="text" name="background" size="20" maxlength="20" value="<?php if (isset($trimmed['background'])) echo $trimmed['background']; ?>" /></p>
 
+	<!--
 	<p><b>Background:</b></p><textarea rows="10" cols="100" name="background" />
 	<?php echo $background; ?>
 	</textarea>	
-
+	-->
+	
 	<p><b>Player Name</b> <input type="text" name="player_name" size="20" maxlength="40" value="<?php echo $player_name; ?>" /></p>
 	
 	<p><b>Race</b> <input type="text" name="race" size="20" maxlength="20" value="<?php echo $race; ?>" /></p>
