@@ -118,7 +118,7 @@ else
   
   	<p><b>Spell Name:</b> <input type="text" name="spell_name" size="20" maxlength="40" value="<?php echo $spell_name; ?>" /></p>
 	<input type="hidden" name="spell_id" value="<?php echo $spell_id ?>">
-	<input type="hidden" name="character" value="<?php echo $character_id ?>">
+	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
 <textarea rows="30" cols="50" name="spell_description" form="spell_edit_form">

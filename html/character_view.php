@@ -196,13 +196,123 @@ if (isset($_SESSION['user_id'])){
    ';
    
    //Page 2
-	echo '<div id="money_info">';
+	echo '<div id="moneyinfo">';
+		echo "<p><b><u>Currency</u></b></p><br>";
 		echo "<p><u>CP</u>: $cp</p>";
 		echo "<p><u>SP</u>: $sp</p>";
 		echo "<p><u>EP</u>: $ep</p>";
 		echo "<p><u>GP</u>: $gp</p>";
 		echo "<p><u>PP</u>: $pp</p>";
 	echo '</div><br><br>';
+	
+	//Select items
+	//Select inventory type items
+	$i1 = "SELECT item_name, item_id FROM items WHERE character_id=$character_id AND item_type='inventory'";
+	
+	
+	$i1f = mysqli_query ($dbc, $i1) or trigger_error("Query: $i1\n<br />MySQL Error: " . mysqli_error($dbc));
+	
+   echo "<table class='spell_table'>";
+	echo "<tbody class='spell_table'>";
+	echo "<tr class='spell_table'>";
+	
+	
+	echo "<th class='spell_table'>Inventory Items</th>";
+	echo "</tr>";
+	
+	while($row = mysqli_fetch_array($i1f))
+	{
+		
+	$item_name = $row["item_name"];
+	$item_id = $row["item_id"];
+			
+	echo "<tr class='spell_table'>";
+
+		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
+					
+	echo "</tr>";
+	
+	
+	
+	}
+	echo "</tbody>";
+	echo "</table>";
+	//Item Inventory End
+	
+	//Select weapon type items
+	$i1 = "SELECT item_name, item_id FROM items WHERE character_id=$character_id AND item_type='weapon'";
+	
+	
+	$i1f = mysqli_query ($dbc, $i1) or trigger_error("Query: $i1\n<br />MySQL Error: " . mysqli_error($dbc));
+	
+   echo "<table class='spell_table'>";
+	echo "<tbody class='spell_table'>";
+	echo "<tr class='spell_table'>";
+	
+	
+	echo "<th class='spell_table'>Weapon Items</th>";
+	echo "</tr>";
+	
+	while($row = mysqli_fetch_array($i1f))
+	{
+		
+	$item_name = $row["item_name"];
+	$item_id = $row["item_id"];
+			
+	echo "<tr class='spell_table'>";
+
+		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
+					
+	echo "</tr>";
+	
+	
+	
+	}
+	echo "</tbody>";
+	echo "</table>";
+	//Item Weapon End
+	
+	//Select armor type items
+	$i1 = "SELECT item_name, item_id FROM items WHERE character_id=$character_id AND item_type='armor'";
+	
+	
+	$i1f = mysqli_query ($dbc, $i1) or trigger_error("Query: $i1\n<br />MySQL Error: " . mysqli_error($dbc));
+	
+   echo "<table class='spell_table'>";
+	echo "<tbody class='spell_table'>";
+	echo "<tr class='spell_table'>";
+	
+	
+	echo "<th class='spell_table'>Armor Items</th>";
+	echo "</tr>";
+	
+	while($row = mysqli_fetch_array($i1f))
+	{
+		
+	$item_name = $row["item_name"];
+	$item_id = $row["item_id"];
+			
+	echo "<tr class='spell_table'>";
+
+		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
+					
+	echo "</tr>";
+	
+	
+	
+	}
+	echo "</tbody>";
+	echo "</table>";
+	//Item Armor End
+	
+	//Create item form
+	echo '<form action="create_item.php" method="get">
+
+			<input type="hidden" name="character_id" value="' . $character_id . '">
+		
+			<input type="submit" name="submit" value="Acquire A New Item" />
+		
+			</form><br>';
    //Page 2 End
    echo '
   	</div>

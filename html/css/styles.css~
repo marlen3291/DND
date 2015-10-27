@@ -224,7 +224,7 @@ caption     	{ background: #efefef; }
 /*SpellPage*/
 #spell_info{}
 #spell_info p{display:inline-block;padding:0px 50px 0px 0px;}
-table.spell_table{width:100px;display:inline-block;border: 0px solid black;}
+table.spell_table{width:100px;display:inline-block;border: 0px solid black;padding:20px;}
 tbody.spell_table{width:100px;}
 th.spell_table{width:100px;}
 tr.spell_table{width:100px;}
@@ -258,7 +258,7 @@ label 	{
 submit	{ background:none; 	}
 
 input 	{ 
-		width: 140px; margin:0 0 16px 10px;
+		/*width: 140px;*/ margin:0 0 16px 10px;
 		border:1px #bbb solid; padding:5px;  
 		}
 		

@@ -221,6 +221,10 @@ caption     	{ background: #efefef; }
 #stats4{float:left;margin:0px 0px 0px 0px;width:500px;}
 #stats5{float:right;margin:0px 0px 0px 0px;width:200px;}
 
+/*Inventory Page*/
+
+#moneyinfo p{display:inline-block;padding:0px 50px 0px 0px;}
+
 /*SpellPage*/
 #spell_info{}
 #spell_info p{display:inline-block;padding:0px 50px 0px 0px;}
@@ -228,6 +232,8 @@ table.spell_table{width:100px;display:inline-block;border: 0px solid black;paddi
 tbody.spell_table{width:100px;}
 th.spell_table{width:100px;}
 tr.spell_table{width:100px;}
+
+
 
 #background1{float:left;width:350px;}
 #background2{display:inline-block;width:500px;}
@@ -258,7 +264,7 @@ label 	{
 submit	{ background:none; 	}
 
 input 	{ 
-		width: 140px; margin:0 0 16px 10px;
+		/*width: 140px;*/ margin:0 0 16px 10px;
 		border:1px #bbb solid; padding:5px;  
 		}
 		
