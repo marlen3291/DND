@@ -14,14 +14,12 @@ include ('includes/top.html');
 <div id="content">
 
 <?php
+
 // Need the database connection:
 	require (MYSQL);
 	
 	// Trim all the incoming data:
 	$trimmed = array_map('trim', $_POST);
-
-	
-	if (isset($_SESSION['user_id'])){
 		
 	$chronicle_id = $_GET["chronicle_id"];
 	echo $chronicle_id;
@@ -40,6 +38,7 @@ include ('includes/top.html');
 	$date = $row["date"];
 	$description = $row["description"];
 	
+	
 	$character_id = $row["character_id"];
 	
 	}
@@ -47,36 +46,10 @@ include ('includes/top.html');
 	echo '<p>Chronicle Name: '	.	$chronicle_name	.	'</p>';
 	echo '<p>Date: '	.	$date	.	'</p>';
 	echo '<p>Entry: '	.	$description	.	'</p>';
-	echo '<p>Public: ' . $public . '</p>';
 	
-	echo '<form action="edit_chronicle.php" method="get">
-
-			<input type="hidden" name="chronicle_id" value='	.	$chronicle_id	. '>
-		
-			<input type="submit" name="submit" value="Edit Chronicle" />
-		
-			</form>'	;
-			
-	echo '<form action="delete_chronicle.php" method="get">
-
-			<input type="hidden" name="chronicle_id" value='	.	$chronicle_id	. '>
-			<input type="hidden" name="character_id" value='	.	$character_id	. '>
-		
-			<input type="submit" name="submit" value="Delete Chronicle" />
-		
-			</form>'	;
 	
-	}
 	
-	else
-	{
 	
-	$url = BASE_URL . 'index.php';
-	
-	ob_end_clean();
-	header("Location: $url");
-	exit();
-	}
 	
 mysqli_close($dbc);
 

@@ -726,7 +726,7 @@ if (isset($_SESSION['user_id'])){
    ';
    
    //Page 5
-	//Select everything from characters
+	//Select everything from chronicles
 	$c = "SELECT * FROM chronicles WHERE character_id=$character_id";
 	
 	
@@ -739,7 +739,6 @@ if (isset($_SESSION['user_id'])){
 	
 	echo "<th>Chronicle Name</th>";
 	echo "<th>Date</th>";
-	echo "<th>Description</th>";
 	echo "<th></th>";
 	
 	echo "</tr>";

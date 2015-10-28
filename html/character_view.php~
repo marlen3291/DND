@@ -726,7 +726,7 @@ if (isset($_SESSION['user_id'])){
    ';
    
    //Page 5
-	//Select everything from characters
+	//Select everything from chronicles
 	$c = "SELECT * FROM chronicles WHERE character_id=$character_id";
 	
 	
@@ -819,7 +819,7 @@ else
 
 			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 		
-			<input type="submit" name="submit" value="Edit Character" />
+			<input type="submit" name="submit" value="Delete Character" />
 		
 </form>
 </div> <!--End of Content-->

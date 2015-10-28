@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 	$chronicle_name = mysqli_real_escape_string ($dbc, $trimmed['chronicle_name']);
 	$description = mysqli_real_escape_string ($dbc, $trimmed['description']);
+	$public = mysqli_real_escape_string ($dbc, $trimmed['public']);
 	$character_id = $_POST['character_id'];
 	echo $character_id;
 	
@@ -87,6 +88,11 @@ else
 <textarea rows="30" cols="100" name="description" form="chronicleform">
 Enter log entry here...
 </textarea>
+
+<p><b>Public:</b>
+	<input type="radio" name="public" value="Yes" required>Yes
+	<input type="radio" name="public" value="No">No
+</p>
 
 <br>
 

@@ -26,7 +26,17 @@
 			<ul id="menu">
 					
 					<li><a href="index.php" >Welcome </a></li>			
-					<li><a href="lore.php" >Lore </a></li>
+					<li><a>Lore(Work in Progress)</a>
+							
+									<li><a href="public_chronicle.php" class="droplink">Public Stories</a></li>
+						<!--			<li><a href="" class="droplink">Races(Work in Progress)</a></li>
+									<li><a href="" class="droplink">Places(Work in Progress)</a></li>
+									<li><a href="" class="droplink">Bestiary(Work in Progress)</a></li> -->
+							
+					
+					
+					</li>
+					
 					
 					
 					<?php # Script 18.2 - footer.html

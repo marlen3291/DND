@@ -37,11 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 	$chronicle_name = mysqli_real_escape_string ($dbc, $trimmed['chronicle_name']);
 	$description = mysqli_real_escape_string ($dbc, $trimmed['description']);
+	$public = mysqli_real_escape_string ($dbc, $trimmed['public']);
 	$character_id = $_POST['character_id'];
 	echo $character_id;
 	
-	$s = "INSERT INTO chronicles (character_id, chronicle_name, date, description) 
-	VALUES ('$character_id', '$chronicle_name', NOW(), '$description')";
+	$s = "INSERT INTO chronicles (character_id, chronicle_name, date, description, public) 
+	VALUES ('$character_id', '$chronicle_name', NOW(), '$description', '$public')";
 	
 	$t = mysqli_query ($dbc, $s) or trigger_error("Query: $s\n<br />MySQL Error: " . mysqli_error($dbc));
 
@@ -87,6 +88,11 @@ else
 <textarea rows="30" cols="100" name="description" form="chronicleform">
 Enter log entry here...
 </textarea>
+
+<p><b>Public:</b>
+	<input type="radio" name="public" value="Yes" required>Yes
+	<input type="radio" name="public" value="No">No
+</p>
 
 <br>
 

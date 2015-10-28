@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 		
 	$chronicle_name = $row["chronicle_name"];
 	$description = $row["description"];
+	$public = $row["public"];
 	$character_id = $row["character_id"];
 	
 	}
@@ -60,10 +61,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 	$chronicle_name = mysqli_real_escape_string ($dbc, $trimmed['chronicle_name']);
 	$description = mysqli_real_escape_string ($dbc, $trimmed['description']);
+	$public = mysqli_real_escape_string ($dbc, $trimmed['public']);
 	$chronicle_id = $_POST['chronicle_id'];
 	$character_id = $_POST['character_id'];
 	
-	$s = "UPDATE chronicles SET chronicle_name='$chronicle_name', description='$description' 
+	$s = "UPDATE chronicles SET chronicle_name='$chronicle_name', description='$description', public='$public' 
 	WHERE chronicle_id = '$chronicle_id'";
 	
 	$t = mysqli_query ($dbc, $s) or trigger_error("Query: $s\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -75,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 				// Finish the page:
 				echo '<h3>It worked!</h3>';
 				
-				$url = BASE_URL . 'chronicle_view.php?character_id='	. $character_id;
+				$url = BASE_URL . 'chronicle_view.php?chronicle_id='	. $chronicle_id;
 	
 				ob_end_clean();
 				header("Location: $url");
@@ -111,6 +113,12 @@ else
 <textarea rows="30" cols="100" name="description" form="chronicleform">
 <?php echo $description; ?>
 </textarea>
+
+<p><b>Public:</b>
+	<input type="radio" name="public" value="No" required>No
+	<input type="radio" name="public" value="Yes">Yes
+</p>
+
 <br>
 <input type="submit" name="submit" value="Edit Chronicle" />
 </form>
