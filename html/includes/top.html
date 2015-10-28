@@ -23,16 +23,16 @@
 		
 		<div id="topnav">
 		
-			<ul id="menu">
+			<ul class="menu">
 					
 					<li><a href="index.php" >Welcome </a></li>			
-					<li><a>Lore(Work in Progress)</a>
-							
-									<li><a href="public_chronicle.php" class="droplink">Stories</a></li>
-						<!--			<li><a href="" class="droplink">Races(Work in Progress)</a></li>
-									<li><a href="" class="droplink">Places(Work in Progress)</a></li>
-									<li><a href="" class="droplink">Bestiary(Work in Progress)</a></li> -->
-							
+					<li><a>Lore</a>
+							<ul>
+									<li><a href="public_chronicle.php" >Stories</a></li>
+									<li><a href="" >Races(Work in Progress)</a></li>
+									<li><a href="" >Places(Work in Progress)</a></li>
+									<li><a href="" >Bestiary(Work in Progress)</a></li> 
+							</ul>
 					
 					
 					</li>
@@ -46,10 +46,14 @@
 					if (isset($_SESSION['user_id'])) {
 
 					echo '
-					
-							<li><a href="view_character.php" >Characters </a></li>
-							<li><a href="logout.php" >Log Out</a></li>
-							<li><a href="change_password.php" title="Change Your Password">Change Password</a></li>
+						<li><a href="view_character.php" >Characters </a></li>
+						<li><a>Account</a>
+								<ul>
+									
+									<li><a href="logout.php" >Log Out</a></li>
+									<li><a href="change_password.php" title="Change Your Password">Change Password</a></li>
+								</ul>
+						<li>
 					';
 					}
 					
