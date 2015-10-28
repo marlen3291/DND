@@ -27,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	
 	
 	$chronicle_id = $_GET['chronicle_id'];
-	$character_id = $_GET['character_id'];
 	echo $chronicle_id;
 	
 	//Select everything from characters
@@ -62,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	$chronicle_name = mysqli_real_escape_string ($dbc, $trimmed['chronicle_name']);
 	$description = mysqli_real_escape_string ($dbc, $trimmed['description']);
 	$chronicle_id = $_POST['chronicle_id'];
-	
+	$character_id = $_POST['character_id'];
 	
 	$s = "UPDATE chronicles SET chronicle_name='$chronicle_name', description='$description' 
 	WHERE chronicle_id = '$chronicle_id'";

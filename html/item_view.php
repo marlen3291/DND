@@ -42,6 +42,7 @@ include ('includes/top.html');
 	$attack_bonus = $row["attack_bonus"];
 	$damage = $row["damage"];
 	$armor = $row["armor"];
+	$character_id = $row["character_id"];
 	
 	}
 	
@@ -60,6 +61,16 @@ include ('includes/top.html');
 			<input type="hidden" name="item_id" value='	.	$item_id	. '>
 		
 			<input type="submit" name="submit" value="Edit Item" />
+		
+			</form>'	;
+	
+	
+	echo '<form action="delete_item.php" method="get">
+
+			<input type="hidden" name="item_id" value='	.	$item_id	. '>
+			<input type="hidden" name="character_id" value='	.	$character_id	. '>
+		
+			<input type="submit" name="submit" value="Delete Item" />
 		
 			</form>'	;
 	}

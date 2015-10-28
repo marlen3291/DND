@@ -14,7 +14,6 @@ include ('includes/top.html');
 <div id="content">
 
 <?php
-
 // Need the database connection:
 	require (MYSQL);
 	
@@ -24,10 +23,10 @@ include ('includes/top.html');
 	
 	if (isset($_SESSION['user_id'])){
 		
-	$spell_id = $_GET["spell_id"];
-	
+	$chronicle_id = $_GET["chronicle_id"];
+	echo $chronicle_id;
 	//Select everything from characters
-	$q = "SELECT * FROM spells WHERE spell_id=$spell_id";
+	$q = "SELECT * FROM chronicles WHERE chronicle_id=$chronicle_id";
 	
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -36,44 +35,36 @@ include ('includes/top.html');
 	while($row = mysqli_fetch_array($r))
 	{
 		
-	$spell_name = $row["spell_name"];
-	$spell_description = $row["spell_description"];
-	$spell_level = $row["spell_level"];
-	$casting_time = $row["casting_time"];
-	$spell_range = $row["spell_range"];
-	$components = $row["components"];
-	$duration = $row["duration"];
+	$chronicle_id = $row["chronicle_id"];
+	$chronicle_name = $row["chronicle_name"];
+	$date = $row["date"];
+	$description = $row["description"];
+	
 	$character_id = $row["character_id"];
 	
 	}
 	
+	echo '<p>Chronicle Name: '	.	$chronicle_name	.	'</p>';
+	echo '<p>Date: '	.	$date	.	'</p>';
+	echo '<p>Entry: '	.	$description	.	'</p>';
 	
-	echo '<p>Spellname: '	.	$spell_name	.	'</p>'; 
-	echo '<p>Description: '	.	$spell_description	.'</p>';
-	echo '<p>Spell Level: '	.	$spell_level	.	'</p>';
-	echo '<p>Casting Time: '	.	$casting_time	.	'</p>';
-	echo '<p>Range: '	.	$spell_range	.	'</p>';
-	echo '<p>Components: '	.	$components	.	'</p>';
-	echo '<p>Duration: '	.	$duration	.'</p>';
-	
-	echo '<br>';
-	
-	echo '<form action="edit_spell.php" method="get">
+	echo '<form action="edit_chronicle.php" method="get">
 
-			<input type="hidden" name="spell_id" value='	.	$spell_id	. '>
+			<input type="hidden" name="chronicle_id" value='	.	$chronicle_id	. '>
 		
-			<input type="submit" name="submit" value="Edit Spell" />
+			<input type="submit" name="submit" value="Edit Chronicle" />
 		
 			</form>'	;
 			
-	echo '<form action="delete_spell.php" method="get">
+	echo '<form action="delete_chronicle.php" method="get">
 
-			<input type="hidden" name="spell_id" value='	.	$spell_id	. '>
+			<input type="hidden" name="chronicle_id" value='	.	$chronicle_id	. '>
 			<input type="hidden" name="character_id" value='	.	$character_id	. '>
 		
-			<input type="submit" name="submit" value="Delete Spell" />
+			<input type="submit" name="submit" value="Delete Chronicle" />
 		
 			</form>'	;
+	
 	}
 	
 	else
@@ -91,8 +82,6 @@ mysqli_close($dbc);
  // End of the main Submit conditional.
 
 ?>
-
-
 
 
 

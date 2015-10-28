@@ -749,21 +749,20 @@ if (isset($_SESSION['user_id'])){
 	$chronicle_id = $row["chronicle_id"];
 	$chronicle_name = $row["chronicle_name"];
 	$date = $row["date"];
-	$description = $row["description"];
+	
 	
 		
 	echo "<tr>";
 
 		echo "<td>" .	$chronicle_name	.	"</td>"	;
 		echo "<td>" .	$date	.	"</td>"	;
-		echo "<td>" .	$description.	"</td>"	;
 		
 		echo
 		"<td>
-				<form action=\"edit_chronicle.php\" method=\"get\">
+				<form action=\"chronicle_view.php\" method=\"get\">
 					<input type=\"hidden\" name=\"chronicle_id\" value=\"$chronicle_id\">
 		
-					<input type=\"submit\" name=\"submit\" value=\"Edit Chronicle\" />
+					<input type=\"submit\" name=\"submit\" value=\"View Chronicle\" />
 		
 				</form>
 		</td>";
@@ -813,6 +812,14 @@ else
 			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 		
 			<input type="submit" name="submit" value="Edit Character" />
+		
+</form>
+
+<form action="delete_character.php" method="get">
+
+			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
+		
+			<input type="submit" name="submit" value="Delete Character" />
 		
 </form>
 </div> <!--End of Content-->

@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 				// Finish the page:
 				echo '<h3>It worked!</h3>';
 				
-				$url = BASE_URL . 'chronicle_view.php?character_id='	. $character_id;
+				$url = BASE_URL . 'chronicle_view.php?chronicle_id='	. $chronicle_id;
 	
 				ob_end_clean();
 				header("Location: $url");

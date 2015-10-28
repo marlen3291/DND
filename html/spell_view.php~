@@ -43,6 +43,7 @@ include ('includes/top.html');
 	$spell_range = $row["spell_range"];
 	$components = $row["components"];
 	$duration = $row["duration"];
+	$character_id = $row["character_id"];
 	
 	}
 	
@@ -59,9 +60,18 @@ include ('includes/top.html');
 	
 	echo '<form action="edit_spell.php" method="get">
 
-			<input type="hidden" name="spell_id" value="<?php echo $spell_id ?>">
+			<input type="hidden" name="spell_id" value='	.	$spell_id	. '>
 		
 			<input type="submit" name="submit" value="Edit Spell" />
+		
+			</form>'	;
+			
+	echo '<form action="delete_spell.php" method="get">
+
+			<input type="hidden" name="spell_id" value='	.	$spell_id	. '>
+			<input type="hidden" name="character_id" value='	.	$character_id	. '>
+		
+			<input type="submit" name="submit" value="Delete Spell" />
 		
 			</form>'	;
 	}
