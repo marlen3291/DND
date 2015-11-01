@@ -15,7 +15,6 @@ include ('includes/top.html');
 
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 // Need the database connection:
 	require (MYSQL);
 	
@@ -23,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	$trimmed = array_map('trim', $_POST);
 		
 	$chronicle_id = $_GET["chronicle_id"];
-	echo $chronicle_id;
+	
 	//Select everything from characters
 	$q = "SELECT * FROM chronicles WHERE chronicle_id=$chronicle_id";
 	
@@ -44,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	
 	}
 	
+	echo '<h1>Chronicle View</h1>';
 	echo '<p>Chronicle Name: '	.	$chronicle_name	.	'</p>';
 	echo '<p>Date: '	.	$date	.	'</p>';
 	echo '<p>Entry: '	.	$description	.	'</p>';
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 mysqli_close($dbc);
 
  // End of the main Submit conditional.
-}
+
 ?>
 
 

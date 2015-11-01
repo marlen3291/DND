@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Public Chronicles';
 include ('includes/header.html');
 include ('includes/top.html');
 ?>
@@ -22,7 +22,7 @@ include ('includes/top.html');
 	$trimmed = array_map('trim', $_POST);
 		
 	$chronicle_id = $_GET["chronicle_id"];
-	echo $chronicle_id;
+	
 	//Select everything from characters
 	$q = "SELECT * FROM chronicles WHERE chronicle_id=$chronicle_id";
 	
@@ -43,6 +43,7 @@ include ('includes/top.html');
 	
 	}
 	
+	echo '<h1>Chronicle View</h1>';
 	echo '<p>Chronicle Name: '	.	$chronicle_name	.	'</p>';
 	echo '<p>Date: '	.	$date	.	'</p>';
 	echo '<p>Entry: '	.	$description	.	'</p>';

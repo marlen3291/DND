@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Welcome to this Site!';
+$page_title = 'Character View';
 include ('includes/header.html');
 include ('includes/top.html');
 ?>

@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Welcome to this Site!';
+$page_title = 'Create Chronicle';
 include ('includes/header.html');
 include ('includes/top.html');
 
@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])){
 if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 
 $character_id = $_GET['character_id'];
-echo $character_id;
+
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	$description = mysqli_real_escape_string ($dbc, $trimmed['description']);
 	$public = mysqli_real_escape_string ($dbc, $trimmed['public']);
 	$character_id = $_POST['character_id'];
-	echo $character_id;
+	
 	
 	$s = "INSERT INTO chronicles (character_id, chronicle_name, date, description, public) 
 	VALUES ('$character_id', '$chronicle_name', NOW(), '$description', '$public')";
@@ -78,7 +78,7 @@ else
 	exit();
 	}
 ?>
-
+<h1>Create A Chronicle</h1>
 <form action="create_chronicle.php" id="chronicleform" method="post">
   
   	<p><b>Chronicle Name:</b> <input type="text" name="chronicle_name" size="20" maxlength="40" value="<?php if (isset($trimmed['chronicle_name'])) echo $trimmed['chronicle_name']; ?>" /></p>

@@ -49,7 +49,6 @@ echo "<h1>View Characters</h1>";
 	echo "<th>Last Name</th>";
 	echo "<th>Class</th>";
 	echo "<th></th>";
-	echo "<th></th>";
 	
 	echo "</tr>";
 	
@@ -75,14 +74,7 @@ echo "<h1>View Characters</h1>";
 		
 			<button><a href='character_view.php?character_id=$character_id'>View Character</a> </button>
 		</td>";
-		
-		echo 
-		
-		"<td>
-				<button><a href='chronicle_view.php?character_id=$character_id'>View Chronicle</a> </button>
-		</td>";
-		
-			
+				
 		
 	echo "</tr>";
 	

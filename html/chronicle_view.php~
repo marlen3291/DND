@@ -24,7 +24,7 @@ include ('includes/top.html');
 	if (isset($_SESSION['user_id'])){
 		
 	$chronicle_id = $_GET["chronicle_id"];
-	echo $chronicle_id;
+	
 	//Select everything from characters
 	$q = "SELECT * FROM chronicles WHERE chronicle_id=$chronicle_id";
 	
@@ -39,11 +39,13 @@ include ('includes/top.html');
 	$chronicle_name = $row["chronicle_name"];
 	$date = $row["date"];
 	$description = $row["description"];
+	$public = $row["public"];
 	
 	$character_id = $row["character_id"];
 	
 	}
 	
+	echo '<h1>Chronicle View</h1>';
 	echo '<p>Chronicle Name: '	.	$chronicle_name	.	'</p>';
 	echo '<p>Date: '	.	$date	.	'</p>';
 	echo '<p>Entry: '	.	$description	.	'</p>';

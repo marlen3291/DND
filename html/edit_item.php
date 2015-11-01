@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Edit Item';
 include ('includes/header.html');
 include ('includes/top.html');
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	
 	
 	$item_id = $_GET['item_id'];
-	echo $item_id;
+	
 	
 	//Select everything from spells
 	$q = "SELECT * FROM items WHERE item_id='$item_id'";
@@ -111,6 +111,7 @@ else
 	}
 ?>
 
+<h1>Edit An Item</h1>
 <form action="edit_item.php" id="item_edit_form" method="post">
   
   	<p><b>Item Name:</b> <input type="text" name="item_name" size="20" maxlength="40" value="<?php echo $item_name; ?>" /></p>

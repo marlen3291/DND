@@ -6,6 +6,7 @@
     position: relative;
     z-index: 10;
     line-height: 2.5em;
+    border: solid 1px #aaaaaa;
 }
 .menu a
 {

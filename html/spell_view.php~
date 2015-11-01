@@ -27,7 +27,7 @@ include ('includes/top.html');
 	$spell_id = $_GET["spell_id"];
 	
 	//Select everything from characters
-	$q = "SELECT spell_name, spell_description, spell_level, casting_time, spell_range, components, duration FROM spells WHERE spell_id=$spell_id";
+	$q = "SELECT * FROM spells WHERE spell_id=$spell_id";
 	
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -47,7 +47,7 @@ include ('includes/top.html');
 	
 	}
 	
-	
+	echo '<h1>Spell View</h1>';
 	echo '<p>Spellname: '	.	$spell_name	.	'</p>'; 
 	echo '<p>Description: '	.	$spell_description	.'</p>';
 	echo '<p>Spell Level: '	.	$spell_level	.	'</p>';

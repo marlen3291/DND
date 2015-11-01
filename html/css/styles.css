@@ -180,11 +180,11 @@ caption     	{ background: #efefef; }
 							
 						}
 						
-#content 			{ float:left;width:100%;height:100%;<!background-image: url("../images/backgrounds/scroll.jpg"); -->  }
-#content h1			{ margin: 0 0 20px 0; font-size:32px; border-bottom:1px #777777 solid; padding:20px 0;  }
+#content 			{ float:left;width:100%;height:100%;/*overflow:scroll;*/background-image: url("../images/backgrounds/scroll.jpg"); }
+#content h1			{ margin: 0 0 20px 5px; font-size:32px; border-bottom:1px #777777 solid; padding:20px 0;  }
 
-#content p			{ margin:16px 0; line-height:160%  }
-#content h2			{ margin:20px 0 0 0;  }
+#content p			{ margin:16px 5px; line-height:160%  }
+#content h2			{ margin:20px 0 0 5px;  }
 #content img 			{ padding:8px;border:1px #8888888 solid;margin:0px;  }
 
 #rightside 			{ padding:20px; margin-left:675px;   }

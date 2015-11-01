@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Create Spell';
 include ('includes/header.html');
 include ('includes/top.html');
 ?>
@@ -20,8 +20,7 @@ if (isset($_SESSION['user_id'])){
 if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 
 $character_id = $_GET['character_id'];
-echo $character_id;
-echo 'dwor';
+
 	
 	
 }
@@ -90,7 +89,7 @@ else
 	exit();
 	}
 ?>
-
+<h1>Acquire A Spell</h1>
 <form action="create_spell.php" id="spellform" method="post">
   
   	<p><b>Spell Name:</b> <input type="text" name="spell_name" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_name'])) echo $trimmed['spell_name']; ?>" /></p>

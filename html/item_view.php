@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Item View';
 include ('includes/header.html');
 include ('includes/top.html');
 ?>
@@ -46,7 +46,7 @@ include ('includes/top.html');
 	
 	}
 	
-	
+	echo '<h1>Item View</h1>';
 	echo '<p>Item Name: '	.	$item_name	.	'</p>'; 
 	echo '<p>Description: '	.	$item_description	.'</p>';
 	echo '<p>Item Type: '	.	$item_type	.	'</p>';

@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Public Chronicle View';
 include ('includes/header.html');
 include ('includes/top.html');
 ?>
@@ -65,7 +65,7 @@ include ('includes/top.html');
 	echo "</tbody>";
 	echo "</table>";
 	
-	
+	echo '<br>';
 	
   
 ?>

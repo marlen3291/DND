@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Edit Spell';
 include ('includes/header.html');
 include ('includes/top.html');
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	
 	
 	$spell_id = $_GET['spell_id'];
-	echo $spell_id;
+	
 	
 	//Select everything from spells
 	$q = "SELECT * FROM spells WHERE spell_id='$spell_id'";
@@ -113,7 +113,7 @@ else
 	exit();
 	}
 ?>
-
+<h1>Edit A Spell</h1>
 <form action="edit_spell.php" id="spell_edit_form" method="post">
   
   	<p><b>Spell Name:</b> <input type="text" name="spell_name" size="20" maxlength="40" value="<?php echo $spell_name; ?>" /></p>

@@ -739,7 +739,6 @@ if (isset($_SESSION['user_id'])){
 	
 	echo "<th>Chronicle Name</th>";
 	echo "<th>Date</th>";
-	echo "<th>Description</th>";
 	echo "<th></th>";
 	
 	echo "</tr>";

@@ -29,7 +29,58 @@ profiles to keep online. Users can also create journal log entries of
 their character.
 </p>
 
+<p>
+Updates:
+</p>
 
+<p>Commits on Oct 28, 2015:</p>
+
+	<p>I fixed the menu dropdown links by implementing a simple jquery menu 
+	sample found online. The dropdown links look a little better now.</p>
+
+	<p>I added public options to character chronicles and a php to view public character chronicles. 
+	I also changed website font-size to 12 px for everything</p>
+
+<p>Commits on Oct 27, 2015:</p>
+
+	<p>Added delete functions for characters, spells, items, and chronicles.
+	Small issue with character delete with multi query delete</p>
+
+	<p>I added inventory view for the character view page and a means to acquire 
+	new equipment and to edit existing equipment</p>
+
+	<p>I fixed the character view page a little bit by adding an inventory tab and chronicle tab. 
+	The chronicles can now be viewed in the character_view page. 
+	The create and edit pages have also been fixed with correct redirects and php variables passed in the url</p>
+
+<p>Commits on Oct 26, 2015</p>
+
+	<p>Added spell inventory and means to acquire spells in character view page. 
+	Fixed other parts of website like tabling</p>
+
+<p>Commits on Oct 23, 2015</p>
+
+	<p>Fixed image edits and layout of character view information</p>
+
+<p>Commits on Oct 22, 2015</p>
+	<p>I updated the image slider using jssor full width slider and added jquery tabs to the character view page 
+	to make different pages for character information. The slider and images still need work and the character 
+	content still needs to be formatted properly.
+	</p>
+	
+<p>Commits on Oct 15, 2015</p>
+	<p>Finished up chronicle creation. Also updated or added character and chronicle views and edit pages. 
+	I also change site look a little bit</p>
+
+<p>Commits on Oct 13, 2015</p>
+	<p>I finished create, view, and character view pages. 
+	I manage to extract uploaded image from database.</p>
+
+<p>Commits on Oct 9, 2015</p>
+
+	<p>Started making a D&D personal hobby website. I used existing user and 
+	administration code from njit projects and worked from there. I made a new top html file, 
+	css basic layout file, and slider javascript.I'm now working on character pages</p>
 
 </div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

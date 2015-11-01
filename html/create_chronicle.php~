@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])){
 if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 
 $character_id = $_GET['character_id'];
-echo $character_id;
+
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
@@ -39,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	$description = mysqli_real_escape_string ($dbc, $trimmed['description']);
 	$public = mysqli_real_escape_string ($dbc, $trimmed['public']);
 	$character_id = $_POST['character_id'];
-	echo $character_id;
 	
-	$s = "INSERT INTO chronicles (character_id, chronicle_name, date, description) 
-	VALUES ('$character_id', '$chronicle_name', NOW(), '$description')";
+	
+	$s = "INSERT INTO chronicles (character_id, chronicle_name, date, description, public) 
+	VALUES ('$character_id', '$chronicle_name', NOW(), '$description', '$public')";
 	
 	$t = mysqli_query ($dbc, $s) or trigger_error("Query: $s\n<br />MySQL Error: " . mysqli_error($dbc));
 
@@ -78,7 +78,7 @@ else
 	exit();
 	}
 ?>
-
+<h1>Create A Chronicle</h1>
 <form action="create_chronicle.php" id="chronicleform" method="post">
   
   	<p><b>Chronicle Name:</b> <input type="text" name="chronicle_name" size="20" maxlength="40" value="<?php if (isset($trimmed['chronicle_name'])) echo $trimmed['chronicle_name']; ?>" /></p>

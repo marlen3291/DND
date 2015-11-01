@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Spell View';
 include ('includes/header.html');
 include ('includes/top.html');
 ?>
@@ -47,7 +47,7 @@ include ('includes/top.html');
 	
 	}
 	
-	
+	echo '<h1>Spell View</h1>';
 	echo '<p>Spellname: '	.	$spell_name	.	'</p>'; 
 	echo '<p>Description: '	.	$spell_description	.'</p>';
 	echo '<p>Spell Level: '	.	$spell_level	.	'</p>';

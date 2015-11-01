@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Edit Chronicle';
 include ('includes/header.html');
 include ('includes/top.html');
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	
 	
 	$chronicle_id = $_GET['chronicle_id'];
-	echo $chronicle_id;
+	
 	
 	//Select everything from characters
 	$q = "SELECT * FROM chronicles WHERE chronicle_id='$chronicle_id'";
@@ -102,7 +102,7 @@ else
 	exit();
 	}
 ?>
-
+<h1>Edit A Chronicle</h1>
 <form action="edit_chronicle.php" id="chronicleform" method="post">
   
   	<p><b>Chronicle Name:</b> <input type="text" name="chronicle_name" size="20" maxlength="40" value="<?php echo $chronicle_name; ?>" /></p>
