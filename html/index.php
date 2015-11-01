@@ -33,6 +33,13 @@ their character.
 Updates:
 </p>
 
+<p>Commits on Nov 1, 2015</p>
+
+	<p>I edited out echo checking statements that checked for variable existences. 
+	I also added proper titles and headers to some of the pages and forms. 
+	I also took out the social links and overflow scroll since they weren't working or did not look well. 
+	I also started adding my Github changes to the index page as updates.</p>
+	
 <p>Commits on Oct 28, 2015:</p>
 
 	<p>I fixed the menu dropdown links by implementing a simple jquery menu 
