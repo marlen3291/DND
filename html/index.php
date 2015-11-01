@@ -35,6 +35,9 @@ Updates:
 
 <p>Commits on Nov 1, 2015</p>
 
+	<p>I made a quick fix and added the character name for the character's chronicle pages to 
+	let users know which character is for each chronicle.</p>
+
 	<p>I edited out echo checking statements that checked for variable existences. 
 	I also added proper titles and headers to some of the pages and forms. 
 	I also took out the social links and overflow scroll since they weren't working or did not look well. 

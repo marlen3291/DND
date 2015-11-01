@@ -76,7 +76,11 @@
 					if ($_SESSION['user_level'] == 1) {	
 						
 						echo '	
-							<li><a href="admin.php" >Administration</a></li>
+							<li><a href="admin.php" >Administration</a>
+								<ul>
+									<li><a href="who_logged_in.php" >User Log</a></li>
+								</ul>
+							</li>	
 						';
 					
 					} 

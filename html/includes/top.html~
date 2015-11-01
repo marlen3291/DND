@@ -29,7 +29,7 @@
 					<li><a href="index.php" >Welcome </a></li>			
 					<li><a>Lore</a>
 							<ul>
-									<li><a href="public_chronicle.php" >Stories</a></li>
+									<li><a href="public_chronicle.php" >Public Chronicles</a></li>
 									<li><a href="" >Races(Work in Progress)</a></li>
 									<li><a href="" >Places(Work in Progress)</a></li>
 									<li><a href="" >Bestiary(Work in Progress)</a></li> 
