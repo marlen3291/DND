@@ -18,19 +18,32 @@ include ('includes/top.html');
 // Need the database connection:
 	require (MYSQL);
 //Select everything from chronicles
-	$c = "SELECT * FROM chronicles WHERE public='Yes'";
+	$a = "SELECT character_id, first_name, last_name FROM characters WHERE public_character='Yes'";
+	
+	
+	$b = mysqli_query ($dbc, $a) or trigger_error("Query: $a\n<br />MySQL Error: " . mysqli_error($dbc));
+
+	while($row = mysqli_fetch_array($b))
+	{
+		
+	$character_id = $row["character_id"];
+	$first_name = $row["first_name"];
+	$last_name = $row["last_name"];
+	
+	$c = "SELECT * FROM chronicles WHERE public='Yes' AND character_id=$character_id";
 	
 	
 	$d = mysqli_query ($dbc, $c) or trigger_error("Query: $c\n<br />MySQL Error: " . mysqli_error($dbc));
 	
 	
+	echo "<p>Character: "	. $first_name	.	" "	. $last_name	. "</p>";
 	echo "<table>";
 	echo "<tbody>";
 	echo "<tr>";
 	
 	
 	echo "<th>Chronicle Name</th>";
-	echo "<th>Character Name</th>";
+	/*echo "<th>Character Name</th>";*/
 	echo "<th>Date</th>";
 	echo "<th>View</th>";
 	
@@ -42,8 +55,8 @@ include ('includes/top.html');
 	$chronicle_name = $row["chronicle_name"];
 	$date = $row["date"];
 	$public = $row["public"];
-	$character_id = $row["character_id"];
 	
+	/*
 	$e = "SELECT first_name, last_name FROM characters WHERE character_id=$character_id";
 	
 	
@@ -54,10 +67,9 @@ include ('includes/top.html');
 		$first_name=$row["first_name"];
 		$last_name=$row["last_name"];
 	}
-	
+	*/
 	echo "<tr>";
 		echo "<td>" .	$chronicle_name	.	"</td>"	;
-		echo '<td>'. $first_name . ' '. $last_name . '</td>';
 		echo "<td>" .	$date	.	"</td>"	;
 		
 		echo
@@ -78,7 +90,7 @@ include ('includes/top.html');
 	echo "</table>";
 	
 	echo '<br>';
-	
+	}
   
 ?>
 

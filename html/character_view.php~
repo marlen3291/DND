@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Welcome to this Site!';
+$page_title = 'Character View';
 include ('includes/header.html');
 include ('includes/top.html');
 ?>
@@ -100,6 +100,8 @@ if (isset($_SESSION['user_id'])){
 	$spell_casting_ability = $row["spell_casting_ability"];
 	$spell_save_dc = $row["spell_save_dc"];
 	$spell_attack_bonus = $row["spell_attack_bonus"];
+	
+	$public_character	= $row["public_character"];
 	
 	
 		
@@ -780,6 +782,9 @@ if (isset($_SESSION['user_id'])){
 		
 		</form>
 	';
+	
+	echo '<br>';
+	echo '<p>Public Character: ' . $public_character	. '</p>';
    //Page 5 End
    echo '
   	</div>

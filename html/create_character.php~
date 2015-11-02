@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Forge A Character';
 include ('includes/header.html');
 include (
 'includes/top.html'
@@ -41,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	$features = $appearance = $organization = $rank = $age = FALSE;
 	$height = $weight = $eyes = $skin = $hair = FALSE;
 	$backstory = $spell_slots = $spell_casting_ability = $spell_save_dc = $spell_attack_bonus = FALSE;
+	$public_character = FALSE;
 	
 //Setting up image uploads:
 
@@ -118,7 +119,7 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	$spell_save_dc = mysqli_real_escape_string ($dbc, $trimmed['spell_save_dc']);
 	$spell_attack_bonus = mysqli_real_escape_string ($dbc, $trimmed['spell_attack_bonus']);
 	
-	 
+	$public_character = mysqli_real_escape_string ($dbc, $trimmed['public_character']);
 	 // Add a new character to the database
 	$s = "INSERT INTO characters (
 	
@@ -127,7 +128,7 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	constitution, intelligence, wisdom, charisma, inspiration, proficiency_bonus, saving_throws, skills, passive_wisdom, languages, 
 	proficiencies, personality_traits, ideals, bonds,flaws, cp, sp, ep, gp, pp, 
 	features, appearance, organization, rank, age, height, weight, eyes, skin, hair,
-	backstory, spell_slots, spell_casting_ability, spell_save_dc, spell_attack_bonus
+	backstory, spell_slots, spell_casting_ability, spell_save_dc, spell_attack_bonus, public_character
 	
 	
 	) 
@@ -138,7 +139,7 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	'$constitution', '$intelligence', '$wisdom', '$charisma', '$inspiration','$proficiency_bonus', '$saving_throws', '$skills', '$passive_wisdom', '$languages',
 	'$proficiencies', '$personality_traits', '$ideals', '$bonds', '$flaws','$cp', '$sp', '$ep', '$gp', '$pp',
 	'$features', '$appearance','$organization', '$rank', '$age','$height', '$weight', '$eyes', '$skin', '$hair',
-	'$backstory', '$spell_slots', '$spell_casting_ability', '$spell_save_dc', '$spell_attack_bonus'
+	'$backstory', '$spell_slots', '$spell_casting_ability', '$spell_save_dc', '$spell_attack_bonus', '$public_character'
 	)";
 	 
 	$t = mysqli_query ($dbc, $s) or trigger_error("Query: $s\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -294,6 +295,11 @@ else
 	
 	<p><b>PP:</b> <input type="text" name="pp" size="20" maxlength="40" value="<?php if (isset($trimmed['pp'])) echo $trimmed['pp']; ?>" /></p>
 	
+	<p><b>Public:</b>
+		<input type="radio" name="public_character" value="Yes" required>Yes
+		<input type="radio" name="public_character" value="No">No
+	</p>
+	
   </div>
   <div id="tabs-2">
 	
@@ -337,6 +343,11 @@ else
 	
 	<p><b>Spell Attack Bonus:</b> <input type="text" name="spell_attack_bonus" size="20" maxlength="40" value="<?php if (isset($trimmed['spell_attack_bonus'])) echo $trimmed['spell_attack_bonus']; ?>" /></p>
 	
+	
+
+
+</p>
+
 
   </div>
 </div>

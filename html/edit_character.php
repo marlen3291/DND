@@ -102,6 +102,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	$spell_save_dc = $row["spell_save_dc"];
 	$spell_attack_bonus = $row["spell_attack_bonus"];
 	
+	$public_character	= $row["public_character"];
+	
 	mysqli_close($dbc);
 		
 	}
@@ -205,6 +207,7 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	$spell_save_dc = mysqli_real_escape_string ($dbc, $trimmed['spell_save_dc']);
 	$spell_attack_bonus = mysqli_real_escape_string ($dbc, $trimmed['spell_attack_bonus']);
 	
+	$public_character = mysqli_real_escape_string ($dbc, $trimmed['public_character']);
 	 
 	 // Update Character to Database
 	$s = "UPDATE characters SET
@@ -262,7 +265,8 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	spell_slots='$spell_slots', 
 	spell_casting_ability='$spell_casting_ability', 
 	spell_save_dc='$spell_save_dc', 
-	spell_attack_bonus='$spell_attack_bonus'
+	spell_attack_bonus='$spell_attack_bonus',
+	public_character='$public_character'
 	
 	WHERE character_id = $character_id";
 	 
@@ -459,6 +463,12 @@ else
 	<p><b>GP:</b> <input type="text" name="gp" size="20" maxlength="40" value="<?php echo $gp; ?>" /></p>
 	
 	<p><b>PP:</b> <input type="text" name="pp" size="20" maxlength="40" value="<?php echo $pp; ?>" /></p>
+	
+	
+	<p><b>Public(Allow Character Profile and Chronicles To Be Public:</b>
+		<input type="radio" name="public_character" value="Yes" required>Yes
+		<input type="radio" name="public_character" value="No">No
+	</p>
 	
   </div>
   

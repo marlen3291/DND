@@ -230,7 +230,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -263,7 +263,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -296,7 +296,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -307,14 +307,7 @@ if (isset($_SESSION['user_id'])){
 	echo "</table>";
 	//Item Armor End
 	
-	//Create item form
-	echo '<form action="create_item.php" method="get">
-
-			<input type="hidden" name="character_id" value="' . $character_id . '">
-		
-			<input type="submit" name="submit" value="Acquire A New Item" />
-		
-			</form><br>';
+	
    //Page 2 End
    echo '
   	</div>
@@ -389,7 +382,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -423,7 +416,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -457,7 +450,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -491,7 +484,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -525,7 +518,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -559,7 +552,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -593,7 +586,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -627,7 +620,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -661,7 +654,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -695,7 +688,7 @@ if (isset($_SESSION['user_id'])){
 			
 	echo "<tr class='spell_table'>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td class='spell_table'> <a href='public_public_spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
 					
 	echo "</tr>";
 	
@@ -708,14 +701,7 @@ if (isset($_SESSION['user_id'])){
 	
 	echo '<br>';
 	
-	//Create spell form
-	echo '<form action="create_spell.php" method="get">
-
-			<input type="hidden" name="character_id" value="' . $character_id . '">
-		
-			<input type="submit" name="submit" value="Acquire New Spells" />
-		
-			</form><br>';
+	
 	
 	//Page 4 End	
 	echo '
@@ -760,7 +746,7 @@ if (isset($_SESSION['user_id'])){
 		
 		echo
 		"<td>
-				<form action=\"chronicle_view.php\" method=\"get\">
+				<form action=\"public_chronicle_view.php\" method=\"get\">
 					<input type=\"hidden\" name=\"chronicle_id\" value=\"$chronicle_id\">
 		
 					<input type=\"submit\" name=\"submit\" value=\"View Chronicle\" />
@@ -772,16 +758,6 @@ if (isset($_SESSION['user_id'])){
 	echo "</tbody>";
 	echo "</table>";
 	
-	echo ' 
-	
-		<form action="create_chronicle.php" method="get">
-
-				<input type="hidden" name="character_id" value='	.	$character_id . '>
-		
-				<input type="submit" name="submit" value="Create A Chronicle" />
-		
-		</form>
-	';
 	
 	echo '<br>';
 	echo '<p>Public Character(Allow Character Profile and Chronicles To Be Viewable By Public): ' . $public_character	. '</p>';
@@ -811,20 +787,6 @@ else
 	}
 
 ?>
-<form action="edit_character.php" method="get">
 
-			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
-		
-			<input type="submit" name="submit" value="Edit Character" />
-		
-</form>
-
-<form action="delete_character.php" method="get">
-
-			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
-		
-			<input type="submit" name="submit" value="Delete Character" />
-		
-</form>
 </div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>
