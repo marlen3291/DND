@@ -11,7 +11,7 @@ include ('includes/top.html');
 ?>
 
 
-<div id="content">
+
 
 <?php
 // Need the database connection:
@@ -21,7 +21,7 @@ include ('includes/top.html');
 	$trimmed = array_map('trim', $_POST);
 
 	
-	if (isset($_SESSION['user_id'])){
+	
 		
 	$chronicle_id = $_GET["chronicle_id"];
 	
@@ -68,17 +68,7 @@ include ('includes/top.html');
 	
 	
 	
-	}
-	
-	else
-	{
-	
-	$url = BASE_URL . 'index.php';
-	
-	ob_end_clean();
-	header("Location: $url");
-	exit();
-	}
+
 	
 mysqli_close($dbc);
 
@@ -89,5 +79,5 @@ mysqli_close($dbc);
 
 
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

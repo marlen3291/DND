@@ -11,8 +11,6 @@ include ('includes/top.html');
 ?>
 
 
-<div id="content">
-
 <?php
 // Welcome the user (by name if they are logged in):
 echo '<h1>Welcome';
@@ -91,6 +89,8 @@ Updates:
 	<p>Started making a D&D personal hobby website. I used existing user and 
 	administration code from njit projects and worked from there. I made a new top html file, 
 	css basic layout file, and slider javascript.I'm now working on character pages</p>
+<br>
+<br>
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

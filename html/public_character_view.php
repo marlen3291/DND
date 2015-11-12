@@ -10,11 +10,10 @@ include ('includes/header.html');
 include ('includes/top.html');
 ?>
 
-<div id="content">
+
 
 <?php
 
-if (isset($_SESSION['user_id'])){
 	
 	if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 
@@ -774,19 +773,9 @@ echo '
 	
 	
 }
-}
 
-else
-	{
-	
-	$url = BASE_URL . 'index.php';
-	
-	ob_end_clean();
-	header("Location: $url");
-	exit();
-	}
 
 ?>
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

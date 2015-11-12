@@ -11,7 +11,6 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
 
 <?php
 
@@ -527,5 +526,5 @@ else
 </form>
 <br>
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

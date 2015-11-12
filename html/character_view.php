@@ -10,7 +10,7 @@ include ('includes/header.html');
 include ('includes/top.html');
 ?>
 
-<div id="content">
+
 
 <?php
 
@@ -826,5 +826,5 @@ else
 			<input type="submit" name="submit" value="Delete Character" />
 		
 </form>
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

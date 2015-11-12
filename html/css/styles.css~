@@ -55,7 +55,7 @@ ol, ul { list-style: none; }
 /* Global */
 
 html 	{	}
-body	{ background-image: url("../images/backgrounds/parchment.jpeg");}
+body	{ background-image: url("../images/backgrounds/castlebackground.jpg");}
 
 
 
@@ -112,7 +112,7 @@ dd          	{ 	}
 
 /* Tables */
 
-table       	{ width:100%;border-spacing: 4px;border: 1px solid black;}
+table       	{ width:80%;border-spacing: 4px;border: 1px solid black;margin-left:10%;}
 
 tr				{	border: 1px solid black;}
 .odd			{ background-color:#eee; }
@@ -180,10 +180,10 @@ caption     	{ background: #efefef; }
 							
 						}
 						
-#content 			{ float:left;width:100%;height:700px;overflow:scroll;background-image: url("../images/backgrounds/scroll.jpg"); }
-#content h1			{ margin: 0 0 20px 5px; font-size:32px; border-bottom:1px #777777 solid; padding:20px 0;  }
+#content 			{ float:left;width:100%;height:100%;/*overflow:scroll;*/font-family: "Eagle Lake";background-image: url("../images/backgrounds/library.png");}
+#content h1			{ margin: 0 0 20px 40px; font-size:32px; width:80%;border-bottom:1px #777777 solid; padding:20px 0;font-family: "Eagle Lake";font-weight: 400;  }
 
-#content p			{ margin:16px 5px; line-height:160%  }
+#content p			{ margin:16px 25px; line-height:160%;font-family: "Eagle Lake";font-weight: 400;font-size:14px;padding-left:25px; }
 #content h2			{ margin:20px 0 0 5px;  }
 #content img 			{ padding:8px;border:1px #8888888 solid;margin:0px;  }
 
@@ -191,8 +191,41 @@ caption     	{ background: #efefef; }
 #rightside h2			{ 20px 0 10px 0;  }
 #rightside p			{ margin:8px 0; line-height:160%;  }
 
-#footer 			{  clear:both; background-color:#000000;padding: 10px 0;width:100%; }
+#footer 			{  clear:both; background-color:#000000;padding: 10px 0px;width:100%; }
 #footer p		{	text-align:center; color:#ffffff;}
+
+/*Parchment*/
+#parchmenttop	{	
+						background-image: url("../images/backgrounds/Parchment-Top-Blend-trans.png");
+						height:55px;
+						background-position: 0px 10px;
+						background-repeat: no-repeat;
+						background-size: 100% 55px;
+						margin-top:10px;
+						margin-left: 10px;
+						}
+						
+#parchmentbody {
+						background-image: url("../images/backgrounds/Parchment-Body.png");
+						background-repeat: repeat-y;
+						background-size: 100% 596px;
+						margin-left: 10px;
+						min-height: 1000px;
+
+					}
+					
+#parchmentbody p,input,button{margin-left:20px;}
+
+#parchmentbody #tabs{border: 0px;}
+						
+#parchmentbottom	{	background-image: url("../images/backgrounds/Parchment-Bottom-Blend-trans.png");
+						height:55px;
+						background-repeat: no-repeat;
+						background-size: 100% 55px;
+						margin-left: 20px;
+						position:relative;
+						top:-30px;
+						}
 
 
 #box1 {   }
@@ -228,7 +261,7 @@ caption     	{ background: #efefef; }
 /*SpellPage*/
 #spell_info{}
 #spell_info p{display:inline-block;padding:0px 50px 0px 0px;}
-table.spell_table{width:100px;display:inline-block;border: 0px solid black;padding:20px;}
+table.spell_table{width:100px;display:inline-block;border: 0px solid black;padding:20px;margin-left: 0px;}
 tbody.spell_table{width:100px;}
 th.spell_table{width:100px;}
 tr.spell_table{width:100px;}
@@ -274,7 +307,7 @@ input:focus, textarea:focus	{ background-color:#BFEBFF; }
 
 textarea {
 	   margin:0 0 16px 10px;
-		border:1px #bbb solid; padding:5px; background:none; 
+		border:1px #bbb solid; padding:5px; background-color:white; 
 		}
 
 select { margin-bottom:20px;	}

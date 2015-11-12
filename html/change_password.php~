@@ -5,6 +5,11 @@ $page_title = 'Change Your Password';
 include ('includes/header.html');
 include ('includes/top.html');
 
+?>
+
+<div id="content">
+
+<?php
 // If no first_name session variable exists, redirect the user:
 if (!isset($_SESSION['user_id'])) {
 	
@@ -67,4 +72,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<div align="center"><input type="submit" name="submit" value="Change My Password" /></div>
 </form>
 
+</div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

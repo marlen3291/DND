@@ -7,7 +7,7 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
+
 
 <?php
 
@@ -77,5 +77,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<div align="center"><input type="submit" name="submit" value="Reset My Password" /></div>
 </form>
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

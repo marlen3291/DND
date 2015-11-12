@@ -13,7 +13,7 @@ include (
 
 ?>
 
-<div id="content">
+
 
 <?php
 
@@ -297,7 +297,7 @@ else
 	
 	<p><b>Public(Allow Character Profile and Chronicles To Be Public:</b>
 		<input type="radio" name="public_character" value="Yes" required>Yes
-		<input type="radio" name="public_character" value="No">No
+		<input type="radio" name="public_character" value="No" checked="checked">No
 	</p>
 	
   </div>
@@ -357,5 +357,5 @@ else
 </form>
 <br>
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

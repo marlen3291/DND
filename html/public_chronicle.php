@@ -11,7 +11,7 @@ include ('includes/top.html');
 ?>
 
 
-<div id="content">
+
 <h1>View Public Stories</h1>
 <?php
 
@@ -98,5 +98,5 @@ include ('includes/top.html');
 
 
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

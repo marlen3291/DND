@@ -30,7 +30,7 @@ include ('includes/top.html');
 	echo '<br>';
 	echo $character_id;
 	//Delete Item from database
-	$q = "DELETE * FROM spells WHERE spell_id=$spell_id";
+	$q = "DELETE FROM spells WHERE spell_id=$spell_id";
 	
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));

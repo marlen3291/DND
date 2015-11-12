@@ -11,7 +11,7 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
+
 
 <?php
 
@@ -95,6 +95,6 @@ mysqli_close($dbc);
 
 ?>
 <br>
-<button type="button"><a href="create_character.php" >Forge A Character </a></button>
-</div> <!--End of Content-->
+
+
 <?php include ('includes/footer.html'); ?>

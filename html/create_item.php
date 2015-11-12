@@ -11,7 +11,7 @@ include ('includes/top.html');
 ?>
 
 
-<div id="content">
+
 
 <?php
 
@@ -98,8 +98,9 @@ else
 	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
+<p><b>Description:</b></p>
 <textarea rows="30" cols="50" name="item_description" form="itemform">
-Enter log entry here...
+Enter the item's attributes and what it does here.
 </textarea>
 <br>
 <p><b>Type:</b>
@@ -117,5 +118,5 @@ Enter log entry here...
 </form>
 
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

@@ -11,7 +11,7 @@ include ('includes/top.html');
 ?>
 
 
-<div id="content">
+
 
 <?php
 
@@ -97,5 +97,5 @@ mysqli_close($dbc);
 
 
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

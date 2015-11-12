@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Welcome to this Site!';
+$page_title = 'Create Chronicle';
 include ('includes/header.html');
 include ('includes/top.html');
 

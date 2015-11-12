@@ -4,6 +4,13 @@ require ('includes/config.inc.php');
 $page_title = 'Logout';
 include ('includes/header.html');
 include ('includes/top.html');
+
+?>
+
+<div id="content">
+
+<?php
+
 // If no first_name session variable exists, redirect the user:
 if (!isset($_SESSION['first_name'])) {
 
@@ -22,6 +29,6 @@ if (!isset($_SESSION['first_name'])) {
 
 // Print a customized message:
 echo '<h3>You are now logged out.</h3>';
-
-include ('includes/footer.html');
 ?>
+</div> <!--End of Content-->
+<?php include ('includes/footer.html'); ?>

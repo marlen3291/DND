@@ -7,7 +7,7 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
+
 
 <?php
 
@@ -41,5 +41,5 @@ if (isset($_GET['x'], $_GET['y'])
 } // End of main IF-ELSE.
 ?>
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html');?>

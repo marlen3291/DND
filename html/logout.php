@@ -7,7 +7,7 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
+
 
 <?php
 
@@ -30,5 +30,5 @@ if (!isset($_SESSION['first_name'])) {
 // Print a customized message:
 echo '<h3>You are now logged out.</h3>';
 ?>
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

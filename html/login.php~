@@ -5,6 +5,11 @@ $page_title = 'Login';
 include ('includes/header.html');
 include ('includes/top.html');
 
+?>
+
+<div id="content">
+
+<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require (MYSQL);
 	
@@ -71,5 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<div align="center"><input type="submit" name="submit" value="Login" /></div>
 	</fieldset>
 </form>
+
+</div> <!--End of Content-->
 
 <?php include ('includes/footer.html'); ?>

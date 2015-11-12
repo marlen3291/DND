@@ -11,7 +11,7 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
+
 
 <?php
 
@@ -123,5 +123,5 @@ else
 <input type="submit" name="submit" value="Edit Chronicle" />
 </form>
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

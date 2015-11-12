@@ -11,7 +11,6 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
 
 <?php
 
@@ -125,7 +124,24 @@ else
 <?php echo $spell_description ?>
 </textarea>
 
+<!--
 <p><b>Spell Level:</b> <input type="text" name="spell_level" value="<?php echo $spell_level; ?>" /></p>
+-->
+
+
+<p><b>Spell Level:</b>
+	<input type="radio" name="spell_level" value="0" required>Cantrip
+	<input type="radio" name="spell_level" value="1">1
+	<input type="radio" name="spell_level" value="2">2
+	<input type="radio" name="spell_level" value="3">3
+	<input type="radio" name="spell_level" value="4">4
+	<input type="radio" name="spell_level" value="5">5
+	<input type="radio" name="spell_level" value="6">6
+	<input type="radio" name="spell_level" value="7">7
+	<input type="radio" name="spell_level" value="8">8
+	<input type="radio" name="spell_level" value="9">9
+</p>
+
 <p><b>Casting Time:</b> <input type="text" name="casting_time"  value="<?php echo $casting_time; ?>" /></p>
 <p><b>Range:</b> <input type="text" name="spell_range" value="<?php echo $spell_range; ?>" /></p>
 <p><b>Components:</b> <input type="text" name="components" value="<?php echo $components; ?>" /></p>
@@ -135,5 +151,5 @@ else
 </form>
 
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

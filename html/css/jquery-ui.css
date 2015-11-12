@@ -780,6 +780,8 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	padding: .2em;
+	/*Updated*/
+	margin-left: 30px;
 }
 .ui-tabs .ui-tabs-nav {
 	margin: 0;
@@ -803,6 +805,7 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
 	margin-bottom: -1px;
 	padding-bottom: 1px;
+	
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
 .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
@@ -854,8 +857,13 @@ body .ui-tooltip {
 	color: #222222;
 }
 .ui-widget-header {
+	/*Updated*/
+	/*
 	border: 1px solid #aaaaaa;
 	background: #cccccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+	*/
+	background-color:#555555; 
+	width:90%;
 	color: #222222;
 	font-weight: bold;
 }

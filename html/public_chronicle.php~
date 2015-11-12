@@ -18,7 +18,7 @@ include ('includes/top.html');
 // Need the database connection:
 	require (MYSQL);
 //Select everything from chronicles
-	$a = "SELECT character_id, first_name, last_name FROM characters";
+	$a = "SELECT character_id, first_name, last_name FROM characters WHERE public_character='Yes'";
 	
 	
 	$b = mysqli_query ($dbc, $a) or trigger_error("Query: $a\n<br />MySQL Error: " . mysqli_error($dbc));

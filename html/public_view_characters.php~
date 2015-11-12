@@ -17,7 +17,7 @@ include ('includes/top.html');
 
 
 	
-echo "<h1>View Characters</h1>";
+echo "<h1>View Public Characters</h1>";
 
 //if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 
@@ -30,12 +30,12 @@ echo "<h1>View Characters</h1>";
 	$trimmed = array_map('trim', $_POST);
 
 	
-	if (isset($_SESSION['user_id'])){
+	
 		
 	$sessionid = $_SESSION['user_id'];
 	
 	//Select everything from characters
-	$q = "SELECT character_id,first_name, last_name, class, level, background FROM characters WHERE user_id=$sessionid";
+	$q = "SELECT character_id,first_name, last_name, class FROM characters WHERE public_character='Yes'";
 	
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -72,7 +72,7 @@ echo "<h1>View Characters</h1>";
 		
 		"<td>
 		
-			<button><a href='character_view.php?character_id=$character_id'>View Character</a> </button>
+			<button><a href='public_character_view.php?character_id=$character_id'>View Character</a> </button>
 		</td>";
 				
 		
@@ -86,17 +86,8 @@ echo "<h1>View Characters</h1>";
 	
 	
 	
-	}
 	
-	else
-	{
 	
-	$url = BASE_URL . 'index.php';
-	
-	ob_end_clean();
-	header("Location: $url");
-	exit();
-	}
 	
 mysqli_close($dbc);
 
@@ -104,6 +95,6 @@ mysqli_close($dbc);
 
 ?>
 <br>
-<button type="button"><a href="create_character.php" >Forge A Character </a></button>
+
 </div> <!--End of Content-->
 <?php include ('includes/footer.html'); ?>

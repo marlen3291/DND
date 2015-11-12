@@ -30,7 +30,7 @@ include ('includes/top.html');
 	echo '<br>';
 	echo $character_id;
 	//Delete Item from database
-	$q = "DELETE * FROM items WHERE item_id=$item_id";
+	$q = "DELETE FROM items WHERE item_id=$item_id";
 	
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));

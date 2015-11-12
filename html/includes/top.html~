@@ -30,10 +30,10 @@
 					<li><a>Lore</a>
 							<ul>
 									<li><a href="public_chronicle.php" >Public Chronicles</a></li>
-									<li><a href="public_view_character.php" >Public Characters</a></li>
-									<li><a href="" >Races(Work in Progress)</a></li>
-									<li><a href="" >Places(Work in Progress)</a></li>
-									<li><a href="" >Bestiary(Work in Progress)</a></li> 
+									<li><a href="public_view_characters.php" >Public Characters</a></li>
+									<li><a>Races(Work in Progress)</a></li>
+									<li><a>Places(Work in Progress)</a></li>
+									<li><a>Bestiary(Work in Progress)</a></li> 
 							</ul>
 					
 					
@@ -77,7 +77,7 @@
 					if ($_SESSION['user_level'] == 1) {	
 						
 						echo '	
-							<li><a href="admin.php" >Administration</a>
+							<li><a>Administration</a>
 								<ul>
 									<li><a href="who_logged_in.php" >User Log</a></li>
 									<li><a href="view_users.php" >View Users</a></li>
@@ -104,8 +104,8 @@
             
             <div><img u="image" src="images/backgrounds/starter.jpg" alt="" ></div>
             <div><img u="image" src="images/backgrounds/ElementalEvil_Air_SubsectionHeader.jpg" alt=""></div>
-            <div><img u="image" src="images/backgrounds/HERO_RiseTiamat_0.jpg" alt="" ></div>
-            <div><img u="image" src="images/backgrounds/02_LATEST-STORY_Heroes_Sub-Header_140707.png" alt="" ></div>
+            <div><img u="image" src="images/backgrounds/heroes.jpg" alt="" ></div>
+            <div><img u="image" src="images/backgrounds/castle.jpg" alt="" ></div>
             <div><img u="image" src="images/backgrounds/factions.jpg" alt=""></div>
         </div>
                 
@@ -199,3 +199,7 @@
 			<h2>Time for adventure!</h2>
 		
 		</div>
+		
+		<div id="content">
+		<div id="parchmenttop"></div>	
+		<div id="parchmentbody">

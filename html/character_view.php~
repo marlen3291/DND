@@ -784,7 +784,7 @@ if (isset($_SESSION['user_id'])){
 	';
 	
 	echo '<br>';
-	echo '<p>Public Character: ' . $public_character	. '</p>';
+	echo '<p>Public Character(Allow Character Profile and Chronicles To Be Viewable By Public): ' . $public_character	. '</p>';
    //Page 5 End
    echo '
   	</div>

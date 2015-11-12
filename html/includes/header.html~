@@ -167,7 +167,7 @@ if (!isset($page_title)) {
   		});
   	 </script>
   	 
-  	 
+  	 <!--simple menu-->
     <script type="text/javascript" src="js/jqsimplemenu.js"></script>
     <link rel="stylesheet" href="css/jqsimplemenu.css" type="text/css" media="screen" />
     <script type="text/javascript">

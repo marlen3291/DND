@@ -7,7 +7,7 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
+
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -77,6 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	</fieldset>
 </form>
 
-</div> <!--End of Content-->
+
 
 <?php include ('includes/footer.html'); ?>

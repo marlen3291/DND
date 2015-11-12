@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Dungeons and Dragons Fan Site';
+$page_title = 'Create Spell';
 include ('includes/header.html');
 include ('includes/top.html');
 ?>
@@ -96,13 +96,30 @@ else
 	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
+<p><b>Description:</b></p>
 <textarea rows="30" cols="50" name="spell_description" form="spellform">
-Enter log entry here...
+Enter the spell's effects and what it does here.
 </textarea>
 
+<!--
 <p><b>Spell Level:</b> <input type="text" name="spell_level" value="<?php if (isset($trimmed['spell_level'])) echo $trimmed['spell_level']; ?>" /></p>
+-->
+
+<p><b>Spell Level:</b>
+	<input type="radio" name="spell_level" value="0" required>Cantrip
+	<input type="radio" name="spell_level" value="1">1
+	<input type="radio" name="spell_level" value="2">2
+	<input type="radio" name="spell_level" value="3">3
+	<input type="radio" name="spell_level" value="4">4
+	<input type="radio" name="spell_level" value="5">5
+	<input type="radio" name="spell_level" value="6">6
+	<input type="radio" name="spell_level" value="7">7
+	<input type="radio" name="spell_level" value="8">8
+	<input type="radio" name="spell_level" value="9">9
+</p>
+
 <p><b>Casting Time:</b> <input type="text" name="casting_time"  value="<?php if (isset($trimmed['casting_time'])) echo $trimmed['casting_time']; ?>" /></p>
-<p><b>Spell_Range:</b> <input type="text" name="spell_range" value="<?php if (isset($trimmed['spell_range'])) echo $trimmed['spell_range']; ?>" /></p>
+<p><b>Range:</b> <input type="text" name="spell_range" value="<?php if (isset($trimmed['spell_range'])) echo $trimmed['spell_range']; ?>" /></p>
 <p><b>Components:</b> <input type="text" name="components" value="<?php if (isset($trimmed['components'])) echo $trimmed['components']; ?>" /></p>
 <p><b>Duration:</b> <input type="text" name="duration" value="<?php if (isset($trimmed['duration'])) echo $trimmed['duration']; ?>" /></p>
 

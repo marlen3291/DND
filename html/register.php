@@ -6,7 +6,7 @@ include ('includes/header.html');
 include ('includes/top.html');
 ?>
 
-<div id="content">
+
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
@@ -161,6 +161,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 </form>
 
-</div> <!--End of Content-->
+
 <br>
 <?php include ('includes/footer.html'); ?>
