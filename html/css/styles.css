@@ -181,11 +181,13 @@ caption     	{ background: #efefef; }
 						}
 						
 #content 			{ float:left;width:100%;height:100%;/*overflow:scroll;*/font-family: "Eagle Lake";background-image: url("../images/backgrounds/library.png");}
-#content h1			{ margin: 0 0 20px 40px; font-size:32px; width:80%;border-bottom:1px #777777 solid; padding:20px 0;font-family: "Eagle Lake";font-weight: 400;  }
+#content h1			{ margin: 0 0 20px 50px; font-size:32px; width:80%;border-bottom:1px #777777 solid; padding:20px 40px;font-family: "Eagle Lake";font-weight: 400;  }
 
-#content p			{ margin:16px 25px; line-height:160%;font-family: "Eagle Lake";font-weight: 400;font-size:12px;padding-left:20px; }
-#content h2			{ margin:20px 0 0 5px;  }
+#content p			{ margin:16px 40px; line-height:160%;font-family: "Eagle Lake";font-weight: 400;font-size:12px;padding-left:40px; }
+#content h2			{ margin:20px 0 0 40px;font-family: "Eagle Lake";  }
 #content img 			{ padding:8px;border:1px #8888888 solid;margin:0px;  }
+#content input {margin-left:40px;}
+#content .description{width:90%;}
 
 #rightside 			{ padding:20px; margin-left:675px;   }
 #rightside h2			{ 20px 0 10px 0;  }
@@ -214,7 +216,6 @@ caption     	{ background: #efefef; }
 
 					}
 					
-#parchmentbody p,input,button{margin-left:20px;}
 
 #parchmentbody #tabs{border: 0px;}
 						
@@ -246,7 +247,7 @@ caption     	{ background: #efefef; }
 
 /*Character Page View*/
 #backgroundphoto{float:left;padding-right: 40px;}
-#playerinfo{float:left;padding:50px 20px 10px 40px;}
+#playerinfo{float:left;padding:50px 20px 10px 0px;}
 #playerinfo p{}
 
 #stats1{float:left;margin:0px 4vw 0px 0px;width:200px;}
@@ -274,7 +275,8 @@ tr.spell_table{width:100px;}
 #background2 p{display:inline-block;padding:0px 0px 0px 20px;}
 
 
-
+/*Spell View Page*/
+/*#spellcontent h1, h2, p{margin-left: 50px;}*/
 /* Layout Extra */
 
 

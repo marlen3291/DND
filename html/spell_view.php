@@ -47,14 +47,16 @@ include ('includes/top.html');
 	
 	}
 	
-	echo '<h1>Spell View</h1>';
-	echo '<p>Spellname: '	.	$spell_name	.	'</p>'; 
-	echo '<p>Description: '	.	$spell_description	.'</p>';
-	echo '<p>Spell Level: '	.	$spell_level	.	'</p>';
-	echo '<p>Casting Time: '	.	$casting_time	.	'</p>';
-	echo '<p>Range: '	.	$spell_range	.	'</p>';
-	echo '<p>Components: '	.	$components	.	'</p>';
-	echo '<p>Duration: '	.	$duration	.'</p>';
+	echo '<div id="spellcontent">';
+		echo '<h1>Spell View</h1>';
+		echo '<h2>Spellname: '	.	$spell_name	.	'</h2>';
+		echo '<p>Spell Level: '	.	$spell_level	.	'</p>';
+		echo '<p>Casting Time: '	.	$casting_time	.	'</p>';
+		echo '<p>Range: '	.	$spell_range	.	'</p>'; 
+		echo '<p>Components: '	.	$components	.	'</p>';
+		echo '<p>Duration: '	.	$duration	.'</p>';
+		echo '<p class="spelldescription">Description: '	.	$spell_description	.'</p>';
+	echo '</div>';
 	
 	echo '<br>';
 	
