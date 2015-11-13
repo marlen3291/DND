@@ -245,8 +245,9 @@ caption     	{ background: #efefef; }
 #character a {font:bold;font-size: 22px;color:#000000;}
 
 /*Character Page View*/
-#playerinfo{padding:20px 20px 10px 20px;}
-#playerinfo p{display:inline-block;padding:0px 50px 0px 0px;}
+#backgroundphoto{float:left;padding-right: 40px;}
+#playerinfo{float:left;padding:50px 20px 10px 40px;}
+#playerinfo p{}
 
 #stats1{float:left;margin:0px 4vw 0px 0px;width:200px;}
 #stats2{float:left;margin:0px 4vw 0px 0px;width:200px;}
@@ -268,8 +269,8 @@ tr.spell_table{width:100px;}
 
 
 
-#background1{float:left;width:350px;}
-#background2{display:inline-block;width:500px;}
+/*#background1{float:left;width:350px;}*/
+#background2{display:inline-block;width:90%;}
 #background2 p{display:inline-block;padding:0px 0px 0px 20px;}
 
 

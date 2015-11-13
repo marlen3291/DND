@@ -129,18 +129,24 @@ if (isset($_SESSION['user_id'])){
 	
 	//Intro
 	
+	//Background Photo
+	echo '<div id="backgroundphoto">';
+		echo "<p><u>Name</u>:$first_name $last_name</p>";
+		echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
+	echo '</div>';
 	
 	//Some Background Info
 	echo '<div id="playerinfo">';
-		echo "<p><u>Name</u>: $first_name $last_name</p>";
 		echo "<p><u>Class</u>: $class</p>";
 		echo "<p><u>Level</u>: $level</p>";
-		echo "<p><u>Background</u>: $background</p><br>";
+		echo "<p><u>Background</u>: $background</p>";
 		echo "<p><u>Player Name</u>: $player_name</p>";
 		echo "<p><u>Race</u>: $race</p>";
 		echo "<p><u>Alignment</u>: $alignment</p>";
 		echo "<p><u>Experience</u>: $exp</p>";
 	echo '</div>';
+	
+	echo '<br>';
 	
 	//Stats 1
 	echo '<div id="stats1">';
@@ -326,11 +332,6 @@ if (isset($_SESSION['user_id'])){
    ';
    
    //Page 3
-	echo '<div id="background1">';
-		echo "<p><u>Appearance</u>:</p>";
-		echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
-	echo '</div>';
-	
 	echo '<div id="background2">';
 		echo "<p><u>Age</u>: $age</p>";
 		echo "<p><u>Height</u>: $height</p>";
