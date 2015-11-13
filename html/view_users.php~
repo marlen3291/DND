@@ -11,7 +11,7 @@ include ('includes/top.html');
 ?>
 
 
-<div id="content">
+
 
 <?php
 
@@ -94,5 +94,5 @@ else
 ?>
 
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

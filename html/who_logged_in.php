@@ -78,18 +78,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
 	
-    echo "<table>";
+   echo '<table id="myTable" class="tablesorter">';
+	echo "<thead>";
+		echo "<tr>";
+			echo "<th>First Name</th>";
+			echo "<th>Last Name</th>";
+			echo "<th>Email</th>";
+			echo "<th>Login Date</th>";
+			echo "<th>Time Elapsed Since Last Login</th>";
+		echo "</tr>";
+	echo "</thead>";
 	echo "<tbody>";
-	echo "<tr>";
-	
-	echo "<th>First Name</th>";
-	echo "<th>Last Name</th>";
-	echo "<th>Email</th>";
-	echo "<th>Login Date</th>";
-	echo "<th>Time Elapsed Since Last Login</th>";
-	
-	echo "</tr>";
-	
 	while($row = mysqli_fetch_array($r))
 	{
 	$first_name = $row["first_name"];

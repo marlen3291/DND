@@ -152,16 +152,17 @@ if (!isset($page_title)) {
 	-->
 	
 	<link href="css/jquery-ui.css" rel="stylesheet">
-	<script src="js/external/jquery/jquery.js"></script>
+	<!--<script src="js/external/jquery/jquery.js"></script>-->
+	<script src="js/jquery-2.1.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
  	 
 
   
-  <script>
-  $(function() {
-    $( "#menu" ).menu();
-  });
-  </script>
+  	<script>
+  		$(function() {
+    	$( "#menu" ).menu();
+  		});
+  	</script>
  
  	 
  	 <script>
@@ -178,6 +179,22 @@ if (!isset($page_title)) {
             $('.menu').jqsimplemenu();
         });
     </script>
+    
+	<!-jquery table sorter-->    
+    <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="js/jquery.metadata.js"></script>
+    <link rel="stylesheet" href="css/bluetabletheme/style.css" type="text/css" media="screen" />
+    <script type="text/javascript"> 
+  $(document).ready(function() 
+    { 
+        $("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} ); 
+        $("#myTablecharacter").tablesorter( {sortList: [[0,0], [1,0]]} );
+        $("#myTableitem").tablesorter( {sortList: [[0,0], [1,0]]} ); 
+        $("#myTablespell").tablesorter( {sortList: [[0,0], [1,0]]} ); 
+        $("#myTablechronicle").tablesorter( {sortList: [[0,0], [1,0]]} );  
+    } 
+);
+	</script>
     
 	<title><?php echo $page_title; ?></title>
 	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">

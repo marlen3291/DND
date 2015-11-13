@@ -33,20 +33,21 @@ echo "<h1>Login Logs</h1>";
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
 	
-    echo "<table>";
+   echo '<table id="myTable" class="tablesorter">';
+	echo "<thead>";
+		echo "<tr>";
+	
+			echo "<th>User ID</th>";
+			echo "<th>First Name</th>";
+			echo "<th>Last Name</th>";
+			echo "<th>Email</th>";
+			echo "<th>User Level</th>";
+			echo "<th>Registration Date</th>";
+			echo "<th>Last Login Date</th>";
+	
+		echo "</tr>";
+	echo "</head>";
 	echo "<tbody>";
-	echo "<tr>";
-	
-	echo "<th>User ID</th>";
-	echo "<th>First Name</th>";
-	echo "<th>Last Name</th>";
-	echo "<th>Email</th>";
-	echo "<th>User Level</th>";
-	echo "<th>Registration Date</th>";
-	echo "<th>Last Login Date</th>";
-	
-	echo "</tr>";
-	
 	while($row = mysqli_fetch_array($r))
 	{
 		

@@ -215,28 +215,38 @@ if (isset($_SESSION['user_id'])){
 	
 	//Select items
 	//Select inventory type items
-	$i1 = "SELECT item_name, item_id FROM items WHERE character_id=$character_id AND item_type='inventory'";
+	$i1 = "SELECT item_name, item_id, item_type FROM items WHERE character_id=$character_id";
 	
 	
 	$i1f = mysqli_query ($dbc, $i1) or trigger_error("Query: $i1\n<br />MySQL Error: " . mysqli_error($dbc));
 	
-   echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Inventory Items</th>";
-	echo "</tr>";
+   echo '<table id="myTableitem" class="tablesorter">';
+	echo "<thead>";
+		echo "<tr>";
+			echo "<th>Item Name</th>";
+			echo "<th>Item Type</th>";
+			echo "<th>Item Link</th>";
+		echo "</tr>";
+	echo "</thead>";
+	echo "<tbody>";
 	
 	while($row = mysqli_fetch_array($i1f))
 	{
 		
 	$item_name = $row["item_name"];
 	$item_id = $row["item_id"];
+	$item_type = $row["item_type"];
 			
-	echo "<tr class='spell_table'>";
+	echo "<tr>";
 
-		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
+		echo "<td>" .	$item_name	.	"</td>"	;
+		echo "<td>". $item_type . "</td>"	;
+		echo 
+		
+		"<td>
+		
+			<button><a href='item_view.php?item_id=$item_id'>View Item</a> </button>
+		</td>";
 					
 	echo "</tr>";
 	
@@ -246,72 +256,6 @@ if (isset($_SESSION['user_id'])){
 	echo "</tbody>";
 	echo "</table>";
 	//Item Inventory End
-	
-	//Select weapon type items
-	$i1 = "SELECT item_name, item_id FROM items WHERE character_id=$character_id AND item_type='weapon'";
-	
-	
-	$i1f = mysqli_query ($dbc, $i1) or trigger_error("Query: $i1\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-   echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Weapon Items</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($i1f))
-	{
-		
-	$item_name = $row["item_name"];
-	$item_id = $row["item_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Item Weapon End
-	
-	//Select armor type items
-	$i1 = "SELECT item_name, item_id FROM items WHERE character_id=$character_id AND item_type='armor'";
-	
-	
-	$i1f = mysqli_query ($dbc, $i1) or trigger_error("Query: $i1\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-   echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Armor Items</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($i1f))
-	{
-		
-	$item_name = $row["item_name"];
-	$item_id = $row["item_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='item_view.php?item_id=$item_id'>" .	$item_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Item Armor End
 	
 	//Create item form
 	echo '<form action="create_item.php" method="get">
@@ -368,29 +312,39 @@ if (isset($_SESSION['user_id'])){
 	echo'</br>';
 	
 	//Select character spells
-	//Select 0 level spells
-	$s0 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=0";
+	$s0 = "SELECT spell_name, spell_id, spell_level FROM spells WHERE character_id=$character_id";
 	
 	
 	$a0 = mysqli_query ($dbc, $s0) or trigger_error("Query: $s0\n<br />MySQL Error: " . mysqli_error($dbc));
 	
-   echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Cantrips</th>";
-	echo "</tr>";
+   echo '<table id="myTablespell" class="tablesorter">';
+   echo "<thead>";
+		echo "<tr>";
+			echo "<th>Spell Name</th>";
+			echo "<th>Spell Level</th>";
+			echo "<th>Spell Link</th>";
+		echo "</tr>";
+	echo "</thead>";
+	echo "<tbody>";
 	
 	while($row = mysqli_fetch_array($a0))
 	{
 		
 	$spell_name = $row["spell_name"];
 	$spell_id = $row["spell_id"];
+	$spell_level = $row["spell_level"];
 			
-	echo "<tr class='spell_table'>";
+	echo "<tr>";
 
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
+		echo "<td>" .	$spell_name	.	"</td>"	;
+		echo "<td>". $spell_level . "</td>";
+		
+		echo 
+		
+		"<td>
+		
+			<button><a href='spell_view.php?spell_id=$spell_id'>View Spell</a> </button>
+		</td>";
 					
 	echo "</tr>";
 	
@@ -399,313 +353,7 @@ if (isset($_SESSION['user_id'])){
 	}
 	echo "</tbody>";
 	echo "</table>";
-	//Level 0 Spell End
-	
-	//Level 1 Spell Start
-	//Select level 1 spells
-	$s1 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=1";
-	
-	
-	$a1 = mysqli_query ($dbc, $s1) or trigger_error("Query: $s1\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 1</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a1))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 1 Spell End
-	
-	//Level 2 Spell Start
-	//Select level 2 spells
-	$s2 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=2";
-	
-	
-	$a2 = mysqli_query ($dbc, $s2) or trigger_error("Query: $s2\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 2</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a2))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 2 Spell End
-	
-	//Level 3 Spell Start
-	//Select level 3 spells
-	$s3 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=3";
-	
-	
-	$a3 = mysqli_query ($dbc, $s3) or trigger_error("Query: $s3\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 3</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a3))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 3 Spell End
-	
-	//Level 4 Spell Start
-	//Select level 4 spells
-	$s4 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=4";
-	
-	
-	$a4 = mysqli_query ($dbc, $s4) or trigger_error("Query: $s4\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 4</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a4))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 4 Spell End
-	
-	//Level 5 Spell Start
-	//Select level 5 spells
-	$s5 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=5";
-	
-	
-	$a5 = mysqli_query ($dbc, $s5) or trigger_error("Query: $s5\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 5</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a5))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 5 Spell End
-		
-	//Level 6 Spell Start
-	//Select level 6 spells
-	$s6 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=6";
-	
-	
-	$a6 = mysqli_query ($dbc, $s6) or trigger_error("Query: $s6\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 6</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a6))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 6 Spell End
-		
-	//Level 7 Spell Start
-	//Select level 7 spells
-	$s7 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=7";
-	
-	
-	$a7 = mysqli_query ($dbc, $s7) or trigger_error("Query: $s7\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 7</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a7))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 7 Spell End
-	
-	//Level 8 Spell Start
-	//Select level 8 spells
-	$s8 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=8";
-	
-	
-	$a8 = mysqli_query ($dbc, $s8) or trigger_error("Query: $s8\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 8</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a8))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 8 Spell End
-	
-	//Level 9 Spell Start
-	//Select level 9 spells
-	$s9 = "SELECT spell_name, spell_id FROM spells WHERE character_id=$character_id AND spell_level=9";
-	
-	
-	$a9 = mysqli_query ($dbc, $s9) or trigger_error("Query: $s9\n<br />MySQL Error: " . mysqli_error($dbc));
-	
-  	echo "<table class='spell_table'>";
-	echo "<tbody class='spell_table'>";
-	echo "<tr class='spell_table'>";
-	
-	
-	echo "<th class='spell_table'>Level 9</th>";
-	echo "</tr>";
-	
-	while($row = mysqli_fetch_array($a9))
-	{
-		
-	$spell_name = $row["spell_name"];
-	$spell_id = $row["spell_id"];
-			
-	echo "<tr class='spell_table'>";
-
-		echo "<td class='spell_table'> <a href='spell_view.php?spell_id=$spell_id'>" .	$spell_name	.	"</a></td>"	;
-					
-	echo "</tr>";
-	
-	
-	
-	}
-	echo "</tbody>";
-	echo "</table>";
-	//Level 9 Spell End	
+	//Spell End
 	
 	echo '<br>';
 	
@@ -735,16 +383,18 @@ if (isset($_SESSION['user_id'])){
 	
 	$d = mysqli_query ($dbc, $c) or trigger_error("Query: $c\n<br />MySQL Error: " . mysqli_error($dbc));
 	
-	echo "<table>";
+	echo '<table id="myTablechronicle" class="tablesorter">';
+	echo "<thead>";
+		echo "<tr>";
+	
+	
+		echo "<th>Chronicle Name</th>";
+		echo "<th>Date</th>";
+		echo "<th>Chronicle Link</th>";
+	
+		echo "</tr>";
+	echo "</head>";	
 	echo "<tbody>";
-	echo "<tr>";
-	
-	
-	echo "<th>Chronicle Name</th>";
-	echo "<th>Date</th>";
-	echo "<th></th>";
-	
-	echo "</tr>";
 	
 	while($row = mysqli_fetch_array($d))
 	{
@@ -759,19 +409,18 @@ if (isset($_SESSION['user_id'])){
 		echo "<td>" .	$chronicle_name	.	"</td>"	;
 		echo "<td>" .	$date	.	"</td>"	;
 		
-		echo
+		echo 
+		
 		"<td>
-				<form action=\"chronicle_view.php\" method=\"get\">
-					<input type=\"hidden\" name=\"chronicle_id\" value=\"$chronicle_id\">
 		
-					<input type=\"submit\" name=\"submit\" value=\"View Chronicle\" />
-		
-				</form>
+			<button><a href='chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
 		</td>";
 		
 	}
 	echo "</tbody>";
 	echo "</table>";
+	
+	
 	
 	echo ' 
 	

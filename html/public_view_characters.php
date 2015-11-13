@@ -40,17 +40,17 @@ echo "<h1>View Public Characters</h1>";
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
 	
-    echo "<table>";
+   echo '<table id="myTablecharacter" class="tablesorter">';
+    echo '<thead>';
+    	echo "<tr>";
+			echo "<th>First Name</th>";
+			echo "<th>Last Name</th>";
+			echo "<th>Class</th>";
+			echo "<th></th>";
+		echo "</tr>";
+	echo '</thead>';
+	
 	echo "<tbody>";
-	echo "<tr>";
-	
-	
-	echo "<th>First Name</th>";
-	echo "<th>Last Name</th>";
-	echo "<th>Class</th>";
-	echo "<th></th>";
-	
-	echo "</tr>";
 	
 	while($row = mysqli_fetch_array($r))
 	{

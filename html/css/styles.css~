@@ -276,7 +276,7 @@ tr.spell_table{width:100px;}
 
 
 /*Spell View Page*/
-#spellcontent h1, h2, p{margin-left: 50px;}
+/*#spellcontent h1, h2, p{margin-left: 50px;}*/
 /* Layout Extra */
 
 

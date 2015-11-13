@@ -37,18 +37,18 @@ include ('includes/top.html');
 	
 	
 	echo "<p>Character: "	. $first_name	.	" "	. $last_name	. "</p>";
-	echo "<table>";
+	echo '<table id="myTablechronicle" class="tablesorter">';
+	echo "<thead>";
+		echo "<tr>";
+	
+			echo "<th>Chronicle Name</th>";
+			echo "<th>Date</th>";
+			echo "<th>View</th>";
+	
+		echo "</tr>";
+	echo '</thead>';
+	
 	echo "<tbody>";
-	echo "<tr>";
-	
-	
-	echo "<th>Chronicle Name</th>";
-	/*echo "<th>Character Name</th>";*/
-	echo "<th>Date</th>";
-	echo "<th>View</th>";
-	
-	echo "</tr>";
-	
 	while($row = mysqli_fetch_array($d))
 	{
 	$chronicle_id = $row["chronicle_id"];
@@ -72,15 +72,13 @@ include ('includes/top.html');
 		echo "<td>" .	$chronicle_name	.	"</td>"	;
 		echo "<td>" .	$date	.	"</td>"	;
 		
-		echo
+		echo 
+		
 		"<td>
-				<form action=\"chronicle_view_public.php\" method=\"get\">
-					<input type=\"hidden\" name=\"chronicle_id\" value=\"$chronicle_id\">
 		
-					<input type=\"submit\" name=\"submit\" value=\"View Chronicle\" />
-		
-				</form>
+			<button><a href='public_chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
 		</td>";
+		
 		
 	echo "</tr>";
 		
