@@ -37,7 +37,7 @@ include ('includes/top.html');
 	
 	
 	echo "<p>Character: "	. $first_name	.	" "	. $last_name	. "</p>";
-	echo '<table id="myTablechronicle" class="tablesorter">';
+	echo '<table id="" class="tablesorter">';
 	echo "<thead>";
 		echo "<tr>";
 	

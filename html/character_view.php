@@ -131,64 +131,79 @@ if (isset($_SESSION['user_id'])){
 	
 	//Background Photo
 	echo '<div id="backgroundphoto">';
-		echo "<p><u>Name</u>:$first_name $last_name</p>";
+		echo "<p><b><u>Name</u></b>:$first_name $last_name</p>";
 		echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
 	echo '</div>';
 	
 	//Some Background Info
 	echo '<div id="playerinfo">';
-		echo "<p><u>Class</u>: $class</p>";
-		echo "<p><u>Level</u>: $level</p>";
-		echo "<p><u>Background</u>: $background</p>";
-		echo "<p><u>Player Name</u>: $player_name</p>";
-		echo "<p><u>Race</u>: $race</p>";
-		echo "<p><u>Alignment</u>: $alignment</p>";
-		echo "<p><u>Experience</u>: $exp</p>";
+		echo "<p><b><u>Class</u></b>: $class</p>";
+		echo "<p><b><u>Level</u></b>: $level</p>";
+		echo "<p><b><u>Background</u></b>: $background</p>";
+		echo "<p><b><u>Player Name</u></b>: $player_name</p>";
+		echo "<p><b><u>Race</u></b>: $race</p>";
+		echo "<p><b><u>Alignment</u></b>: $alignment</p>";
+		echo "<p><b><u>Experience</u></b>: $exp</p>";
 	echo '</div>';
 	
 	echo '<br>';
 	
 	//Stats 1
 	echo '<div id="stats1">';
-		echo "<p><u>Strength</u>: $strength</p>";
-		echo "<p><u>Dexterity</u>: $dexterity</p>";
-		echo "<p><u>Constitution</u>: $constitution</p>";
-		echo "<p><u>Intelligence</u>: $intelligence</p>";
-		echo "<p><u>Wisdom</u>: $wisdom</p>";
-		echo "<p><u>Charisma</u>: $charisma</p>";
+		echo "<p><b><u>Strength</u></b>: $strength <p id='strbonus'></p></p>";		
+		echo "<p><b><u>Dexterity</u></b>: $dexterity<p id='dexbonus'></p></p>";
+		echo "<p><b><u>Constitution</u></b>: $constitution<p id='conbonus'></p></p>";
+		echo "<p><b><u>Intelligence</u></b>: $intelligence<p id='intbonus'></p></p>";
+		echo "<p><b><u>Wisdom</u></b>: $wisdom<p id='wisbonus'></p></p>";
+		echo "<p><b><u>Charisma</u></b>: $charisma<p id='chabonus'></p></p>";
+		
+		
+		echo'<script type="text/javascript"> 
+  			$(document).ready(function() 
+    			{ 
+       			document.getElementById("strbonus").innerHTML = modifierbonus('.$strength.'); 
+       			document.getElementById("dexbonus").innerHTML = modifierbonus('.$dexterity.');
+       			document.getElementById("conbonus").innerHTML = modifierbonus('.$constitution.');
+       			document.getElementById("intbonus").innerHTML = modifierbonus('.$intelligence.');
+       			document.getElementById("wisbonus").innerHTML = modifierbonus('.$wisdom.');
+       			document.getElementById("chabonus").innerHTML = modifierbonus('.$charisma.');
+    			} 
+			);
+			</script>';	
+	
 	echo '</div>';
 	
 	
 	//Stats 2
 
 	echo '<div id="stats2">';
-		echo "<p><u>Inspiration</u>: $inspiration</p>";
-		echo "<p><u>Proficiency Bonus</u>: $proficiency_bonus</p>";
-		echo "<p><u>Saving Throws</u>: $saving_throws</p>";
-		echo "<p><u>Skills</u>: $skills</p>";
-		echo "<p><u>Passive Wisdom</u>: $passive_wisdom</p>";
-		echo "<p><u>Languages</u>: $languages</p>";
-		echo "<p><u>Proficiencies</u>: $proficiencies</p>";
+		echo "<p><b><u>Inspiration</u></b>: $inspiration</p>";
+		echo "<p><b><u>Proficiency Bonus</u></b>: $proficiency_bonus</p>";
+		echo "<p><b><u>Saving Throws</u></b>: $saving_throws</p>";
+		echo "<p><b><u>Skills</u></b>: $skills</p>";
+		echo "<p><b><u>Passive Wisdom</u></b>: $passive_wisdom</p>";
+		echo "<p><b><u>Languages</u></b>: $languages</p>";
+		echo "<p><b><u>Proficiencies</u></b>: $proficiencies</p>";
 	echo '</div>';
 	
 	//Stats 3
 	echo '<div id="stats3">';
-		echo "<p><u>Armor Class</u>: $armor_class</p>";
-		echo "<p><u>Initiative</u>: $initiative</p>";
-		echo "<p><u>Speed</u>: $speed</p>";
-		echo "<p><u>Max HP</u>: $max_hp</p>";
-		echo "<p><u>Current HP</u>: $current_hp</p>";
-		echo "<p><u>Hit Dice</u>: $hit_dice</p>";
-		echo "<p><u>Successes</u>: $successes</p>";
-		echo "<p><u>Failures</u>: $failures</p>";
+		echo "<p><b><u>Armor Class</u></b>: $armor_class</p>";
+		echo "<p><b><u>Initiative</u></b>: $initiative</p>";
+		echo "<p><b><u>Speed</u></b>: $speed</p>";
+		echo "<p><b><u>Max HP</u></b>: $max_hp</p>";
+		echo "<p><b><u>Current HP</u></b>: $current_hp</p>";
+		echo "<p><b><u>Hit Dice</u></b>: $hit_dice</p>";
+		echo "<p><b><u>Successes</u></b>: $successes</p>";
+		echo "<p><b><u>Failures</u></b>: $failures</p>";
 	echo '</div><br>';
 	
 	//Stats 4	
 	echo '<div id="stats4">';
-		echo "<p><u>Personality Traits</u>: $personality_traits</p>";
-		echo "<p><u>Ideals</u>: $ideals</p>";
-		echo "<p><u>Bonds</u>: $bonds</p>";
-		echo "<p><u>Flaws</u>: $flaws</p>";
+		echo "<p><b><u>Personality Traits</u></b>: $personality_traits</p>";
+		echo "<p><b><u>Ideals</u></b>: $ideals</p>";
+		echo "<p><b><u>Bonds</u></b>: $bonds</p>";
+		echo "<p><b><u>Flaws</u></b>: $flaws</p>";
 	echo '</div>';
 	
 	echo '<br>';
@@ -206,11 +221,11 @@ if (isset($_SESSION['user_id'])){
    //Page 2
 	echo '<div id="moneyinfo">';
 		echo "<p><b><u>Currency</u></b></p><br>";
-		echo "<p><u>CP</u>: $cp</p>";
-		echo "<p><u>SP</u>: $sp</p>";
-		echo "<p><u>EP</u>: $ep</p>";
-		echo "<p><u>GP</u>: $gp</p>";
-		echo "<p><u>PP</u>: $pp</p>";
+		echo "<p><b><u>CP</u></b>: $cp</p>";
+		echo "<p><b><u>SP</u></b>: $sp</p>";
+		echo "<p><b><u>EP</u></b>: $ep</p>";
+		echo "<p><b><u>GP</u></b>: $gp</p>";
+		echo "<p><b><u>PP</u></b>: $pp</p>";
 	echo '</div><br><br>';
 	
 	//Select items
@@ -277,19 +292,19 @@ if (isset($_SESSION['user_id'])){
    
    //Page 3
 	echo '<div id="background2">';
-		echo "<p><u>Age</u>: $age</p>";
-		echo "<p><u>Height</u>: $height</p>";
-		echo "<p><u>Weight</u>: $weight</p><br>";
-		echo "<p><u>Eyes</u>: $eyes</p>";
-		echo "<p><u>Skin</u>: $skin</p>";
-		echo "<p><u>Hair</u>: $hair</p>";
+		echo "<p><b><u>Age</u></b>: $age</p>";
+		echo "<p><b><u>Height</u></b>: $height</p>";
+		echo "<p><b><u>Weight</u></b>: $weight</p><br>";
+		echo "<p><b><u>Eyes</u></b>: $eyes</p>";
+		echo "<p><b><u>Skin</u></b>: $skin</p>";
+		echo "<p><b><u>Hair</u></b>: $hair</p>";
 	
-		echo "<p><u>Organization</u>: $organization</p>";
-		echo "<p><u>Rank</u>: $rank</p><br>";
+		echo "<p><b><u>Organization</u></b>: $organization</p>";
+		echo "<p><b><u>Rank</u></b>: $rank</p><br>";
 	
-		echo "<p><u>Backstory</u>: $backstory</p><br>";
+		echo "<p><b><u>Backstory</u></b>: $backstory</p><br>";
 	
-		echo "<p><u>Features</u>: $features</p><br>";
+		echo "<p><b><u>Features</u></b>: $features</p><br>";
    echo '</div><br>';
    //Page 3 End
    echo '
@@ -303,10 +318,10 @@ if (isset($_SESSION['user_id'])){
 	
 	//Page 4
 	echo '<div id="spell_info">';
-		echo "<p><u>Spell Slots</u>: $spell_slots</p>";
-		echo "<p><u>Spellcasting Ability</u>: $spell_casting_ability</p>";
-		echo "<p><u>Spell Save DC</u>: $spell_save_dc</p>";
-		echo "<p><u>Spell Attack Bonus</u>: $spell_attack_bonus</p>";
+		echo "<p><b><u>Spell Slots</u></b>: $spell_slots</p>";
+		echo "<p><b><u>Spellcasting Ability</u></b>: $spell_casting_ability</p>";
+		echo "<p><b><u>Spell Save DC</u></b>: $spell_save_dc</p>";
+		echo "<p><b><u>Spell Attack Bonus</u></b>: $spell_attack_bonus</p>";
 	echo'</div>';
 	
 	echo'</br>';

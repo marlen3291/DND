@@ -137,13 +137,13 @@ include ('includes/top.html');
 	
 	//Some Background Info
 	echo '<div id="playerinfo">';
-		echo "<p><u>Class</u>: $class</p>";
-		echo "<p><u>Level</u>: $level</p>";
-		echo "<p><u>Background</u>: $background</p>";
-		echo "<p><u>Player Name</u>: $player_name</p>";
-		echo "<p><u>Race</u>: $race</p>";
-		echo "<p><u>Alignment</u>: $alignment</p>";
-		echo "<p><u>Experience</u>: $exp</p>";
+		echo "<p><b><u>Class</u></b>: $class</p>";
+		echo "<p><b><u>Level</u></b>: $level</p>";
+		echo "<p><b><u>Background</u></b>: $background</p>";
+		echo "<p><b><u>Player Name</u></b>: $player_name</p>";
+		echo "<p><b><u>Race</u></b>: $race</p>";
+		echo "<p><b><u>Alignment</u></b>: $alignment</p>";
+		echo "<p><b><u>Experience</u></b>: $exp</p>";
 	echo '</div>';
 	
 	echo '<br>';
@@ -162,6 +162,11 @@ include ('includes/top.html');
   			$(document).ready(function() 
     			{ 
        			document.getElementById("strbonus").innerHTML = modifierbonus('.$strength.'); 
+       			document.getElementById("dexbonus").innerHTML = modifierbonus('.$dexterity.');
+       			document.getElementById("conbonus").innerHTML = modifierbonus('.$constitution.');
+       			document.getElementById("intbonus").innerHTML = modifierbonus('.$intelligence.');
+       			document.getElementById("wisbonus").innerHTML = modifierbonus('.$wisdom.');
+       			document.getElementById("chabonus").innerHTML = modifierbonus('.$charisma.');
     			} 
 			);
 			</script>';	

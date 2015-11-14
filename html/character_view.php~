@@ -150,12 +150,27 @@ if (isset($_SESSION['user_id'])){
 	
 	//Stats 1
 	echo '<div id="stats1">';
-		echo "<p><u>Strength</u>: $strength</p>";
-		echo "<p><u>Dexterity</u>: $dexterity</p>";
-		echo "<p><u>Constitution</u>: $constitution</p>";
-		echo "<p><u>Intelligence</u>: $intelligence</p>";
-		echo "<p><u>Wisdom</u>: $wisdom</p>";
-		echo "<p><u>Charisma</u>: $charisma</p>";
+		echo "<p><b><u>Strength</u></b>: $strength <p id='strbonus'></p></p>";		
+		echo "<p><b><u>Dexterity</u></b>: $dexterity<p id='dexbonus'></p></p>";
+		echo "<p><b><u>Constitution</u></b>: $constitution<p id='conbonus'></p></p>";
+		echo "<p><b><u>Intelligence</u></b>: $intelligence<p id='intbonus'></p></p>";
+		echo "<p><b><u>Wisdom</u></b>: $wisdom<p id='wisbonus'></p></p>";
+		echo "<p><b><u>Charisma</u></b>: $charisma<p id='chabonus'></p></p>";
+		
+		
+		echo'<script type="text/javascript"> 
+  			$(document).ready(function() 
+    			{ 
+       			document.getElementById("strbonus").innerHTML = modifierbonus('.$strength.'); 
+       			document.getElementById("dexbonus").innerHTML = modifierbonus('.$dexterity.');
+       			document.getElementById("conbonus").innerHTML = modifierbonus('.$constitution.');
+       			document.getElementById("intbonus").innerHTML = modifierbonus('.$intelligence.');
+       			document.getElementById("wisbonus").innerHTML = modifierbonus('.$wisdom.');
+       			document.getElementById("chabonus").innerHTML = modifierbonus('.$charisma.');
+    			} 
+			);
+			</script>';	
+	
 	echo '</div>';
 	
 	
@@ -245,7 +260,7 @@ if (isset($_SESSION['user_id'])){
 		
 		"<td>
 		
-			<button><a href='public_item_view.php?item_id=$item_id'>View Item</a> </button>
+			<button><a href='item_view.php?item_id=$item_id'>View Item</a> </button>
 		</td>";
 					
 	echo "</tr>";
@@ -413,7 +428,7 @@ if (isset($_SESSION['user_id'])){
 		
 		"<td>
 		
-			<button><a href='chronicle_view_public.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
+			<button><a href='chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
 		</td>";
 		
 	}

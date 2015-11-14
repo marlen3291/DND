@@ -76,7 +76,7 @@ include ('includes/top.html');
 		
 		"<td>
 		
-			<button><a href='chronicle_view_public.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
+			<button><a href='public_chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
 		</td>";
 		
 		

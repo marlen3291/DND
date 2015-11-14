@@ -78,7 +78,7 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
 
 /* Text Elements */
 
-p           	{ color:#000; font-size:12px; line-height:150%;  }
+p           	{ color:#000; font-size:14px; line-height:150%;  }
 p .left			{ margin: 1.5em 1.5em 1.5em 0; padding: 0; }
 p .right 		{ margin: 1.5em 0 1.5em 1.5em; padding: 0; }
 
@@ -186,7 +186,7 @@ caption     	{ background: #efefef; }
 #content 			{ float:left;width:100%;height:100%;/*overflow:scroll;*/font-family: "Eagle Lake";background-image: url("../images/backgrounds/library.png");}
 #content h1			{ margin: 0 0 20px 50px; font-size:32px; width:80%;border-bottom:1px #777777 solid; padding:20px 40px;font-family: "Eagle Lake";font-weight: 400;  }
 
-#content p			{ margin:16px 40px; line-height:160%;font-family: "Eagle Lake";font-weight: 400;font-size:12px;padding-left:40px; }
+#content p			{ margin:16px 30px; line-height:160%;font-family: "Eagle Lake";font-weight: 400;font-size:12px;padding-left:40px; }
 #content h2			{ margin:20px 0 0 40px;font-family: "Eagle Lake";  }
 #content img 			{ padding:8px;border:1px #8888888 solid;margin:0px;  }
 #content input {margin-left:40px;}
@@ -253,9 +253,9 @@ caption     	{ background: #efefef; }
 #playerinfo{float:left;padding:50px 20px 10px 0px;}
 #playerinfo p{}
 
-#stats1{float:left;margin:0px 2vw 0px 0px;width:220px;}
-#stats2{float:left;margin:0px 3vw 0px 0px;width:200px;}
-#stats3{float:left;margin:0px 3vw 0px 0px;width:200px;}
+#stats1{float:left;margin:0px 0px 0px 0px;width:240px;}
+#stats2{float:left;margin:0px 0px 0px 0px;width:200px;}
+#stats3{float:left;margin:0px 0px 0px 0px;width:240px;}
 #stats4{float:left;margin:0px 0px 0px 0px;width:500px;}
 #stats5{float:right;margin:0px 0px 0px 0px;width:200px;}
 
