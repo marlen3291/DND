@@ -295,7 +295,7 @@ else
 	
 	<p><b>PP:</b> <input type="text" name="pp" size="20" maxlength="40" value="<?php if (isset($trimmed['pp'])) echo $trimmed['pp']; ?>" /></p>
 	
-	<p><b>Public(Allow Character Profile and Chronicles To Be Public:</b>
+	<p><b>Public(Allow Character Profile To Be Public):</b>
 		<input type="radio" name="public_character" value="Yes" required>Yes
 		<input type="radio" name="public_character" value="No" checked="checked">No
 	</p>

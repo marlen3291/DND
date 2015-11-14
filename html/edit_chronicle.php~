@@ -114,12 +114,20 @@ else
 <?php echo $description; ?>
 </textarea>
 
-<p><b>Public:</b>
-	<input type="radio" name="public" value="Yes" required>Yes
-	<input type="radio" name="public" value="No">No
-</p>
 
-<br>
+<?php
+	
+	if($public == 'Yes'){$yescheck = "checked";}
+	else{$nocheck = "checked";}
+	
+	echo '<p><b>Public(Allow Chronicle To Be Public:)</b>
+		<input type="radio" name="public" value="Yes" '. $yescheck	.	'>Yes
+		<input type="radio" name="public" value="No" '	.	$nocheck	.  '>No
+	</p>';
+	
+	?>
+  </div>
+  <br>
 <input type="submit" name="submit" value="Edit Chronicle" />
 </form>
 

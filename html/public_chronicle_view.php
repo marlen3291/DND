@@ -64,7 +64,6 @@ include ('includes/top.html');
 	echo '<p>Chronicle Name: '	.	$chronicle_name	.	'</p>';
 	echo '<p>Date: '	.	$date	.	'</p>';
 	echo '<p>Entry: '	.	$description	.	'</p>';
-	echo '<p>Public: ' . $public . '</p>';
 	
 	
 	

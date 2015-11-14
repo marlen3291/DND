@@ -11,7 +11,7 @@ include ('includes/top.html');
 
 ?>
 
-<div id="content">
+
 
 <?php
 
@@ -99,5 +99,5 @@ Enter log entry here...
 <input type="submit" name="submit" value="Create a chronicle" />
 </form>
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

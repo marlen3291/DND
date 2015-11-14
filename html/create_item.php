@@ -104,9 +104,9 @@ Enter the item's attributes and what it does here.
 </textarea>
 <br>
 <p><b>Type:</b>
-	<input type="radio" name="item_type" value="inventory" required>Inventory
-	<input type="radio" name="item_type" value="weapon">Weapon
-	<input type="radio" name="item_type" value="armor">Armor
+	<input type="radio" name="item_type" value="Inventory" required checked>Inventory
+	<input type="radio" name="item_type" value="Weapon">Weapon
+	<input type="radio" name="item_type" value="Armor">Armor
 </p>
 
 <p><b>Attack Bonus:</b> <input type="text" name="attack_bonus"  value="<?php if (isset($trimmed['attack_bonus'])) echo $trimmed['attack_bonus']; ?>" /></p>

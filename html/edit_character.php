@@ -463,12 +463,17 @@ else
 	
 	<p><b>PP:</b> <input type="text" name="pp" size="20" maxlength="40" value="<?php echo $pp; ?>" /></p>
 	
+	<?php
 	
-	<p><b>Public(Allow Character Profile and Chronicles To Be Public:</b>
-		<input type="radio" name="public_character" value="Yes" required>Yes
-		<input type="radio" name="public_character" value="No">No
-	</p>
+	if($public_character=='Yes'){$yescheck="checked";}
+	else{$nocheck="checked";}
 	
+	echo '<p><b>Public(Allow Character Profile To Be Public:)</b>
+		<input type="radio" name="public_character" value="Yes" '. $yescheck	.	'>Yes
+		<input type="radio" name="public_character" value="No" '	.	$nocheck	.  '>No
+	</p>';
+	
+	?>
   </div>
   
   <div id="tabs-2">

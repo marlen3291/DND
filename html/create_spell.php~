@@ -11,7 +11,7 @@ include ('includes/top.html');
 ?>
 
 
-<div id="content">
+
 
 <?php
 
@@ -127,5 +127,5 @@ Enter the spell's effects and what it does here.
 </form>
 
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

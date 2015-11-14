@@ -228,13 +228,18 @@ include ('includes/top.html');
 		echo "<p><b><u>PP</u></b>: $pp</p>";
 	echo '</div><br><br>';
 	
+	
 	//Select items
 	//Select inventory type items
+	echo '<p><b><u>List of Items</u></b></p>';
+	
 	$i1 = "SELECT item_name, item_id, item_type FROM items WHERE character_id=$character_id";
 	
 	
 	$i1f = mysqli_query ($dbc, $i1) or trigger_error("Query: $i1\n<br />MySQL Error: " . mysqli_error($dbc));
 	
+	if(mysqli_num_rows($i1f) != 0){
+		
    echo '<table id="myTableitem" class="tablesorter">';
 	echo "<thead>";
 		echo "<tr>";
@@ -270,6 +275,9 @@ include ('includes/top.html');
 	}
 	echo "</tbody>";
 	echo "</table>";
+	
+}
+else{echo '<p>No Items Acquired Yet</p>';}
 	//Item Inventory End
 	
 	
@@ -322,11 +330,14 @@ include ('includes/top.html');
 	echo'</br>';
 	
 	//Select character spells
+	echo '<p><b><u>List of Spells</u></b></p>';
+	
 	$s0 = "SELECT spell_name, spell_id, spell_level FROM spells WHERE character_id=$character_id";
 	
 	
 	$a0 = mysqli_query ($dbc, $s0) or trigger_error("Query: $s0\n<br />MySQL Error: " . mysqli_error($dbc));
 	
+	if(mysqli_num_rows($a0) !=0){
    echo '<table id="myTablespell" class="tablesorter">';
    echo "<thead>";
 		echo "<tr>";
@@ -363,6 +374,8 @@ include ('includes/top.html');
 	}
 	echo "</tbody>";
 	echo "</table>";
+}
+else{echo '<p>No Spells Acquired Yet</p>';}
 	//Spell End
 	
 	
@@ -383,11 +396,14 @@ include ('includes/top.html');
    
    //Page 5
 	//Select everything from chronicles
-	$c = "SELECT * FROM chronicles WHERE character_id=$character_id";
+	echo '<p><b><u>List of Chronicles</u></b></p>';
+	
+	$c = "SELECT * FROM chronicles WHERE character_id=$character_id AND public='Yes'";
 	
 	
 	$d = mysqli_query ($dbc, $c) or trigger_error("Query: $c\n<br />MySQL Error: " . mysqli_error($dbc));
 	
+	if(mysqli_num_rows($d) !=0){
 	echo '<table id="myTablechronicle" class="tablesorter">';
 	echo "<thead>";
 		echo "<tr>";
@@ -418,16 +434,17 @@ include ('includes/top.html');
 		
 		"<td>
 		
-			<button><a href='public_chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
+			<button><a href='public_chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle Entry</a> </button>
 		</td>";
 		
 	}
 	echo "</tbody>";
 	echo "</table>";
-	
+	}
+	else{echo '<p>No Chronicle Written Yet</p>';}
 	
 	echo '<br>';
-	echo '<p>Public Character(Allow Character Profile and Chronicles To Be Viewable By Public): ' . $public_character	. '</p>';
+
    //Page 5 End
    echo '
   	</div>

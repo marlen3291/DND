@@ -123,12 +123,22 @@ else
 <?php echo $item_description ?>
 </textarea>
 
-<p><b>Type:</b>
-	<input type="radio" name="item_type" value="inventory" required>Inventory
-	<input type="radio" name="item_type" value="weapon">Weapon
-	<input type="radio" name="item_type" value="armor">Armor
-</p>
 
+<?php
+	
+	if($item_type == 'Inventory'){$inventorycheck = "checked";}
+	elseif($item_type == 'Weapon') {$weaponcheck = "checked";}
+	else{$armorcheck = "checked";}
+	
+	echo '<p><b>Type:</b>
+		<input type="radio" name="item_type" value="Inventory" '	.	$inventorycheck	.	'>Inventory
+		<input type="radio" name="item_type" value="Weapon" '	.	$weaponcheck	.	'>Weapon
+		<input type="radio" name="item_type" value="Armor" '	.	$armorcheck	.	'>Armor
+		
+	</p>';
+	
+	?>
+ 
 <p><b>Attack Bonus:</b> <input type="text" name="attack_bonus" value="<?php echo $attack_bonus; ?>" /></p>
 <p><b>Damage:</b> <input type="text" name="damage"  value="<?php echo $damage; ?>" /></p>
 <p><b>Armor:</b> <input type="text" name="armor" value="<?php echo $armor; ?>" /></p>

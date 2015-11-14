@@ -91,7 +91,7 @@ Enter log entry here...
 
 <p><b>Public:</b>
 	<input type="radio" name="public" value="Yes" required>Yes
-	<input type="radio" name="public" value="No">No
+	<input type="radio" name="public" value="No" checked>No
 </p>
 
 <br>
