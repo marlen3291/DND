@@ -74,6 +74,7 @@ include ('includes/top.html');
 	echo "<tr>";
 		echo "<td>" .	$chronicle_name	.	"</td>"	;
 		echo "<td>" .	$first_name	. ' ' . $last_name	.	"</td>"	;
+		echo "<td>" .	$player_name	.	"</td>"	;
 		echo "<td>" .	$date	.	"</td>"	;
 		
 		echo 

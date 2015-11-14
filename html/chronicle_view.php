@@ -59,8 +59,7 @@ include ('includes/top.html');
 	}
 	
 	echo '<h1>Chronicle View</h1>';
-	echo '<p>Character: '. $first_name . ' '. $last_name . '</p>';
-	echo '<p>Chronicle Name: '	.	$chronicle_name	.	'</p>';
+	echo '<h2>Chronicle Name: '	.	$chronicle_name	.	'</h2>';
 	echo '<p>Date: '	.	$date	.	'</p>';
 	echo '<p>Entry: '	.	$description	.	'</p>';
 	echo '<p>Public: ' . $public . '</p>';
@@ -81,7 +80,7 @@ include ('includes/top.html');
 			<input type="submit" name="submit" value="Delete Chronicle" />
 		
 			</form>'	;
-	
+	echo "<button><a href='character_view.php?character_id=$character_id'>Return to Character Profile</a></button>";	
 	}
 	
 	else

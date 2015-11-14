@@ -46,7 +46,7 @@ include ('includes/top.html');
 	}
 	
 	echo '<h1>Item View</h1>';
-	echo '<p>Item Name: '	.	$item_name	.	'</p>'; 
+	echo '<h2>Item Name: '	.	$item_name	.	'</h2>'; 
 	echo '<p>Description: '	.	$item_description	.'</p>';
 	echo '<p>Item Type: '	.	$item_type	.	'</p>';
 	echo '<p>Attack Bonus: '	.	$attack_bonus	.	'</p>';
@@ -72,6 +72,9 @@ include ('includes/top.html');
 			<input type="submit" name="submit" value="Delete Item" />
 		
 			</form>'	;
+			
+	echo "<button><a href='character_view.php?character_id=$character_id'>Return to Character Profile</a></button>";
+	
 	}
 	
 	else

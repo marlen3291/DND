@@ -40,7 +40,7 @@ echo "<h1>View Characters</h1>";
 	
 	$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
 	
-    echo '<table id="myTable" class="tablesorter">';
+    echo '<table id="myTablecharacter" class="tablesorter">';
     echo '<thead>';
     	echo "<tr>";
 			echo "<th>First Name</th>";

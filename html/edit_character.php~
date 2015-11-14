@@ -69,7 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	$inspiration = $row["inspiration"];
 	$proficiency_bonus = $row["proficiency_bonus"];
 	$saving_throws = $row["saving_throws"];
-	$skills = $row["skills"];
 	$passive_wisdom = $row["passive_wisdom"];
 	$languages = $row["languages"];
 	
@@ -84,7 +83,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Handle the form.
 	$gp = $row["gp"];
 	$pp = $row["pp"];
 	
-	$features = $row["features"];
 	$appearance = $row["appearance"];
 	$organization = $row["organization"];
 	$rank = $row["rank"];
@@ -124,10 +122,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	$initiative = $speed = $max_hp = $current_hp = $hit_dice = FALSE;
 	$successes = $failures = $death_saves = $strength = $dexterity = FALSE;
 	$constitution = $intelligence = $wisdom = $charisma = $inspiration = FALSE;
-	$proficiency_bonus = $saving_throws = $skills = $passive_wisdom = $languages = FALSE;
+	$proficiency_bonus = $saving_throws = $passive_wisdom = $languages = FALSE;
 	$proficiencies = $personality_traits = $ideals = $bonds = $flaws = FALSE;
 	$cp = $sp = $ep = $gp = $pp = FALSE;
-	$features = $appearance = $organization = $rank = $age = FALSE;
+	$appearance = $organization = $rank = $age = FALSE;
 	$height = $weight = $eyes = $skin = $hair = FALSE;
 	$backstory = $spell_slots = $spell_casting_ability = $spell_save_dc = $spell_attack_bonus = FALSE;
 	
@@ -171,7 +169,6 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	$inspiration = mysqli_real_escape_string ($dbc, $trimmed['inspiration']);
 	$proficiency_bonus = mysqli_real_escape_string ($dbc, $trimmed['proficiency_bonus']);
 	$saving_throws = mysqli_real_escape_string ($dbc, $trimmed['saving_throws']);
-	$skills = mysqli_real_escape_string ($dbc, $trimmed['skills']);
 	$passive_wisdom = mysqli_real_escape_string ($dbc, $trimmed['passive_wisdom']);
 	$languages = mysqli_real_escape_string ($dbc, $trimmed['languages']);
 	
@@ -186,7 +183,6 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	$gp = mysqli_real_escape_string ($dbc, $trimmed['gp']);
 	$pp = mysqli_real_escape_string ($dbc, $trimmed['pp']);
 	
-	$features = mysqli_real_escape_string ($dbc, $trimmed['features']);
 	$appearance = $appearance;
 	
 	
@@ -237,8 +233,7 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	charisma='$charisma', 
 	inspiration='$inspiration', 
 	proficiency_bonus='$proficiency_bonus', 
-	saving_throws='$saving_throws', 
-	skills='$skills', 
+	saving_throws='$saving_throws',  
 	passive_wisdom='$passive_wisdom', 
 	languages='$languages', 
 	proficiencies='$proficiencies', 
@@ -250,8 +245,7 @@ $appearance = addslashes(file_get_contents($_FILES['appearance']['tmp_name']));
 	sp='$sp', 
 	ep='$ep',
 	gp='$gp', 
-	pp='$pp', 
-	features='$features', 
+	pp='$pp',  
 	organization='$organization', 
 	rank='$rank', 
 	age='$age', 
@@ -347,7 +341,7 @@ else
 	<div id="tabs">
   <ul>
     <li><a href="#tabs-1">Character Main Stats</a></li>
-    <li><a href="#tabs-2">Features and Backstory</a></li>
+    <li><a href="#tabs-2">Backstory</a></li>
     <li><a href="#tabs-3">Spellcasting</a></li>
   </ul>
   <div id="tabs-1">
@@ -360,7 +354,7 @@ else
 	
 	<p><b>Level:</b> <input type="text" name="level" size="20" maxlength="40" value="<?php echo $level; ?>" /></p>
 	
-	<p><b>Background:</b> <input type="text" name="background" size="20" maxlength="20" value="<?php if (isset($trimmed['background'])) echo $trimmed['background']; ?>" /></p>
+	<p><b>Background:</b> <input type="text" name="background" size="20" maxlength="20" value="<?php if (isset($trimmed['background'])) echo $trimmed['$background']; ?>" /></p>
 
 	<!--
 	<p><b>Background:</b></p><textarea rows="10" cols="100" name="background" />
@@ -410,11 +404,7 @@ else
 
 	<p><b>Proficiency Bonus:</b> <input type="text" name="proficiency_bonus" size="20" maxlength="40" value="<?php echo $proficiency_bonus; ?>" /></p>
 
-	<p><b>Saving Throws:</b> <input type="text" name="saving_throws" size="20" maxlength="40" value="<?php echo $saving_throws; ?>" /></p>
-
-	<p><b>Skills:</b></p><textarea rows="10" cols="100" name="skills" />
-	<?php echo $skills; ?>
-	</textarea>	
+	<p><b>Saving Throws:</b> <input type="text" name="saving_throws" size="20" maxlength="40" value="<?php echo $saving_throws; ?>" /></p>	
 
 	<p><b>Passive Wisdom:</b> <input type="text" name="passive_wisdom" size="20" maxlength="40" value="<?php echo $passive_wisdom; ?>" /></p>
 
@@ -472,19 +462,12 @@ else
 		<input type="radio" name="public_character" value="Yes" '. $yescheck	.	'>Yes
 		<input type="radio" name="public_character" value="No" '	.	$nocheck	.  '>No
 	</p>';
-	echo $public_character;
-	echo $check;
+	
 	?>
   </div>
   
   <div id="tabs-2">
   
-  <!--	<p><b>Features:</b> <input type="text" name="features" size="20" maxlength="40" value="<?php if (isset($trimmed['features'])) echo $trimmed['features']; ?>" /></p>
--->	
-	<p><b>Features:</b></p><textarea rows="10" cols="100" name="features" />
-	<?php echo $features; ?>
-	</textarea>
-	
    <p><b>Appearance:</b><input type="file" name="appearance" id="appearance" ></p>
    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/><br>'; ?>
 	

@@ -46,7 +46,7 @@ echo "<h1>View Public Characters</h1>";
 			echo "<th>First Name</th>";
 			echo "<th>Last Name</th>";
 			echo "<th>Class</th>";
-			echo "<th></th>";
+			echo "<th>View Link</th>";
 		echo "</tr>";
 	echo '</thead>';
 	

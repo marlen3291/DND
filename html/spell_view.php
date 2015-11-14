@@ -47,7 +47,7 @@ include ('includes/top.html');
 	
 	}
 	
-	echo '<div id="spellcontent">';
+	
 		echo '<h1>Spell View</h1>';
 		echo '<h2>Spellname: '	.	$spell_name	.	'</h2>';
 		echo '<p>Spell Level: '	.	$spell_level	.	'</p>';
@@ -56,7 +56,7 @@ include ('includes/top.html');
 		echo '<p>Components: '	.	$components	.	'</p>';
 		echo '<p>Duration: '	.	$duration	.'</p>';
 		echo '<p class="spelldescription">Description: '	.	$spell_description	.'</p>';
-	echo '</div>';
+	
 	
 	echo '<br>';
 	
@@ -76,6 +76,9 @@ include ('includes/top.html');
 			<input type="submit" name="submit" value="Delete Spell" />
 		
 			</form>'	;
+	
+	echo "<button><a href='character_view.php?character_id=$character_id'>Return to Character Profile</a></button>";
+	
 	}
 	
 	else

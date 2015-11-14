@@ -69,7 +69,6 @@ if (isset($_SESSION['user_id'])){
 	$inspiration = $row["inspiration"];
 	$proficiency_bonus = $row["proficiency_bonus"];
 	$saving_throws = $row["saving_throws"];
-	$skills = $row["skills"];
 	$passive_wisdom = $row["passive_wisdom"];
 	$languages = $row["languages"];
 	
@@ -84,7 +83,6 @@ if (isset($_SESSION['user_id'])){
 	$gp = $row["gp"];
 	$pp = $row["pp"];
 	
-	$features = $row["features"];
 	$appearance = $row["appearance"];
 	$organization = $row["organization"];
 	$rank = $row["rank"];
@@ -113,9 +111,10 @@ if (isset($_SESSION['user_id'])){
   	<ul>
     	<li><a href="#tabs-1">Character Main Stats </a></li>
     	<li><a href="#tabs-2">Inventory </a></li>
-    	<li><a href="#tabs-3">Background and Features</a></li>
+    	<li><a href="#tabs-3">Background</a></li>
     	<li><a href="#tabs-4">Spellcasting</a></li>
     	<li><a href="#tabs-5">Chronicles</a></li>
+    	<li><a href="#tabs-6">Skills & Features</a></li>
   	</ul>
   	
   	';
@@ -131,7 +130,7 @@ if (isset($_SESSION['user_id'])){
 	
 	//Background Photo
 	echo '<div id="backgroundphoto">';
-		echo "<p><b><u>Name</u></b>:$first_name $last_name</p>";
+		echo "<h2><b><u>Name</u></b>:$first_name $last_name</h2>";
 		echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
 	echo '</div>';
 	
@@ -180,7 +179,6 @@ if (isset($_SESSION['user_id'])){
 		echo "<p><b><u>Inspiration</u></b>: $inspiration</p>";
 		echo "<p><b><u>Proficiency Bonus</u></b>: $proficiency_bonus</p>";
 		echo "<p><b><u>Saving Throws</u></b>: $saving_throws</p>";
-		echo "<p><b><u>Skills</u></b>: $skills</p>";
 		echo "<p><b><u>Passive Wisdom</u></b>: $passive_wisdom</p>";
 		echo "<p><b><u>Languages</u></b>: $languages</p>";
 		echo "<p><b><u>Proficiencies</u></b>: $proficiencies</p>";
@@ -313,7 +311,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 	
 		echo "<p><b><u>Backstory</u></b>: $backstory</p><br>";
 	
-		echo "<p><b><u>Features</u></b>: $features</p><br>";
+		
    echo '</div><br>';
    //Page 3 End
    echo '
@@ -472,6 +470,136 @@ else{echo '<p>No Items Acquired Yet</p>';}
    echo '
   	</div>
   	';
+  	
+  	  	//Page 6 Start
+  	echo '
+  	<div id="tabs-6">
+   ';
+   
+   //Page 6
+	//Select everything from skills
+	echo '<p><b><u>List of Skills</u></b></p>';
+	
+	$sk = "SELECT * FROM skills WHERE character_id=$character_id";
+	
+	
+	$ski = mysqli_query ($dbc, $sk) or trigger_error("Query: $c\n<br />MySQL Error: " . mysqli_error($dbc));
+	
+	if(mysqli_num_rows($ski) !=0){
+	echo '<table id="myTableskill" class="tablesorter">';
+	echo "<thead>";
+		echo "<tr>";
+	
+	
+		echo "<th>Skill Name</th>";
+		echo "<th>Skill Link</th>";
+	
+		echo "</tr>";
+	echo "</head>";	
+	echo "<tbody>";
+	
+	while($row = mysqli_fetch_array($ski))
+	{
+	$skill_id = $row["skill_id"];
+	$skill_name = $row["skill_name"];
+	
+	
+		
+	echo "<tr>";
+
+		echo "<td>" .	$skill_name	.	"</td>"	;	
+		echo 
+		
+		"<td>
+		
+			<button><a href='skill_view.php?skill_id=$skill_id'>View Skill</a> </button>
+		</td>";
+		
+	}
+	echo "</tbody>";
+	echo "</table>";
+	}
+	else{echo '<p>No Skill Written Yet</p>';}
+	
+	echo ' 
+	
+		<form action="create_skill.php" method="get">
+
+				<input type="hidden" name="character_id" value='	.	$character_id . '>
+		
+				<input type="submit" name="submit" value="Acquire A Skill" />
+		
+		</form>
+	';
+	
+	echo '<br>';
+	
+	//Select everything from features
+	echo '<p><b><u>List of Features</u></b></p>';
+	
+	$fk = "SELECT * FROM features WHERE character_id=$character_id";
+	
+	
+	$fki = mysqli_query ($dbc, $fk) or trigger_error("Query: $c\n<br />MySQL Error: " . mysqli_error($dbc));
+	
+	if(mysqli_num_rows($fki) !=0){
+	echo '<table id="myTablefeature" class="tablesorter">';
+	echo "<thead>";
+		echo "<tr>";
+	
+	
+		echo "<th>Feature Name</th>";
+		echo "<th>Feature Link</th>";
+	
+		echo "</tr>";
+	echo "</head>";	
+	echo "<tbody>";
+	
+	while($row = mysqli_fetch_array($fki))
+	{
+	$feature_id = $row["feature_id"];
+	$feature_name = $row["feature_name"];
+	
+	
+		
+	echo "<tr>";
+
+		echo "<td>" .	$feature_name	.	"</td>"	;
+		echo 
+		
+		"<td>
+		
+			<button><a href='feature_view.php?feature_id=$feature_id'>View Feature</a> </button>
+		</td>";
+		
+	}
+	echo "</tbody>";
+	echo "</table>";
+	}
+	else{echo '<p>No Feature Written Yet</p>';}
+	
+		echo ' 
+	
+		<form action="create_feature.php" method="get">
+
+				<input type="hidden" name="character_id" value='	.	$character_id . '>
+		
+				<input type="submit" name="submit" value="Acquire A Feature" />
+		
+		</form>
+	';
+	
+	echo '<br>';
+
+   //Page 6 End
+   echo '
+  	</div>
+  	';
+  	
+  	
+  	
+  	
+  	
 //Tab End  	
 echo '
 </div>

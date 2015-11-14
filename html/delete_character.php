@@ -33,6 +33,8 @@ include ('includes/top.html');
 	DELETE FROM chronicles WHERE character_id=$character_id;
 	DELETE FROM spells WHERE character_id=$character_id;
 	DELETE FROM items WHERE character_id=$character_id;
+	DELETE FROM skills WHERE character_id=$character_id;
+	DELETE FROM features WHERE character_id=$character_id;
 	DELETE FROM characters WHERE character_id=$character_id
 	
 	";

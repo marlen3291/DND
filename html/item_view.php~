@@ -11,7 +11,6 @@ include ('includes/top.html');
 ?>
 
 
-<div id="content">
 
 <?php
 
@@ -47,7 +46,7 @@ include ('includes/top.html');
 	}
 	
 	echo '<h1>Item View</h1>';
-	echo '<p>Item Name: '	.	$item_name	.	'</p>'; 
+	echo '<h2>Item Name: '	.	$item_name	.	'</h2>'; 
 	echo '<p>Description: '	.	$item_description	.'</p>';
 	echo '<p>Item Type: '	.	$item_type	.	'</p>';
 	echo '<p>Attack Bonus: '	.	$attack_bonus	.	'</p>';
@@ -96,5 +95,5 @@ mysqli_close($dbc);
 
 
 
-</div> <!--End of Content-->
+
 <?php include ('includes/footer.html'); ?>

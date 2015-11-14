@@ -200,13 +200,7 @@ if (!isset($page_title)) {
     <script src="js/modifiercheck.js"></script>
      <script src="js/sample.js"></script>
      
-     <script type="text/javascript"> 
-  $(document).ready(function() 
-    { 
-       document.getElementById("strbonus").innerHTML = strengthbonus(<?php echo $strength ?>); 
-    } 
-);
-	</script>
+    
     
    
     
