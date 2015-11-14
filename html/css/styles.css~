@@ -22,6 +22,7 @@ table, tr, th, td, tbody, tfoot, thead {
 
 img 	{ margin:0; padding:0; border:0; }
 
+/*
 table, tr, th, td, tbody, tfoot, thead {
 	margin: 0; padding: 0; border: 0;
 	vertical-align: baseline;
@@ -29,6 +30,7 @@ table, tr, th, td, tbody, tfoot, thead {
 	}
 	
 table { border-collapse: collapse; border-spacing: 0; }
+*/
 	
 input, select, textarea, form, fieldset {
 	margin: 0; padding: 0; border: 0;
@@ -112,6 +114,7 @@ dd          	{ 	}
 
 /* Tables */
 
+/*
 table       	{ width:80%;border-spacing: 4px;border: 1px solid black;margin-left:10%;}
 
 tr				{	border: 1px solid black;}
@@ -130,7 +133,7 @@ tfoot       	{	}
 .tfooter		{ background-color:#ccc; text-align:center; font-style:italic; }
 
 caption     	{ background: #efefef; }
-
+*/
 
 /* Containers */
 
@@ -250,8 +253,8 @@ caption     	{ background: #efefef; }
 #playerinfo{float:left;padding:50px 20px 10px 0px;}
 #playerinfo p{}
 
-#stats1{float:left;margin:0px 4vw 0px 0px;width:200px;}
-#stats2{float:left;margin:0px 4vw 0px 0px;width:200px;}
+#stats1{float:left;margin:0px 2vw 0px 0px;width:220px;}
+#stats2{float:left;margin:0px 3vw 0px 0px;width:200px;}
 #stats3{float:left;margin:0px 3vw 0px 0px;width:200px;}
 #stats4{float:left;margin:0px 0px 0px 0px;width:500px;}
 #stats5{float:right;margin:0px 0px 0px 0px;width:200px;}

@@ -150,12 +150,27 @@ include ('includes/top.html');
 	
 	//Stats 1
 	echo '<div id="stats1">';
-		echo "<p><u>Strength</u>: $strength</p>";
-		echo "<p><u>Dexterity</u>: $dexterity</p>";
-		echo "<p><u>Constitution</u>: $constitution</p>";
-		echo "<p><u>Intelligence</u>: $intelligence</p>";
-		echo "<p><u>Wisdom</u>: $wisdom</p>";
-		echo "<p><u>Charisma</u>: $charisma</p>";
+		echo "<p><u>Strength</u>: $strength <p id='strbonus'></p></p>";		
+		echo "<p><u>Dexterity</u>: $dexterity<p id='dexbonus'></p></p>";
+		echo "<p><u>Constitution</u>: $constitution<p id='conbonus'></p></p>";
+		echo "<p><u>Intelligence</u>: $intelligence<p id='intbonus'></p></p>";
+		echo "<p><u>Wisdom</u>: $wisdom<p id='wisbonus'></p></p>";
+		echo "<p><u>Charisma</u>: $charisma<p id='chabonus'></p></p>";
+		
+		
+		echo'<script type="text/javascript"> 
+  			$(document).ready(function() 
+    			{ 
+       			document.getElementById("strbonus").innerHTML = modifierbonus('.$strength.'); 
+       			document.getElementById("dexbonus").innerHTML = modifierbonus('.$dexterity.');
+       			document.getElementById("conbonus").innerHTML = modifierbonus('.$constitution.');
+       			document.getElementById("intbonus").innerHTML = modifierbonus('.$intelligence.');
+       			document.getElementById("wisbonus").innerHTML = modifierbonus('.$wisdom.');
+       			document.getElementById("chabonus").innerHTML = modifierbonus('.$charisma.');
+    			} 
+			);
+			</script>';	
+	
 	echo '</div>';
 	
 	

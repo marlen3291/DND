@@ -253,8 +253,8 @@ caption     	{ background: #efefef; }
 #playerinfo{float:left;padding:50px 20px 10px 0px;}
 #playerinfo p{}
 
-#stats1{float:left;margin:0px 4vw 0px 0px;width:200px;}
-#stats2{float:left;margin:0px 4vw 0px 0px;width:200px;}
+#stats1{float:left;margin:0px 1vw 0px 0px;width:240px;}
+#stats2{float:left;margin:0px 3vw 0px 0px;width:200px;}
 #stats3{float:left;margin:0px 3vw 0px 0px;width:200px;}
 #stats4{float:left;margin:0px 0px 0px 0px;width:500px;}
 #stats5{float:right;margin:0px 0px 0px 0px;width:200px;}

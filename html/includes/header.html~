@@ -188,12 +188,27 @@ if (!isset($page_title)) {
   $(document).ready(function() 
     { 
         $("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} ); 
+        $("#myTablecharacter").tablesorter( {sortList: [[0,0], [1,0]]} );
         $("#myTableitem").tablesorter( {sortList: [[0,0], [1,0]]} ); 
         $("#myTablespell").tablesorter( {sortList: [[0,0], [1,0]]} ); 
         $("#myTablechronicle").tablesorter( {sortList: [[0,0], [1,0]]} );  
     } 
 );
 	</script>
+    
+    <!--Modifier Check Javascript-->
+    <script src="js/modifiercheck.js"></script>
+     <script src="js/sample.js"></script>
+     
+     <script type="text/javascript"> 
+  $(document).ready(function() 
+    { 
+       document.getElementById("strbonus").innerHTML = strengthbonus(<?php echo $strength ?>); 
+    } 
+);
+	</script>
+    
+   
     
 	<title><?php echo $page_title; ?></title>
 	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
