@@ -60,8 +60,7 @@ include ('includes/top.html');
 	}
 	
 	echo '<h1>Chronicle View</h1>';
-	echo '<p>Character: '. $first_name . ' '. $last_name . '</p>';
-	echo '<p>Chronicle Name: '	.	$chronicle_name	.	'</p>';
+	echo '<h2>Chronicle Name: '	.	$chronicle_name	.	'</h2>';
 	echo '<p>Date: '	.	$date	.	'</p>';
 	echo '<p>Entry: '	.	$description	.	'</p>';
 	

@@ -276,6 +276,8 @@ include ('includes/top.html');
 	
 }
 else{echo '<p>No Items Acquired Yet</p>';}
+
+	echo '<br>';
 	//Item Inventory End
 	
 	
@@ -303,7 +305,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 		echo "<p><b><u>Organization</u></b>: $organization</p>";
 		echo "<p><b><u>Rank</u></b>: $rank</p><br>";
 	
-		echo "<p><b><u>Backstory</u></b>: $backstory</p><br>";
+		echo "<p><b><u>Backstory</u></b>:"	.	nl2br($backstory)	.	"</p><br>";
 	
 		
    echo '</div><br>';

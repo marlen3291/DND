@@ -130,7 +130,7 @@ if (isset($_SESSION['user_id'])){
 	
 	//Background Photo
 	echo '<div id="backgroundphoto">';
-		echo "<h1><b><u>Name</u></b>:$first_name $last_name</h1>";
+		echo "<h2><b><u>Name</u></b>:$first_name $last_name</h2>";
 		echo '<img src="data:image/jpeg;base64,'.base64_encode($appearance).'" height="300" width="300"/>';
 	echo '</div>';
 	
@@ -309,7 +309,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 		echo "<p><b><u>Organization</u></b>: $organization</p>";
 		echo "<p><b><u>Rank</u></b>: $rank</p><br>";
 	
-		echo "<p><b><u>Backstory</u></b>: $backstory</p><br>";
+		echo "<p><b><u>Backstory</u></b>:". nl2br($backstory)	.	"</p><br>";
 	
 		
    echo '</div><br>';

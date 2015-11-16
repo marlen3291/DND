@@ -189,7 +189,7 @@ caption     	{ background: #efefef; }
 #content p			{ margin:16px 30px; line-height:160%;font-family: "Eagle Lake";font-weight: 400;font-size:14px;padding-left:40px; }
 #content h2			{ margin:20px 0 0 40px;font-family: "Eagle Lake";  }
 #content img 			{ padding:8px;border:1px #8888888 solid;margin:0px;  }
-#content input {margin-left:40px;}
+#content input,button {margin-left:40px;}
 #content .description{width:90%;}
 
 #rightside 			{ padding:20px; margin-left:675px;   }

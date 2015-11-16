@@ -31,6 +31,22 @@ their character.
 Updates:
 </p>
 
+<p>Commits on Nov 14, 2015</p>
+	<p>I fixed a lot of issues including public characters and chronicles and separating their public boolean values. I also allowed radio buttons to be checked based on the input value in the database for several create and edit pages</p>
+	
+<p>Commits on Nov 13, 2015</p>
+	<p>I fixed the public chronicle list page with an error with sorting tables</p>
+	<p>I bolded some of the p elements and changed the font and look a little bit [issue17]</p>
+	<p>I added proficiency bonus or stat modifiers for strength, dexterity,constitution, intelligence, wisdom, and charisma</p>
+	<p>I added the Jquery table sorter plugin and changed all the site tables</p>
+	
+<p>Commits on Nov 12, 2015</p>
+	<p>I improved the look of the spell view page and ended up fixing the look of similar pages [issue4]</p>
+	<p>I moved the character photo to the main stats tab and reordered the look for the character view tabs</p>
+	<p>I changed the div stats placement</p>
+	<p>Fixed the placement of the stats divs on the the main character tabs[issue7]</p>
+	<p>I changed the background area and content area and fixed the position of some elements including tables, p, and h1</p>
+	
 <p>Commits on Nov 1, 2015</p>
 
 	<p>I made a quick fix and added the character name for the character's chronicle pages to 

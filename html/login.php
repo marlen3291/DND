@@ -73,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<fieldset>
 	<p><b>Email Address:</b> <input type="text" name="email" size="20" maxlength="60" /></p>
 	<p><b>Password:</b> <input type="password" name="pass" size="20" maxlength="20" /></p>
+	<p>To login as guest and experiment with making characters, use guestd&d@mailinator.com as email address and type Guest as the password</p>
 	<div align="center"><input type="submit" name="submit" value="Login" /></div>
 	</fieldset>
 </form>

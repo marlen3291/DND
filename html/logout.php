@@ -28,7 +28,7 @@ if (!isset($_SESSION['first_name'])) {
 }
 
 // Print a customized message:
-echo '<h3>You are now logged out.</h3>';
+echo '<br><p>You are now logged out.<p>';
 ?>
 
 <?php include ('includes/footer.html'); ?>

@@ -55,7 +55,7 @@ include ('includes/top.html');
 		echo '<p>Range: '	.	$spell_range	.	'</p>'; 
 		echo '<p>Components: '	.	$components	.	'</p>';
 		echo '<p>Duration: '	.	$duration	.'</p>';
-		echo '<p class="spelldescription">Description: '	.	$spell_description	.'</p>';
+		echo '<p class="spelldescription">Description: '	.	nl2br($spell_description)	.'</p>';
 	
 	
 	echo '<br>';

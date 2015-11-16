@@ -61,7 +61,7 @@ include ('includes/top.html');
 	echo '<h1>Chronicle View</h1>';
 	echo '<h2>Chronicle Name: '	.	$chronicle_name	.	'</h2>';
 	echo '<p>Date: '	.	$date	.	'</p>';
-	echo '<p>Entry: '	.	$description	.	'</p>';
+	echo '<p>Entry: '	.	nl2br($description)	.	'</p>';
 	echo '<p>Public: ' . $public . '</p>';
 	
 	echo '<form action="edit_chronicle.php" method="get">
