@@ -47,7 +47,7 @@ include ('includes/top.html');
 	
 	echo '<h1>Item View</h1>';
 	echo '<h2>Item Name: '	.	$item_name	.	'</h2>'; 
-	echo '<p>Description: '	.	$item_description	.'</p>';
+	echo '<p>Description: '	.	nl2br($item_description)	.'</p>';
 	echo '<p>Item Type: '	.	$item_type	.	'</p>';
 	echo '<p>Attack Bonus: '	.	$attack_bonus	.	'</p>';
 	echo '<p>Damage: '	.	$damage	.	'</p>';

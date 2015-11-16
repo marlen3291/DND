@@ -72,7 +72,7 @@ echo "<h1>View Public Characters</h1>";
 		
 		"<td>
 		
-			<button><a href='public_character_view.php?character_id=$character_id'>View Character</a> </button>
+			<a href='public_character_view.php?character_id=$character_id'>View Character</a> 
 		</td>";
 				
 		

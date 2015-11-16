@@ -81,7 +81,7 @@ include ('includes/top.html');
 		
 		"<td>
 		
-			<button><a href='public_chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
+			<a href='public_chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> 
 		</td>";
 		
 		

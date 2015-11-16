@@ -264,7 +264,7 @@ if (isset($_SESSION['user_id'])){
 		
 		"<td>
 		
-			<button><a href='item_view.php?item_id=$item_id'>View Item</a> </button>
+			<a href='item_view.php?item_id=$item_id'>View Item</a> 
 		</td>";
 					
 	echo "</tr>";
@@ -367,7 +367,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 		
 		"<td>
 		
-			<button><a href='spell_view.php?spell_id=$spell_id'>View Spell</a> </button>
+			<a href='spell_view.php?spell_id=$spell_id'>View Spell</a> 
 		</td>";
 					
 	echo "</tr>";
@@ -442,7 +442,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 		
 		"<td>
 		
-			<button><a href='chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> </button>
+			<a href='chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle</a> 
 		</td>";
 		
 	}
@@ -512,7 +512,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 		
 		"<td>
 		
-			<button><a href='skill_view.php?skill_id=$skill_id'>View Skill</a> </button>
+			<a href='skill_view.php?skill_id=$skill_id'>View Skill</a> 
 		</td>";
 		
 	}
@@ -569,7 +569,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 		
 		"<td>
 		
-			<button><a href='feature_view.php?feature_id=$feature_id'>View Feature</a> </button>
+			<a href='feature_view.php?feature_id=$feature_id'>View Feature</a> 
 		</td>";
 		
 	}

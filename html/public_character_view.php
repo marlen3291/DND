@@ -263,7 +263,7 @@ include ('includes/top.html');
 		
 		"<td>
 		
-			<button><a href='public_item_view.php?item_id=$item_id'>View Item</a> </button>
+			<a href='public_item_view.php?item_id=$item_id'>View Item</a> 
 		</td>";
 					
 	echo "</tr>";
@@ -364,7 +364,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 		
 		"<td>
 		
-			<button><a href='public_spell_view.php?spell_id=$spell_id'>View Spell</a> </button>
+			<a href='public_spell_view.php?spell_id=$spell_id'>View Spell</a> 
 		</td>";
 					
 	echo "</tr>";
@@ -434,7 +434,7 @@ else{echo '<p>No Spells Acquired Yet</p>';}
 		
 		"<td>
 		
-			<button><a href='public_chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle Entry</a> </button>
+			<a href='public_chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle Entry</a> 
 		</td>";
 		
 	}
@@ -492,7 +492,7 @@ else{echo '<p>No Spells Acquired Yet</p>';}
 		
 		"<td>
 		
-			<button><a href='public_skill_view.php?skill_id=$skill_id'>View Skill</a> </button>
+			<a href='public_skill_view.php?skill_id=$skill_id'>View Skill</a> 
 		</td>";
 		
 	}
@@ -539,7 +539,7 @@ else{echo '<p>No Spells Acquired Yet</p>';}
 		
 		"<td>
 		
-			<button><a href='public_feature_view.php?feature_id=$feature_id'>View Feature</a> </button>
+			<a href='public_feature_view.php?feature_id=$feature_id'>View Feature</a> 
 		</td>";
 		
 	}

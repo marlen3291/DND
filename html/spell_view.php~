@@ -55,7 +55,7 @@ include ('includes/top.html');
 		echo '<p>Range: '	.	$spell_range	.	'</p>'; 
 		echo '<p>Components: '	.	$components	.	'</p>';
 		echo '<p>Duration: '	.	$duration	.'</p>';
-		echo '<p class="spelldescription">Description: '	.	$spell_description	.'</p>';
+		echo '<p class="spelldescription">Description: '	.	nl2br($spell_description)	.'</p>';
 	
 	
 	echo '<br>';
@@ -77,7 +77,7 @@ include ('includes/top.html');
 		
 			</form>'	;
 	
-	echo "<button><a href='character_view.php?character_id=$character_id'>Return to Character Profile</a></button>";
+	echo "<a href='character_view.php?character_id=$character_id'>Return to Character Profile</a>";
 	
 	}
 	

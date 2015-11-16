@@ -626,7 +626,7 @@ else
 
 			<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 		
-			<input type="submit" name="submit" value="Edit Character" />
+			<input type="submit" name="submit" value="Edit Character Main Stats" />
 		
 </form>
 

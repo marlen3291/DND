@@ -73,7 +73,7 @@ include ('includes/top.html');
 		
 			</form>'	;
 			
-	echo "<button><a href='character_view.php?character_id=$character_id'>Return to Character Profile</a></button>";
+	echo "<a id='return' href='character_view.php?character_id=$character_id'>Return to Character Profile</a>";
 	
 	}
 	

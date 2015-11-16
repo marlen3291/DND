@@ -179,8 +179,9 @@ if (!isset($page_title)) {
             $('.menu').jqsimplemenu();
         });
     </script>
-    
-	<!-jquery table sorter-->    
+   
+   <!--
+	   
     <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
     <script type="text/javascript" src="js/jquery.metadata.js"></script>
     <link rel="stylesheet" href="css/bluetabletheme/style.css" type="text/css" media="screen" />
@@ -197,7 +198,70 @@ if (!isset($page_title)) {
     } 
 );
 	</script>
-    
+    -->
+    <!-- Pick a theme, load the plugin & initialize plugin -->
+	<link href="css/theme.default.css" rel="stylesheet">
+	<script src="js/jquery.tablesorter.min.js"></script>
+	<script src="js/jquery.tablesorter.widgets.min.js"></script>
+	<script>
+	$(function(){
+		$('#myTable').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+		
+		$('#myTablecharacter').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+		
+		$('#myTableitem').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+		
+		$('#myTablespell').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+		
+		$('#myTablecharacter').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+		
+		$('#myTablechronicle').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+		
+		$('#myTableskill').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+		
+		$('#myTablefeature').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+	});
+	</script>
     <!--Modifier Check Javascript-->
     <script src="js/modifiercheck.js"></script>
      <script src="js/sample.js"></script>

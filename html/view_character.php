@@ -73,7 +73,7 @@ echo "<h1>View Characters</h1>";
 		
 		"<td>
 		
-			<button><a href='character_view.php?character_id=$character_id'>View Character</a> </button>
+			<a href='character_view.php?character_id=$character_id'>View Character</a> 
 		</td>";
 				
 		
