@@ -106,7 +106,7 @@ Enter the spell's effects and what it does here.
 -->
 
 <p><b>Spell Level:</b>
-	<input type="radio" name="spell_level" value="0" required>Cantrip
+	<input type="radio" name="spell_level" value="0" required checked>Cantrip
 	<input type="radio" name="spell_level" value="1">1
 	<input type="radio" name="spell_level" value="2">2
 	<input type="radio" name="spell_level" value="3">3

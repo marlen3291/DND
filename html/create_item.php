@@ -99,9 +99,7 @@ else
 <br>
 
 <p><b>Description:</b></p>
-<textarea rows="30" cols="50" name="item_description" form="itemform">
-Enter the item's attributes and what it does here.
-</textarea>
+<textarea rows="30" cols="50" name="item_description" form="itemform" placeholder="Enter the item's attributes and what it does here"></textarea>
 <br>
 <p><b>Type:</b>
 	<input type="radio" name="item_type" value="Inventory" required checked>Inventory

@@ -97,9 +97,7 @@ else
 <br>
 
 <p><b>Description:</b></p>
-<textarea rows="30" cols="50" name="spell_description" form="spellform">
-Enter the spell's effects and what it does here.
-</textarea>
+<textarea rows="30" cols="50" name="spell_description" form="spellform" placeholder="Enter the spell's effects and what it does here."></textarea>
 
 <!--
 <p><b>Spell Level:</b> <input type="text" name="spell_level" value="<?php if (isset($trimmed['spell_level'])) echo $trimmed['spell_level']; ?>" /></p>

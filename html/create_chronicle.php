@@ -85,9 +85,7 @@ else
 	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
-<textarea rows="30" cols="100" name="description" form="chronicleform">
-Enter log entry here...
-</textarea>
+<textarea rows="30" cols="100" name="description" form="chronicleform" placeholder="Enter log entry here..."></textarea>
 
 <p><b>Public:</b>
 	<input type="radio" name="public" value="Yes" required>Yes
