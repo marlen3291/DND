@@ -84,9 +84,7 @@ else
 	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
-<textarea rows="30" cols="100" name="skill_description" form="skillform">
-Enter skill description here
-</textarea>
+<textarea rows="30" cols="100" name="skill_description" form="skillform" placeholder="Enter skill description here"></textarea>
 
 <br>
 

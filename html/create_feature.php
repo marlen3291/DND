@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Create feature';
+$page_title = 'Create A Feature';
 include ('includes/header.html');
 include ('includes/top.html');
 
@@ -77,7 +77,7 @@ else
 	exit();
 	}
 ?>
-<h1>Create A feature</h1>
+<h1>Create A Feature</h1>
 <form action="create_feature.php" id="featureform" method="post">
   
   	<p><b>Feature Name:</b> <input type="text" name="feature_name" size="20" maxlength="40" value="<?php if (isset($trimmed['feature_name'])) echo $trimmed['feature_name']; ?>" /></p>

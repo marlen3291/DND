@@ -152,7 +152,7 @@ caption     	{ background: #efefef; }
 #topnav 			{ background-color: #333333; clear: both;  }
 #topnav ul		{width:100%; float:left; margin:0px; background-color:#333333; }
 #topnav ul li  { display:inline;}
-#topnav ul li a { float:left; padding:10px 20px; font-size:20px;}
+#topnav ul li a { float:left; padding:10px 20px; font-size:20px;border-bottom: solid 1px #aaaaaa;}
 #topnav ul li a.droplink{width:100px; }
 
 #topnav a{color:#ffffff;background-color: #333333;}
@@ -189,7 +189,7 @@ caption     	{ background: #efefef; }
 #content p			{ margin:16px 30px; line-height:160%;font-family: "Eagle Lake";font-weight: 400;font-size:14px;padding-left:40px; }
 #content h2			{ margin:20px 0 0 40px;font-family: "Eagle Lake";  }
 #content img 			{ padding:8px;border:1px #8888888 solid;margin:0px;  }
-#content input,button,.return {margin-left:40px;}
+#content input,button,#return {margin-left:40px;}
 #content .description{width:90%;}
 
 #rightside 			{ padding:20px; margin-left:675px;   }

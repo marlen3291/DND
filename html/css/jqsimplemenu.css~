@@ -6,7 +6,12 @@
     position: relative;
     z-index: 10;
     line-height: 2.5em;
-    border: solid 1px #aaaaaa;
+    
+}
+
+.menu
+{
+
 }
 .menu a
 {
@@ -24,7 +29,7 @@
 {
     padding: 0px 10px;
     margin: 0;
-    width: 100%;
+    /*width: 100%;*/
     text-decoration: none;
     /*color: #838383;*/
     font-weight: bold;
@@ -91,6 +96,7 @@ li.right-menu > a
     float: left;
     color: #FFFEFD;
     padding: 0 10px;
+    
 }
 .menu li ul li
 {

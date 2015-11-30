@@ -5,7 +5,7 @@
 require ('includes/config.inc.php'); 
 
 // Set the page title and include the HTML header:
-$page_title = 'Create Skill';
+$page_title = 'Create A Skill';
 include ('includes/header.html');
 include ('includes/top.html');
 
@@ -77,7 +77,7 @@ else
 	exit();
 	}
 ?>
-<h1>Create A skill</h1>
+<h1>Create A Skill</h1>
 <form action="create_skill.php" id="skillform" method="post">
   
   	<p><b>skill Name:</b> <input type="text" name="skill_name" size="20" maxlength="40" value="<?php if (isset($trimmed['skill_name'])) echo $trimmed['skill_name']; ?>" /></p>

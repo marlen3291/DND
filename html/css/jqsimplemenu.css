@@ -6,7 +6,12 @@
     position: relative;
     z-index: 10;
     line-height: 2.5em;
-    border: solid 1px #aaaaaa;
+    
+}
+
+.menu
+{
+/*border: solid 1px #aaaaaa;Optional:Put silver border*/	
 }
 .menu a
 {
@@ -91,6 +96,7 @@ li.right-menu > a
     float: left;
     color: #FFFEFD;
     padding: 0 10px;
+    /*border: solid 1px #aaaaaa;Optional:Puts silver border*/
 }
 .menu li ul li
 {
