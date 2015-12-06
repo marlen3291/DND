@@ -335,7 +335,7 @@ else{echo '<p>No Items Acquired Yet</p>';}
 	
 	//Select character spells
 	echo '<p><b><u>List of Spells</u></b></p>';
-	$s0 = "SELECT spell_name, spell_id, spell_level FROM spells WHERE character_id=$character_id";
+	$s0 = "SELECT spell_name, spell_id, spell_level, spell_range, casting_time, components, duration,spell_description FROM spells WHERE character_id=$character_id";
 	
 	
 	$a0 = mysqli_query ($dbc, $s0) or trigger_error("Query: $s0\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -344,9 +344,14 @@ else{echo '<p>No Items Acquired Yet</p>';}
    echo '<table id="myTablespell" class="tablesorter">';
    echo "<thead>";
 		echo "<tr>";
-			echo "<th>Spell Name</th>";
-			echo "<th>Spell Level</th>";
-			echo "<th>Spell Link</th>";
+			echo "<th>Name</th>";
+			echo "<th>Level</th>";
+			echo "<th>Casting Time</th>";
+			echo "<th>Range</th>";
+			echo "<th>Components</th>";
+			echo "<th>Duration</th>";
+			echo "<th>Description</th>";
+			echo "<th>Edit Spell</th>";
 		echo "</tr>";
 	echo "</thead>";
 	echo "<tbody>";
@@ -357,12 +362,21 @@ else{echo '<p>No Items Acquired Yet</p>';}
 	$spell_name = $row["spell_name"];
 	$spell_id = $row["spell_id"];
 	$spell_level = $row["spell_level"];
+	$casting_time = $row["casting_time"];
+	$spell_range = $row["spell_range"];
+	$components = $row["components"];
+	$duration = $row["duration"];
+	$spell_description = $row["spell_description"];
 			
 	echo "<tr>";
 
 		echo "<td>" .	$spell_name	.	"</td>"	;
 		echo "<td>". $spell_level . "</td>";
-		
+		echo "<td>". $casting_time . "</td>";
+		echo "<td>". $spell_range . "</td>";
+		echo "<td>". $components . "</td>";
+		echo "<td>". $duration . "</td>";
+		echo "<td>". nl2br($spell_description) . "</td>";
 		echo 
 		
 		"<td>
