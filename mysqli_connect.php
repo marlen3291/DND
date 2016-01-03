@@ -5,7 +5,7 @@
 
 // Set the database access information as constants:
 DEFINE ('DB_USER', 'mll6');
-DEFINE ('DB_PASSWORD', 'rampage34');
+DEFINE ('DB_PASSWORD', '*******');
 DEFINE ('DB_HOST', 'sql2.njit.edu');
 DEFINE ('DB_NAME', 'mll6');
 
