@@ -180,26 +180,9 @@ if (!isset($page_title)) {
         });
     </script>
    
-   <!--
-	   
-    <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
-    <script type="text/javascript" src="js/jquery.metadata.js"></script>
-    <link rel="stylesheet" href="css/bluetabletheme/style.css" type="text/css" media="screen" />
-    <script type="text/javascript"> 
-  $(document).ready(function() 
-    { 
-        $("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} ); 
-        $("#myTablecharacter").tablesorter( {sortList: [[0,0], [1,0]]} );
-        $("#myTableitem").tablesorter( {sortList: [[0,0], [1,0]]} ); 
-        $("#myTablespell").tablesorter( {sortList: [[0,0], [1,0]]} ); 
-        $("#myTablechronicle").tablesorter( {sortList: [[0,0], [1,0]]} );  
-        $("#myTableskill").tablesorter( {sortList: [[0,0], [1,0]]} );
-        $("#myTablefeature").tablesorter( {sortList: [[0,0], [1,0]]} );
-    } 
-);
-	</script>
-    -->
+   
     <!-- Pick a theme, load the plugin & initialize plugin -->
+	<!--	
 	<link href="css/theme.default.css" rel="stylesheet">
 	<script src="js/jquery.tablesorter.min.js"></script>
 	<script src="js/jquery.tablesorter.widgets.min.js"></script>
@@ -219,12 +202,7 @@ if (!isset($page_title)) {
 			sortRestart    : true
 		});
 		
-		$('#myTableitem').tablesorter({
-			widgets        : ['zebra', 'columns'],
-			usNumberFormat : false,
-			sortReset      : true,
-			sortRestart    : true
-		});
+		
 		
 		$('#myTablespell').tablesorter({
 			widgets        : ['zebra', 'columns'],
@@ -262,14 +240,100 @@ if (!isset($page_title)) {
 		});
 	});
 	</script>
+	-->
+	
     <!--Modifier Check Javascript-->
     <script src="js/modifiercheck.js"></script>
-     <script src="js/sample.js"></script>
+    <script src="js/sample.js"></script>
      
+     <!-- Datatables -->
     
-    
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+ 
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+ 
    
+<script type="text/javaScript">	
+		$(document).ready(function() {
+    $('#myTableitem').DataTable( {
+        dom: 'Bfrtip',
+        lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength','colvis', 'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
     
+    $('#myTablespell').DataTable( {
+        dom: 'Bfrtip',
+        lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength', 'colvis', 'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+    
+    $('#myTablecharacter').DataTable( {
+        dom: 'Bfrtip',
+        lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength', 'colvis', 'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+    
+    $('#myTablechronicle').DataTable( {
+        dom: 'Bfrtip',
+        lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength', 'colvis', 'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+    
+    $('#myTableskill').DataTable( {
+        dom: 'Bfrtip',
+        lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength', 'colvis', 'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+    
+    $('#myTablefeature').DataTable( {
+        dom: 'Bfrtip',
+        lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength', 'colvis', 'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+    
+     $('#myTable').DataTable( {
+        dom: 'Bfrtip',
+        lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength','colvis', 'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+} );
+
+</script>    
 	<title><?php echo $page_title; ?></title>
 	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 </head>

@@ -18,7 +18,7 @@ define('LIVE', FALSE);
 define('EMAIL', 'mll6@njit.edu');
 
 // Site URL (base for all redirections):
-define ('BASE_URL', 'https://web.njit.edu/~mll6/D&D/html/');
+define ('BASE_URL', 'localhost');
 
 // Location of the MySQL connection script:
 define ('MYSQL', '../mysqli_connect.php');

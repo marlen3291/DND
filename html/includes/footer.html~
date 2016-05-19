@@ -1,10 +1,78 @@
-<div><!--End of parchment body-->
+</div><!--End of parchment body-->
 <div id="parchmentbottom"></div>
 </div> <!--End of Content-->
 
 <div id="footer">
 
-<p>© 1995-2015 Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. All Rights Reserved.</p>
+	<h1 id="title"><u>Quick Links</u></h1><br>
+
+	<div id="account">
+		
+		<h2><u>Account</u></h2>
+		<?php # Script 18.2 - footer.html
+					// This page completes the HTML template.
+
+						// Display links based upon the login status:
+					if (isset($_SESSION['user_id'])) {
+
+					echo '
+						<a href="view_character.php" >Characters </a><br>
+						<a href="logout.php" >Log Out</a><br>
+						<a href="change_password.php" title="Change Your Password">Change Password</a><br>
+					';
+					}
+					
+					else { 
+					//  Not logged in.
+					echo '	
+						<a href="login.php" class="droplink">Log In</a><br>
+						<a href="register.php" class="droplink">Register</a><br>
+						<a href="forgot_password.php" class="droplink">Retrieve Password</a><br>
+					';
+					}
+					
+					// Add links if the user is an administrator:
+					if ($_SESSION['user_level'] == 1) {	
+						
+						echo '	
+						<a href="who_logged_in.php" >User Log</a><br>
+						<a href="view_users.php" >View Users</a><br>	
+						';
+					
+					} 
+					
+					
+					?>
+	</div>
+
+
+
+	<div id="lore">
+		
+		<h2><u>Lore</u></h2>
+		
+		<a href="public_chronicle.php" >Public Chronicles</a><br>
+		<a href="public_view_characters.php" >Public Characters</a><br>
+
+
+	</div>
+
+
+	<div id="externallinks">
+
+		<h2><u>External Links</u></h2>
+		
+		<a href="http://dnd.wizards.com/">D&D Official Website</a><br>
+
+		<a href="http://www.giantitp.com/forums/forumdisplay.php?30-Roleplaying-Games">Giantitp Roleplaying Guides</a><br>
+	</div>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<p id="copyright">© 1995-2015 Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. All Rights Reserved.</p>
 
 
 
