@@ -334,6 +334,29 @@ if (!isset($page_title)) {
 } );
 
 </script>    
+
+<!--Jquery Timeline Plugin  -->
+
+<link rel="stylesheet" href="css/timeliner.css" type="text/css" media="screen">
+
+<script type="text/javascript" src="js/timeliner.min.js"></script>
+
+<script>
+        $(document).ready(function() {
+			$.timeliner({});
+			$.timeliner({
+				timelineContainer: '#timeline-js',
+				timelineSectionMarker: '.milestone',
+				oneOpen: true,
+				startState: 'flat',
+				expandAllText: '+ Show All',
+				collapseAllText: '- Hide All'
+			});
+			
+			});
+</script>
+
+
 	<title><?php echo $page_title; ?></title>
 	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen">
 </head>

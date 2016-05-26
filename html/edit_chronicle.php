@@ -62,10 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	$chronicle_name = mysqli_real_escape_string ($dbc, $trimmed['chronicle_name']);
 	$description = mysqli_real_escape_string ($dbc, $trimmed['description']);
 	$public = mysqli_real_escape_string ($dbc, $trimmed['public']);
+	$cdate = mysqli_real_escape_string ($dbc, $trimmed['cdate']);
 	$chronicle_id = $_POST['chronicle_id'];
 	$character_id = $_POST['character_id'];
 	
-	$s = "UPDATE chronicles SET chronicle_name='$chronicle_name', description='$description', public='$public' 
+	$s = "UPDATE chronicles SET chronicle_name='$chronicle_name', description='$description', cdate='$cdate', public='$public' 
 	WHERE chronicle_id = '$chronicle_id'";
 	
 	$t = mysqli_query ($dbc, $s) or trigger_error("Query: $s\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -109,6 +110,10 @@ else
 	<input type="hidden" name="chronicle_id" value="<?php echo $chronicle_id; ?>">
 	<input type="hidden" name="character_id" value="<?php echo $character_id; ?>">
 <br>
+
+  	<p><b>Date</b> <input type="date" name="cdate" value="<?php if (isset($trimmed['cdate'])) echo $trimmed['cdate']; ?>" /></p>
+  	
+  	<br>
 
 <textarea rows="30" cols="100" name="description" form="chronicleform">
 <?php echo $description; ?>
