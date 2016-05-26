@@ -1,0 +1,85 @@
+<?php
+
+//Page 5 Start
+  	echo '
+  	<div id="tabs-5">
+   ';
+   
+   //Page 5
+	//Select everything from chronicles
+	echo '<p><b><u>List of Chronicles</u></b></p>';
+	
+	$c = "SELECT * FROM chronicles WHERE character_id=$character_id AND public='Yes'";
+	
+	
+	$d = mysqli_query ($dbc, $c) or trigger_error("Query: $c\n<br />MySQL Error: " . mysqli_error($dbc));
+	
+	if(mysqli_num_rows($d) !=0){
+	echo '<table id="myTablechronicle" class="display">';
+	echo "<thead>";
+		echo "<tr>";
+	
+	
+		echo "<th>Chronicle Name</th>";
+		echo "<th>Date</th>";
+		echo "<th>Entry</th>";
+		
+		if (isset($_SESSION['user_id'])){
+		echo "<th>Chronicle Link</th>";
+		}
+			
+		echo "</tr>";
+	echo "</head>";	
+	echo "<tbody>";
+	
+	while($row = mysqli_fetch_array($d))
+	{
+	$chronicle_id = $row["chronicle_id"];
+	$chronicle_name = $row["chronicle_name"];
+	$date = $row["date"];
+	$description = $row["description"];
+	
+	
+		
+	echo "<tr>";
+
+		echo "<td>" .	$chronicle_name	.	"</td>"	;
+		echo "<td>" .	$date	.	"</td>"	;
+		echo "<td>" .	nl2br($description)	.	"</td>"	;
+		
+	if (isset($_SESSION['user_id'])){
+		echo 
+		
+		"<td>
+		
+			<a href='chronicle_view.php?chronicle_id=$chronicle_id'>View Chronicle Entry</a> 
+		</td>";
+	}
+		
+	}
+	echo "</tbody>";
+	echo "</table>";
+	}
+	else{echo '<p>No Chronicle Written Yet</p>';}
+	
+	if (isset($_SESSION['user_id'])){
+		
+		echo ' 
+	
+		<form action="create_chronicle.php" method="get">
+
+				<input type="hidden" name="character_id" value='	.	$character_id . '>
+		
+				<input type="submit" name="submit" value="Create A Chronicle" />
+		
+		</form>
+	';
+	}
+	echo '<br>';
+
+   //Page 5 End
+   echo '
+  	</div>
+  	';
+
+?>
