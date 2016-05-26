@@ -80,7 +80,7 @@ else
 <h1>Create A Skill</h1>
 <form action="create_skill.php" id="skillform" method="post">
   
-  	<p><b>skill Name:</b> <input type="text" name="skill_name" size="20" maxlength="40" value="<?php if (isset($trimmed['skill_name'])) echo $trimmed['skill_name']; ?>" /></p>
+  	<p><b>Skill Name:</b> <input type="text" name="skill_name" size="20" maxlength="40" value="<?php if (isset($trimmed['skill_name'])) echo $trimmed['skill_name']; ?>" /></p>
 	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
@@ -88,7 +88,7 @@ else
 
 <br>
 
-<input type="submit" name="submit" value="Acquire a skill" />
+<input type="submit" name="submit" value="Acquire A Skill" />
 </form>
 
 

@@ -35,7 +35,8 @@ include ('includes/top.html');
     	<li><a href="#tabs-3">Background</a></li>
     	<li><a href="#tabs-4">Spellcasting</a></li>
     	<li><a href="#tabs-5">Chronicles</a></li>
-    	<li><a href="#tabs-6">Skills & Features</a></li>
+    	<li><a href="#tabs-6">Skills</a></li>
+    	<li><a href="#tabs-7">Features</a></li>
   	</ul>
   	
   	';
@@ -46,6 +47,7 @@ include ('includes/top.html');
  include ('tabs/spelltab.php');
  include ('tabs/chronicletab.php'); 
  include ('tabs/skilltab.php');
+ include ('tabs/featuretab.php');
   	
 //Tab End  	
 echo '

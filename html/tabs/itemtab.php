@@ -5,6 +5,7 @@
   	<div id="tabs-2">
    ';
    
+   echo '<h1><b>Inventory</b></h1>';
    //Page 2
 	echo '<div id="moneyinfo">';
 		echo "<p><b><u>Currency</u></b></p><br>";
@@ -18,7 +19,7 @@
 	
 	//Select items
 	//Select inventory type items
-	echo '<p><b><u>List of Items</u></b></p>';
+	echo '<h2><b><u>List of Items</u></b></h2><br>';
 	
 	$i1 = "SELECT * FROM items WHERE character_id=$character_id";
 	

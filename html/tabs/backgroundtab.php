@@ -6,7 +6,7 @@
    ';
    
    //Page 3
-
+	echo '<h1><b>Background</b></h1>';
 	
 	echo '<div id="background2">';
 		echo "<p><b><u>Age</u></b>: $age</p>";

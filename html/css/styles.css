@@ -190,7 +190,7 @@ caption     	{ background: #efefef; }
 #content p			{ margin:16px 30px; line-height:160%;font-family: "Eagle Lake";font-weight: 400;font-size:14px;padding-left:40px; }
 #content h2			{ margin:20px 0 0 40px;font-family: "Eagle Lake";  }
 #content img 			{ padding:8px;border:1px #8888888 solid;margin:0px;  }
-#content input,button,#return {margin-right:40px;}
+#content input,button,#return {margin-left:40px;}
 #content .description{width:90%;}
 			.dataTables_wrapper{width:90%;margin-left: 5%;margin-right: 10%;}
 			.label{margin-right: 60px;}
@@ -317,7 +317,7 @@ input[type=submit] {cursor:pointer;}
 input:focus, textarea:focus	{ background-color:#BFEBFF; }
 
 textarea {
-	   margin:0 0 16px 10px;
+	   margin:0 0 16px 40px;
 		border:1px #bbb solid; padding:5px; background-color:white; 
 		}
 

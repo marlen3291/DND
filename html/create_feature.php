@@ -88,7 +88,7 @@ else
 
 <br>
 
-<input type="submit" name="submit" value="Acquire a feature" />
+<input type="submit" name="submit" value="Acquire A Feature" />
 </form>
 
 

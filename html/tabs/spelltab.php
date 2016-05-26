@@ -4,7 +4,7 @@
   	echo '
   	<div id="tabs-4">
 	';
-	
+	echo '<h1><b>Spellcasting</b></h1>';
 	//Page 4
 	echo '<div id="spell_info">';
 		echo "<p><b><u>Spell Slots</u></b>: $spell_slots</p>";
@@ -16,8 +16,7 @@
 	echo'</br>';
 	
 	//Select character spells
-	echo '<p><b><u>List of Spells</u></b></p>';
-	
+	echo '<h2><b><u>List of Spells</u></b></h2><br>';
 	$s0 = "SELECT * FROM spells WHERE character_id=$character_id";
 	
 	
@@ -93,7 +92,7 @@ else{echo '<p>No Spells Acquired Yet</p>';}
 
 			<input type="hidden" name="character_id" value="' . $character_id . '">
 		
-			<input type="submit" name="submit" value="Acquire New Spells" />
+			<input type="submit" name="submit" value="Acquire A Spell" />
 		
 			</form><br>';
 	}

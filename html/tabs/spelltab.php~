@@ -4,7 +4,7 @@
   	echo '
   	<div id="tabs-4">
 	';
-	
+	echo '<h1><b>Spellcasting</b></h1>';
 	//Page 4
 	echo '<div id="spell_info">';
 		echo "<p><b><u>Spell Slots</u></b>: $spell_slots</p>";
@@ -16,8 +16,7 @@
 	echo'</br>';
 	
 	//Select character spells
-	echo '<p><b><u>List of Spells</u></b></p>';
-	
+	echo '<h2><b>List of Spells</b></h2><br>';
 	$s0 = "SELECT * FROM spells WHERE character_id=$character_id";
 	
 	
@@ -35,7 +34,7 @@
 			echo "<th>Components</th>";
 			echo "<th>Duration</th>";
 			
-			if (isset($_SESSION['user_id'])){
+			if (isset($_SESSION['user_id']) && $public_viewing != "Yes"){
 			echo "<th>Spell Link</th>";
 			}
 		
@@ -67,7 +66,7 @@
 		echo "<td>". $components . "</td>";
 		echo "<td>". $duration . "</td>";
 		
-		if (isset($_SESSION['user_id'])){
+		if (isset($_SESSION['user_id']) && $public_viewing != "Yes"){
 		
 			echo 
 		
@@ -87,7 +86,7 @@
 else{echo '<p>No Spells Acquired Yet</p>';}
 	//Spell End
 	
-	if (isset($_SESSION['user_id'])){
+	if (isset($_SESSION['user_id']) && $public_viewing != "Yes"){
 	//Create spell form
 	echo '<form action="create_spell.php" method="get">
 

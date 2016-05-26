@@ -37,12 +37,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 	
 	$chronicle_name = mysqli_real_escape_string ($dbc, $trimmed['chronicle_name']);
 	$description = mysqli_real_escape_string ($dbc, $trimmed['description']);
+	$cdate = mysqli_real_escape_string ($dbc, $trimmed['cdate']);
 	$public = mysqli_real_escape_string ($dbc, $trimmed['public']);
 	$character_id = $_POST['character_id'];
 	
 	
-	$s = "INSERT INTO chronicles (character_id, chronicle_name, date, description, public) 
-	VALUES ('$character_id', '$chronicle_name', NOW(), '$description', '$public')";
+	$s = "INSERT INTO chronicles (character_id, chronicle_name, cdate, description, public) 
+	VALUES ('$character_id', '$chronicle_name', '$cdate', '$description', '$public')";
 	
 	$t = mysqli_query ($dbc, $s) or trigger_error("Query: $s\n<br />MySQL Error: " . mysqli_error($dbc));
 
@@ -85,6 +86,9 @@ else
 	<input type="hidden" name="character_id" value="<?php echo $character_id ?>">
 <br>
 
+  	<p><b>Date</b> <input type="date" name="cdate" value="<?php if (isset($trimmed['cdate'])) echo $trimmed['cdate']; ?>" /></p>
+<br>
+
 <textarea rows="30" cols="100" name="description" form="chronicleform" placeholder="Enter log entry here..."></textarea>
 
 <p><b>Public:</b>
@@ -94,8 +98,9 @@ else
 
 <br>
 
-<input type="submit" name="submit" value="Create a chronicle" />
+<input type="submit" name="submit" value="Create A Chronicle" />
 </form>
+
 
 
 <?php include ('includes/footer.html'); ?>

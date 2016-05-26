@@ -37,7 +37,8 @@ include ('includes/top.html');
 		
 	$chronicle_id = $row["chronicle_id"];
 	$chronicle_name = $row["chronicle_name"];
-	$date = $row["date"];
+	$cdate = $row["cdate"];
+	$newdate = date("M d, Y", strtotime($cdate));
 	$description = $row["description"];
 	$public = $row["public"];
 	
@@ -61,7 +62,7 @@ include ('includes/top.html');
 	
 	echo '<h1>Chronicle View</h1>';
 	echo '<h2>Chronicle Name: '	.	$chronicle_name	.	'</h2>';
-	echo '<p>Date: '	.	$date	.	'</p>';
+	echo '<p>Date: '	.	$newdate	.	'</p>';
 	echo '<p>Entry: '	.	nl2br($description)	.	'</p>';
 	
 	

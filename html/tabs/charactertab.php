@@ -9,6 +9,7 @@
   	//Page 1
 	
 	//Intro
+	echo '<h1><b>Main Character Stats</b></h1>';
 	
 	$character_id = $_GET['character_id'];
 	

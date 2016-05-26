@@ -42,7 +42,7 @@
 
                         <dt class="timeline-event" start-open id="'.$newdate.'"><a>Date: '.$newdate.'</a></dt>
                         <dd class="timeline-event-content" id="'.$chronicle_name.'EX">
-                                <p>'.$description.'</p>
+                                <p>'.nl2br($description).'</p>
  										  <p><a href="chronicle_view.php?chronicle_id='.$chronicle_id.'">View Chronicle Entry</a></p>                                
                         </dd>
                 </dl>
@@ -76,7 +76,7 @@
 	
 	else{
 	
-			$c = "SELECT * FROM chronicles WHERE character_id=$character_id";
+			$c = "SELECT * FROM chronicles WHERE character_id=$character_id AND public='Yes'";
 	
 	
 		$d = mysqli_query ($dbc, $c) or trigger_error("Query: $c\n<br />MySQL Error: " . mysqli_error($dbc));
@@ -105,7 +105,7 @@
 
                         <dt class="timeline-event" start-open id="'.$newdate.'"><a>Date: '.$newdate.'</a></dt>
                         <dd class="timeline-event-content" id="'.$chronicle_name.'EX">
-                                <p>'.$description.'</p>
+                                <p>'.nl2br($description).'</p>
                         </dd>
                 </dl>
         </div>

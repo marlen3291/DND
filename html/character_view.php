@@ -36,7 +36,8 @@ if (isset($_SESSION['user_id'])){
     	<li><a href="#tabs-3">Background</a></li>
     	<li><a href="#tabs-4">Spellcasting</a></li>
     	<li><a href="#tabs-5">Chronicles</a></li>
-    	<li><a href="#tabs-6">Skills & Features</a></li>
+    	<li><a href="#tabs-6">Skills</a></li>
+    	<li><a href="#tabs-7">Features</a></li>
   	</ul>
   	
   	';
@@ -53,6 +54,8 @@ if (isset($_SESSION['user_id'])){
  include ('tabs/chronicletab.php'); 
 
  include ('tabs/skilltab.php');
+ 
+ include ('tabs/featuretab.php');
 
   	
   	

@@ -23,7 +23,7 @@
 		echo "<th>Name</th>";
 		echo "<th>Description Name</th>";
 		
-		if (isset($_SESSION['user_id'])){
+		if (isset($_SESSION['user_id']) && $public_viewing != "Yes"){
 			echo "<th>Skill Link</th>";
 		}		
 	

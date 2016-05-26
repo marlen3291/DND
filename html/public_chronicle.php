@@ -56,7 +56,7 @@ include ('includes/top.html');
 	{
 	$chronicle_id = $row["chronicle_id"];
 	$chronicle_name = $row["chronicle_name"];
-	$date = $row["date"];
+	$cdate = $row["cdate"];
 	$public = $row["public"];
 	
 	/*
@@ -75,7 +75,7 @@ include ('includes/top.html');
 		echo "<td>" .	$chronicle_name	.	"</td>"	;
 		echo "<td>" .	$first_name	. ' ' . $last_name	.	"</td>"	;
 		echo "<td>" .	$player_name	.	"</td>"	;
-		echo "<td>" .	$date	.	"</td>"	;
+		echo "<td>" .	$cdate	.	"</td>"	;
 		
 		echo 
 		

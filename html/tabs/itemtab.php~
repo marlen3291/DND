@@ -5,6 +5,7 @@
   	<div id="tabs-2">
    ';
    
+   echo '<h1><b>Inventory</b></h1>';
    //Page 2
 	echo '<div id="moneyinfo">';
 		echo "<p><b><u>Currency</u></b></p><br>";
@@ -37,7 +38,7 @@
 			echo "<th>Damage</th>";
 			echo "<th>Armor</th>";
 			
-			if (isset($_SESSION['user_id'])){
+			if (isset($_SESSION['user_id']) && $public_viewing != "Yes"){
 			echo "<th>Item Link</th>";
 			}
 		echo "</tr>";
